@@ -1,0 +1,841 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RoyaltyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AvailableRight">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastUpdateBy" Type="int" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="ObjectTypeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bank">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BankName" Type="nvarchar" MaxLength="500" />
+    <Property Name="Address" Type="nvarchar" MaxLength="150" />
+    <Property Name="Suburb" Type="varchar" MaxLength="100" />
+    <Property Name="PostCode" Type="varchar" MaxLength="10" />
+    <Property Name="State" Type="varchar" MaxLength="20" />
+    <Property Name="Country" Type="varchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" />
+    <Property Name="Fax" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="250" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastUpdateBy" Type="int" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Contract">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RefContract" Type="varchar" MaxLength="50" />
+    <Property Name="ExternalContractNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContractNo" Type="varchar" MaxLength="12" />
+    <Property Name="ContractTitle" Type="nvarchar" MaxLength="250" />
+    <Property Name="OrderNumber" Type="int" />
+    <Property Name="Entity" Type="nvarchar" MaxLength="50" />
+    <Property Name="CurrencyCode" Type="varchar" MaxLength="5" />
+    <Property Name="LicensorID" Type="int" />
+    <Property Name="LicensorContactName" Type="nvarchar" MaxLength="250" />
+    <Property Name="LicenseeID" Type="int" />
+    <Property Name="LicenceeContactName" Type="nvarchar" MaxLength="250" />
+    <Property Name="CommecementDate" Type="datetime" />
+    <Property Name="ExpiryDate" Type="datetime" />
+    <Property Name="SignedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="SignedDate" Type="datetime" />
+    <Property Name="ReportPeriod" Type="nvarchar" MaxLength="50" />
+    <Property Name="FileAttached" Type="varchar(max)" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastUpdateBy" Type="int" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="ProcessBy" Type="int" />
+    <Property Name="ProcessDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="ContractMapAvailableRight">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AvailableRightID" Type="int" Nullable="false" />
+    <Property Name="ContractID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContractMapBank">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContractID" Type="int" Nullable="false" />
+    <Property Name="BankID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContractMapGroup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupID" Type="int" Nullable="false" />
+    <Property Name="ContractID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContractMapProduct">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContractMapGroupID" Type="int" />
+    <Property Name="ProductID" Type="int" />
+  </EntityType>
+  <EntityType Name="ContractParty">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="250" />
+    <Property Name="Address" Type="nvarchar" MaxLength="150" />
+    <Property Name="Suburb" Type="varchar" MaxLength="100" />
+    <Property Name="PostCode" Type="varchar" MaxLength="10" />
+    <Property Name="State" Type="varchar" MaxLength="20" />
+    <Property Name="Country" Type="varchar" MaxLength="50" />
+    <Property Name="ACN" Type="varchar" MaxLength="20" />
+    <Property Name="ABN" Type="varchar" MaxLength="20" />
+    <Property Name="LicenseType" Type="int" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Position" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" />
+    <Property Name="Mobile" Type="varchar" MaxLength="20" />
+    <Property Name="Fax" Type="varchar" MaxLength="20" />
+    <Property Name="PriEmail" Type="varchar" MaxLength="200" />
+    <Property Name="AltEmail" Type="varchar" MaxLength="200" />
+    <Property Name="AccEmail" Type="varchar" MaxLength="200" />
+    <Property Name="Website" Type="varchar" MaxLength="50" />
+    <Property Name="DeliveryAttention" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeliveryAddress" Type="nvarchar" MaxLength="150" />
+    <Property Name="DeliverySuburb" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeliveryState" Type="varchar" MaxLength="20" />
+    <Property Name="DeliveryPostcode" Type="varchar" MaxLength="10" />
+    <Property Name="DeliveryCountry" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeliveryPhone" Type="varchar" MaxLength="20" />
+    <Property Name="TradingTerm" Type="varchar" MaxLength="50" />
+    <Property Name="TradingCurrencyType" Type="varchar" MaxLength="10" />
+    <Property Name="TradingBankName" Type="nvarchar" MaxLength="100" />
+    <Property Name="TradingBankAccount" Type="nvarchar" MaxLength="100" />
+    <Property Name="TradingBankBSB" Type="varchar" MaxLength="100" />
+    <Property Name="TradingBankNumber" Type="varchar" MaxLength="20" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastUpdateBy" Type="int" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="Avatar" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ContractSchedule">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContractID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReportDate" Type="datetime" />
+    <Property Name="AlertDate" Type="int" />
+    <Property Name="AlertRepeat" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastUpdateBy" Type="int" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="Currency">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="Code" Type="varchar" MaxLength="5" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastUpdateBy" Type="int" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="LicenseeMap">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContractID" Type="int" Nullable="false" />
+    <Property Name="LicensorID" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastUpdateBy" Type="int" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="ObjectType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Descriptions" Type="nvarchar" MaxLength="250" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastUpdateBy" Type="int" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PaymentTerm">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContractID" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="MinAmount" Type="float" />
+    <Property Name="FromDate" Type="datetime" />
+    <Property Name="ToDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastUpdateBy" Type="int" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="ProductMapGroup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductID" Type="bigint" />
+    <Property Name="ProductName" Type="varchar" MaxLength="200" />
+    <Property Name="GroupID" Type="int" />
+  </EntityType>
+  <EntityType Name="Royalty">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContractID" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="RoyaltyTypeID" Type="int" />
+    <Property Name="RebatePercent" Type="float" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastUpdateBy" Type="int" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="RoyaltyType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastUpdateBy" Type="int" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="SKU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Code" Type="varchar" MaxLength="10" />
+    <Property Name="AltCode" Type="varchar" MaxLength="10" />
+    <Property Name="SubmissionMapProdID" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastUpdateBy" Type="int" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="Submission">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InternalCode" Type="varchar" MaxLength="12" />
+    <Property Name="ContractID" Type="int" />
+    <Property Name="ContactName" Type="varchar" MaxLength="200" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastUpdateBy" Type="int" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="ResponeBy" Type="int" />
+    <Property Name="ResponeDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="SubmissionAttachment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubmissionMapProductID" Type="int" />
+    <Property Name="FileName" Type="varchar" MaxLength="200" />
+    <Property Name="FilePath" Type="varchar" MaxLength="500" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastUpdateBy" Type="int" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="SubmissionComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubmissionID" Type="int" />
+    <Property Name="Comment" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="SubmissionMapAvailableRight">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContractAvailableID" Type="int" />
+    <Property Name="SubmissionID" Type="int" />
+  </EntityType>
+  <EntityType Name="SubmissionMapProduct">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubmissionID" Type="int" />
+    <Property Name="ContractMapProductID" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="ResponseBy" Type="int" />
+    <Property Name="ResponseDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="LasUpdateBy" Type="int" />
+    <Property Name="LasUpdateDate" Type="date" />
+  </EntityType>
+  <EntityType Name="SubmissionProductPrice">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubmitsionMapProductID" Type="int" />
+    <Property Name="RoyaltyTypeID" Type="int" />
+    <Property Name="ValueFrom" Type="float" />
+    <Property Name="ValueTo" Type="float" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <Association Name="FK_AvailableRight_ObjectType">
+    <End Role="ObjectType" Type="Self.ObjectType" Multiplicity="1" />
+    <End Role="AvailableRight" Type="Self.AvailableRight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ObjectType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AvailableRight">
+        <PropertyRef Name="ObjectTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contract_ContractParty">
+    <End Role="ContractParty" Type="Self.ContractParty" Multiplicity="0..1" />
+    <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractParty">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="LicensorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contract_ContractParty1">
+    <End Role="ContractParty" Type="Self.ContractParty" Multiplicity="0..1" />
+    <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractParty">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="LicenseeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractMapAvailableRight_AvailableRight">
+    <End Role="AvailableRight" Type="Self.AvailableRight" Multiplicity="1" />
+    <End Role="ContractMapAvailableRight" Type="Self.ContractMapAvailableRight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AvailableRight">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractMapAvailableRight">
+        <PropertyRef Name="AvailableRightID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractMapAvailableRight_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="1" />
+    <End Role="ContractMapAvailableRight" Type="Self.ContractMapAvailableRight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractMapAvailableRight">
+        <PropertyRef Name="ContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractMapBank_Bank">
+    <End Role="Bank" Type="Self.Bank" Multiplicity="1" />
+    <End Role="ContractMapBank" Type="Self.ContractMapBank" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bank">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractMapBank">
+        <PropertyRef Name="BankID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractMapBank_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="1" />
+    <End Role="ContractMapBank" Type="Self.ContractMapBank" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractMapBank">
+        <PropertyRef Name="ContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractMapProductGroup_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="1" />
+    <End Role="ContractMapGroup" Type="Self.ContractMapGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractMapGroup">
+        <PropertyRef Name="ContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractMapProductGroup_ProductGroup1">
+    <End Role="Group" Type="Self.Group" Multiplicity="1" />
+    <End Role="ContractMapGroup" Type="Self.ContractMapGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractMapGroup">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractProducts_ContractGroups">
+    <End Role="ContractMapGroup" Type="Self.ContractMapGroup" Multiplicity="0..1" />
+    <End Role="ContractMapProduct" Type="Self.ContractMapProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractMapGroup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractMapProduct">
+        <PropertyRef Name="ContractMapGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractSchedule_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="1" />
+    <End Role="ContractSchedule" Type="Self.ContractSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractSchedule">
+        <PropertyRef Name="ContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LicenseeMap_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="1" />
+    <End Role="LicenseeMap" Type="Self.LicenseeMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LicenseeMap">
+        <PropertyRef Name="ContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LicenseeMap_ContractParty">
+    <End Role="ContractParty" Type="Self.ContractParty" Multiplicity="1" />
+    <End Role="LicenseeMap" Type="Self.LicenseeMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractParty">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LicenseeMap">
+        <PropertyRef Name="LicensorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PaymentTerm_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="0..1" />
+    <End Role="PaymentTerm" Type="Self.PaymentTerm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PaymentTerm">
+        <PropertyRef Name="ContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductMapGroup_Group">
+    <End Role="Group" Type="Self.Group" Multiplicity="0..1" />
+    <End Role="ProductMapGroup" Type="Self.ProductMapGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProductMapGroup">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Royalty_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="0..1" />
+    <End Role="Royalty" Type="Self.Royalty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Royalty">
+        <PropertyRef Name="ContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Royalty_RoyaltyType">
+    <End Role="RoyaltyType" Type="Self.RoyaltyType" Multiplicity="0..1" />
+    <End Role="Royalty" Type="Self.Royalty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoyaltyType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Royalty">
+        <PropertyRef Name="RoyaltyTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SKU_SubmissionMapProduct">
+    <End Role="SubmissionMapProduct" Type="Self.SubmissionMapProduct" Multiplicity="1" />
+    <End Role="SKU" Type="Self.SKU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubmissionMapProduct">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SKU">
+        <PropertyRef Name="SubmissionMapProdID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Submission_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="0..1" />
+    <End Role="Submission" Type="Self.Submission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Submission">
+        <PropertyRef Name="ContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubmissionComment_Submission">
+    <End Role="Submission" Type="Self.Submission" Multiplicity="0..1" />
+    <End Role="SubmissionComment" Type="Self.SubmissionComment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Submission">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubmissionComment">
+        <PropertyRef Name="SubmissionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubmissionMapProduct_ContractMapProduct">
+    <End Role="ContractMapProduct" Type="Self.ContractMapProduct" Multiplicity="0..1" />
+    <End Role="SubmissionMapProduct" Type="Self.SubmissionMapProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractMapProduct">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubmissionMapProduct">
+        <PropertyRef Name="ContractMapProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubmissionMapProduct_Submission">
+    <End Role="Submission" Type="Self.Submission" Multiplicity="0..1" />
+    <End Role="SubmissionMapProduct" Type="Self.SubmissionMapProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Submission">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubmissionMapProduct">
+        <PropertyRef Name="SubmissionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubmissionProductPrics_RoyaltyType">
+    <End Role="RoyaltyType" Type="Self.RoyaltyType" Multiplicity="0..1" />
+    <End Role="SubmissionProductPrice" Type="Self.SubmissionProductPrice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoyaltyType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubmissionProductPrice">
+        <PropertyRef Name="RoyaltyTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubmissionProductPrics_SubmissionMapProduct">
+    <End Role="SubmissionMapProduct" Type="Self.SubmissionMapProduct" Multiplicity="0..1" />
+    <End Role="SubmissionProductPrice" Type="Self.SubmissionProductPrice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubmissionMapProduct">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubmissionProductPrice">
+        <PropertyRef Name="SubmitsionMapProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SumissionMapAvailableRight_ContractMapAvailableRight">
+    <End Role="ContractMapAvailableRight" Type="Self.ContractMapAvailableRight" Multiplicity="0..1" />
+    <End Role="SubmissionMapAvailableRight" Type="Self.SubmissionMapAvailableRight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractMapAvailableRight">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubmissionMapAvailableRight">
+        <PropertyRef Name="ContractAvailableID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SumissionMapAvailableRight_Submission">
+    <End Role="Submission" Type="Self.Submission" Multiplicity="0..1" />
+    <End Role="SubmissionMapAvailableRight" Type="Self.SubmissionMapAvailableRight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Submission">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubmissionMapAvailableRight">
+        <PropertyRef Name="SubmissionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="roy_sp_GetContractByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="contractId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="roy_sp_GetContractList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="keyword" Type="varchar" Mode="In" />
+    <Parameter Name="page" Type="int" Mode="In" />
+    <Parameter Name="pageSize" Type="int" Mode="In" />
+    <Parameter Name="total" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="roy_sp_GetEntityFromCompanyFinanceData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="roy_sp_GetProductByCatalogue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="catalogueId" Type="int" Mode="In" />
+    <Parameter Name="keyword" Type="varchar" Mode="In" />
+    <Parameter Name="page" Type="int" Mode="In" />
+    <Parameter Name="pageSize" Type="int" Mode="In" />
+    <Parameter Name="total" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="roy_sp_GetProductByGroupId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GroupId" Type="int" Mode="In" />
+    <Parameter Name="KeySearch" Type="nvarchar" Mode="In" />
+    <Parameter Name="page" Type="int" Mode="In" />
+    <Parameter Name="pageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="roy_sp_GetProductBySubmissionId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="submissionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="roy_sp_GetProductForSubmission" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContractId" Type="int" Mode="In" />
+    <Parameter Name="GroupId" Type="int" Mode="In" />
+    <Parameter Name="KeySearch" Type="nvarchar" Mode="In" />
+    <Parameter Name="page" Type="int" Mode="In" />
+    <Parameter Name="pageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="roy_sp_GetProductListByContractId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="contractId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="roy_sp_GetSubmissionList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="keyword" Type="varchar" Mode="In" />
+    <Parameter Name="page" Type="int" Mode="In" />
+    <Parameter Name="pageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="roy_sp_SearchSubmissionInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="condition" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="RoyaltyModelStoreContainer">
+    <EntitySet Name="AvailableRight" EntityType="Self.AvailableRight" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bank" EntityType="Self.Bank" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contract" EntityType="Self.Contract" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractMapAvailableRight" EntityType="Self.ContractMapAvailableRight" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractMapBank" EntityType="Self.ContractMapBank" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractMapGroup" EntityType="Self.ContractMapGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractMapProduct" EntityType="Self.ContractMapProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractParty" EntityType="Self.ContractParty" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractSchedule" EntityType="Self.ContractSchedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Currency" EntityType="Self.Currency" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Group" EntityType="Self.Group" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LicenseeMap" EntityType="Self.LicenseeMap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ObjectType" EntityType="Self.ObjectType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentTerm" EntityType="Self.PaymentTerm" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductMapGroup" EntityType="Self.ProductMapGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Royalty" EntityType="Self.Royalty" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoyaltyType" EntityType="Self.RoyaltyType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SKU" EntityType="Self.SKU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Submission" EntityType="Self.Submission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubmissionAttachment" EntityType="Self.SubmissionAttachment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubmissionComment" EntityType="Self.SubmissionComment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubmissionMapAvailableRight" EntityType="Self.SubmissionMapAvailableRight" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubmissionMapProduct" EntityType="Self.SubmissionMapProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubmissionProductPrice" EntityType="Self.SubmissionProductPrice" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AvailableRight_ObjectType" Association="Self.FK_AvailableRight_ObjectType">
+      <End Role="ObjectType" EntitySet="ObjectType" />
+      <End Role="AvailableRight" EntitySet="AvailableRight" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contract_ContractParty" Association="Self.FK_Contract_ContractParty">
+      <End Role="ContractParty" EntitySet="ContractParty" />
+      <End Role="Contract" EntitySet="Contract" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contract_ContractParty1" Association="Self.FK_Contract_ContractParty1">
+      <End Role="ContractParty" EntitySet="ContractParty" />
+      <End Role="Contract" EntitySet="Contract" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractMapAvailableRight_AvailableRight" Association="Self.FK_ContractMapAvailableRight_AvailableRight">
+      <End Role="AvailableRight" EntitySet="AvailableRight" />
+      <End Role="ContractMapAvailableRight" EntitySet="ContractMapAvailableRight" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractMapAvailableRight_Contract" Association="Self.FK_ContractMapAvailableRight_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="ContractMapAvailableRight" EntitySet="ContractMapAvailableRight" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractMapBank_Bank" Association="Self.FK_ContractMapBank_Bank">
+      <End Role="Bank" EntitySet="Bank" />
+      <End Role="ContractMapBank" EntitySet="ContractMapBank" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractMapBank_Contract" Association="Self.FK_ContractMapBank_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="ContractMapBank" EntitySet="ContractMapBank" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractMapProductGroup_Contract" Association="Self.FK_ContractMapProductGroup_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="ContractMapGroup" EntitySet="ContractMapGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractMapProductGroup_ProductGroup1" Association="Self.FK_ContractMapProductGroup_ProductGroup1">
+      <End Role="Group" EntitySet="Group" />
+      <End Role="ContractMapGroup" EntitySet="ContractMapGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractProducts_ContractGroups" Association="Self.FK_ContractProducts_ContractGroups">
+      <End Role="ContractMapGroup" EntitySet="ContractMapGroup" />
+      <End Role="ContractMapProduct" EntitySet="ContractMapProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractSchedule_Contract" Association="Self.FK_ContractSchedule_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="ContractSchedule" EntitySet="ContractSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LicenseeMap_Contract" Association="Self.FK_LicenseeMap_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="LicenseeMap" EntitySet="LicenseeMap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LicenseeMap_ContractParty" Association="Self.FK_LicenseeMap_ContractParty">
+      <End Role="ContractParty" EntitySet="ContractParty" />
+      <End Role="LicenseeMap" EntitySet="LicenseeMap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PaymentTerm_Contract" Association="Self.FK_PaymentTerm_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="PaymentTerm" EntitySet="PaymentTerm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductMapGroup_Group" Association="Self.FK_ProductMapGroup_Group">
+      <End Role="Group" EntitySet="Group" />
+      <End Role="ProductMapGroup" EntitySet="ProductMapGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Royalty_Contract" Association="Self.FK_Royalty_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="Royalty" EntitySet="Royalty" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Royalty_RoyaltyType" Association="Self.FK_Royalty_RoyaltyType">
+      <End Role="RoyaltyType" EntitySet="RoyaltyType" />
+      <End Role="Royalty" EntitySet="Royalty" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SKU_SubmissionMapProduct" Association="Self.FK_SKU_SubmissionMapProduct">
+      <End Role="SubmissionMapProduct" EntitySet="SubmissionMapProduct" />
+      <End Role="SKU" EntitySet="SKU" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Submission_Contract" Association="Self.FK_Submission_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="Submission" EntitySet="Submission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubmissionComment_Submission" Association="Self.FK_SubmissionComment_Submission">
+      <End Role="Submission" EntitySet="Submission" />
+      <End Role="SubmissionComment" EntitySet="SubmissionComment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubmissionMapProduct_ContractMapProduct" Association="Self.FK_SubmissionMapProduct_ContractMapProduct">
+      <End Role="ContractMapProduct" EntitySet="ContractMapProduct" />
+      <End Role="SubmissionMapProduct" EntitySet="SubmissionMapProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubmissionMapProduct_Submission" Association="Self.FK_SubmissionMapProduct_Submission">
+      <End Role="Submission" EntitySet="Submission" />
+      <End Role="SubmissionMapProduct" EntitySet="SubmissionMapProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubmissionProductPrics_RoyaltyType" Association="Self.FK_SubmissionProductPrics_RoyaltyType">
+      <End Role="RoyaltyType" EntitySet="RoyaltyType" />
+      <End Role="SubmissionProductPrice" EntitySet="SubmissionProductPrice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubmissionProductPrics_SubmissionMapProduct" Association="Self.FK_SubmissionProductPrics_SubmissionMapProduct">
+      <End Role="SubmissionMapProduct" EntitySet="SubmissionMapProduct" />
+      <End Role="SubmissionProductPrice" EntitySet="SubmissionProductPrice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SumissionMapAvailableRight_ContractMapAvailableRight" Association="Self.FK_SumissionMapAvailableRight_ContractMapAvailableRight">
+      <End Role="ContractMapAvailableRight" EntitySet="ContractMapAvailableRight" />
+      <End Role="SubmissionMapAvailableRight" EntitySet="SubmissionMapAvailableRight" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SumissionMapAvailableRight_Submission" Association="Self.FK_SumissionMapAvailableRight_Submission">
+      <End Role="Submission" EntitySet="Submission" />
+      <End Role="SubmissionMapAvailableRight" EntitySet="SubmissionMapAvailableRight" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

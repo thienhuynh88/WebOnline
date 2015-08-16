@@ -1,0 +1,151 @@
+﻿@using System.Web.Optimization
+@using Royalty.Business.Authentication
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+          "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - TPF System</title>
+
+    @Html.Partial("Partials/MySetting")
+
+    @Styles.Render("~/Content/css")
+    @*@Scripts.Render("~/bundles/modernizr")*@
+
+
+    <!-- Kendo-UI -->
+    <link href="~/Content/kendoui/kendo.common.min.css" rel="stylesheet" />
+    <link href="~/Content/kendoui/kendo.rtl.min.css" rel="stylesheet" />
+    <link href="~/Content/kendoui/kendo.default.min.css" rel="stylesheet" />
+    <!-- Chart, Barcode, Treemap -->
+    <link href="~/Content/kendoui/kendo.dataviz.min.css" rel="stylesheet" />
+    <link href="~/Content/kendoui/kendo.dataviz.default.min.css" rel="stylesheet" />
+    <link href="~/Scripts/facebox/facebox.css" rel="stylesheet" />
+
+    @RenderSection("head", required: false)
+
+    @Scripts.Render("~/bundles/jquery")
+
+    <script src="~/Scripts/facebox/facebox.js"></script>
+
+    <script src="~/Scripts/kendoui/kendo.web.min.js"></script>
+</head>
+<body>
+    <header>
+        <div style="font-size: 11px !important; padding-top: 0 !important; margin-bottom: 5px;" class="content-wrapper main-content clear-fix">
+            <center>
+                If you have any feeback or new idea about inventory, please feel free to contact with us. My email is <a href="mailto:minhpham@tpfvietnam.vn">inventory@tpfvietnam.vn</a>
+            </center>
+
+            <div class="container">
+                <div class="header-title">
+                    <div class="left">
+                        <h1 class="page-title PageTitle">
+                            <a href="@Url.Content("~")">
+                                ROYALTY
+                            </a>
+                        </h1>
+                    </div>
+
+                    <div style="float: right !important;  width: 20%;  margin-top: 15px;   height: 20px;">
+                        <input class="m-textbox-50per float-right-important margin0" style="width:200px;height:25px" type="text" name="name" id="txtSearch" value="" placeholder="Product name or code" />
+                    </div>
+
+                    <div style="float: right !important;  width: 20%;  margin-top: 15px;   height: 20px;"></div>
+
+                    <div style="float: right; position: relative; top: 10px; width: 64%; font-size: 13px">
+                        <div style="min-width: 15%;float: right; margin-bottom: 10px">
+
+                            @if (@AdminManager.UserLoginInfo == null)
+                            {
+                                @*<div>
+                                    <a class="Logout" href="@Url.Action("Login", "Home", new {area= ""})">Log in</a>
+                                </div>*@
+                            }
+                            else
+                            {
+                                <div>
+                                    Hello <a href="#">@AdminManager.UserLoginInfo.UserName</a>
+                                    <span>&nbsp;|&nbsp;</span>
+                                    <a href="@Url.Content("~/logoff")"> Log out </a>
+                                </div>
+                            }
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <div class="float-left" style="width: 100%;">
+
+        <div class="menucont" style="">
+            <div id="div_menu" style="" class="content-wrapper main-content clear-fix">
+                @Html.Partial("Partials/Menu")
+            </div>
+        </div>
+
+
+    </div>
+    @*<div class="float-right" style="margin-right: 20px; margin-top: 1px; margin-bottom: 1px">
+            <a href="http://orderconsole.tpf.com.au/">Back to TPF Workspace</a>
+        </div>*@
+
+    <div id="body" style="background-color: white; min-height: 740px; padding-left: 20px; padding-right: 20px">
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+    </div>
+    <div class="clear-fix"></div>
+
+
+    <footer class="foter" style="bottom: 2px">
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>Inventory System</p>
+            </div>
+            <div class="site-title" style="width: 18%; float: right; margin-top:-5px;">
+                <a href="@Url.Action("Index", "Home")">
+                    <img src="@Url.Content("~/Images/layout/tpf_logo.gif")" title="TPF Logo" width="200" />
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        //$(document).ready(function () {
+        //http://docs.telerik.com/kendo-ui/getting-started/framework/globalization/overview
+        //set current to the "en-AU" culture script
+        kendo.culture(mySettings.Culture);
+        //});
+    </script>
+
+    @Scripts.Render("~/bundles/common")
+
+    <script>
+
+        $(document).bind("ready", function () {
+
+            @*$('#txtSearch').keypress(function (e) {
+                if (e.keyCode == 13 && $(this).val() != '') {
+                    window.location = '@Url.Action("Search", "Home")?keyword=' + $(this).val();
+                }
+            });*@
+        });
+
+        $(document).ready(function () {
+            $("#KendoMenu").kendoMenu();
+            $("#KendoMenu").show();
+            return;
+        });
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+

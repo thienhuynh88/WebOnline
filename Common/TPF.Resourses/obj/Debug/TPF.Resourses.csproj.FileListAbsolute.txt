@@ -1,0 +1,6 @@
+E:\Change Code New\Common\TPF.Resourses\bin\Debug\TPF.Resourses.dll
+E:\Change Code New\Common\TPF.Resourses\bin\Debug\TPF.Resourses.pdb
+E:\Change Code New\Common\TPF.Resourses\obj\Debug\TPF.Resourses.EnumResources.resources
+E:\Change Code New\Common\TPF.Resourses\obj\Debug\TPF.Resourses.csproj.GenerateResource.Cache
+E:\Change Code New\Common\TPF.Resourses\obj\Debug\TPF.Resourses.dll
+E:\Change Code New\Common\TPF.Resourses\obj\Debug\TPF.Resourses.pdb

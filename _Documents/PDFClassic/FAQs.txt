@@ -1,0 +1,13 @@
+Solutions
+
+1. If you are using Windows Server 2008, Windows 7, windows has created a quick fix. Right click the chm file, and you will get the "yourfile.chm Properties" dialog box, at the bottom, a button called "Unblock" appears. Click Unblock and press OK, and try to open the chm file again, it works correctly. This option is not available for earlier versions of windows before WinXP(SP3).
+
+2. Solve the problem by moving your chm file OFF the network drive. You may be unaware you are using a network drive, double check now: Right click your .chm file, click properties and look at the "location" field. If it starts with two backslashes like this: \\epicserver\blah\, then you are using a networked drive. So to fix it, Copy the chm file, and paste it into a local drive, like C:\ or E:. Then try to reopen the chm file, windows does not freak out.
+
+3. Last resort, if you can't copy/move the file off the networked drive. If you must open it where it sits, and you are using a lesser version of windows like XP, Vista, ME or other, you will have to manually tell Windows not to freak out over this .chm file. HHReg (HTML Help Registration Utility) Utility Automates this Task. Basically you download the HHReg utility, load your .chm file, press OK, and it will create the necessary registry keys to tell Windows not to block it. For more info: http://www.winhelponline.com/blog/fix-cannot-view-chm-files-network-xp-2003-vista/
+
+
+
+
+
+http://stackoverflow.com/questions/11438634/opening-a-chm-file-produces-navigation-to-the-webpage-was-canceled

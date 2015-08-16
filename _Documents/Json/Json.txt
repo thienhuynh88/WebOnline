@@ -1,0 +1,7 @@
+http://stackoverflow.com/questions/3904269/convert-object-to-json-string
+
+-- convert string to object
+JSON.parse()
+
+-- convert object to string
+JSON.stringify()

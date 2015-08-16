@@ -1,0 +1,1 @@
+http://demos.telerik.com/kendo-ui/grid/filter-menu-customization

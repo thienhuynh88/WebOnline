@@ -1,0 +1,439 @@
+﻿
+@{
+    ViewBag.Title = "Contract";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .ContractInformationLeft {
+        border: 1px solid #c5c5c5;
+        padding: 10px;
+        margin-top: 10px;
+        width: 38%;
+        float:left;
+        border-radius: 5px;
+        min-height: 818px;
+    }
+      .ContractInformationRight {
+          width: 62%;
+          float: left;
+    }
+      .DetailDiv {
+            border: 1px solid #c5c5c5;
+            padding: 5px;
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 48%;
+            float:left;
+            border-radius: 5px
+      }
+        .DetailDiv100 {
+            border: 1px solid #c5c5c5;
+            padding: 5px;
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 97%;
+            float:left;
+            border-radius: 5px
+      }
+      .TextAreaNote {
+          width: 100%;
+          height: 150px
+      }
+      .btnAdd {
+          float: right;
+      }
+      .headerFont {
+        color:#428bca;
+        font-family:verdana;
+        font-size:14px;
+      }
+      .txtInput {
+          width: 90%
+      }
+      .DivDetailChecked {
+          width: 100%;
+          height: 155px;
+          border: 1px solid #c5c5c5;
+          padding: 5px;
+          margin-top: 5px;
+          border-radius: 5px;
+          scrollbar: auto;
+      }
+      a {
+          color: #333;
+      }
+     
+</style>
+
+<div id="ContractDiv">
+    <div id="ContractInformationLeft" class="ContractInformationLeft">
+        <h4><span style="margin-left: 20px;color: #428bca;font-weight: bold">Contract Information</span></h4>
+        <table style="width: 100%">
+            <tr>
+                <td >
+                    <span>Licensor :</span>
+                </td>
+                <td >
+                    <input id="txtLicensor" class="txtInput"/>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <span>Contract No :</span>
+                </td>
+                <td>
+                    <input id="txtContractNo" type="text" class="k-textbox txtInput" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Property :</span>
+                </td>
+                <td>
+                    <input id="txtProperty" type="text" class="k-textbox txtInput" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Entity :</span>
+                </td>
+                <td>
+                    <input id="txtEntity" class="txtInput" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Licensed Property:</span>
+                </td>
+                <td>
+                    <input id="txtPropertyGroup" class="txtInput" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Term Start :</span>
+                </td>
+                <td>
+                    <input id="txtTermStart" class="txtInput" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Term End :</span>
+                </td>
+                <td>
+                    <input id="txtTermEnd" class="txtInput" />
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <span>Sell off Period :</span>
+                </td>
+                <td>
+                    <input id="txtSellOffPeriod" type="text" class="k-textbox txtInput" />
+                </td>
+            </tr>
+          
+            <tr>
+                <td>
+                    <span>Minimum Guarantee :</span>
+                </td>
+                <td>
+                    <input id="txtMinimumGuarantee" type="text" class="k-textbox txtInput" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Report :</span>
+                </td>
+                <td>
+                    <input id="txtReport" class="txtInput" />
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <span>Currency :</span>
+                </td>
+                <td>
+                    <input id="txtCurrency" type="text" class="k-textbox txtInput" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Email :</span>
+                </td>
+                <td>
+                    <input id="txtEmail" type="text" class="k-textbox txtInput" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Acc Manager :</span>
+                </td>
+                <td>
+                    <input id="txtAccManager" class="txtInput" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Executed By :</span>
+                </td>
+                <td>
+                    <input id="txtExecutedBy" class="txtInput" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Execute Date :</span>
+                </td>
+                <td>
+                    <input id="txtExecuteDate" class="txtInput" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Product Range :</span>
+                </td>
+                <td>
+                    <textarea id="txtProductRange" style="width: 90%;height: 150px" class="k-textbox"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Status :</span>
+                </td>
+                <td>
+                    <input id="txtStatus" class="txtInput" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <span style="margin-left: 45%">
+                        <input style="margin-top: 20px" id="btnCreate" type="button" class="m-button" value="Create" />
+                        <input style="margin-top: 20px" id="btnReview" type="button" class="m-button" value="Review" />
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="ContractInformationRight" class="ContractInformationRight">
+
+        @*<div id="LicensedProperty" class="DetailDiv">
+            <div id="windowLicensedProperty">
+                
+            </div>
+            <label class="k-label headerFont" id="lbnamelicensedproperty">Licensed Property</label>
+            <input id="AddLicensedProperty" type="button" class="m-button btnAdd" value="Add" onclick="ShowLicensedProperty()" />
+            @*<textarea id="txtLicensedProperty" class="k-textbox TextAreaNote"></textarea>
+            <div class="DivDetailChecked">
+                
+            </div>
+ 
+        </div>*@
+       
+        <div id="Territory" class="DetailDiv">
+            <div id="windowTerritory"></div>
+            <label class="k-label headerFont" id="lbnameTerritory">Territory</label>
+            <input id="AddTerritory" type="button" class="m-button btnAdd" value="Add" onclick="ShowAttachment()" />
+            @*<textarea id="txtTerritory" class="k-textbox TextAreaNote"></textarea>*@
+            <div class="DivDetailChecked">
+                <div style="width: 33%;float:left; margin-bottom: 10px">
+                    <a onclick=''><span class="k-icon k-i-close"></span></a>
+                    <a style="" id="Checked" href='#'>Test1</a>
+                </div>
+                <div style="width: 33%;float:left; margin-bottom: 10px">
+                    <a onclick=''><span class="k-icon k-i-close"></span></a>
+                    <a style="" id="Checked" href='#'>Test2</a>
+                </div>
+                <div style="width: 33%;float:left; margin-bottom: 10px">
+                    <a onclick=''><span class="k-icon k-i-close"></span></a>
+                    <a style="" id="Checked" href='#'>Test3</a>
+                </div>
+                <div style="width: 33%;float:left; margin-bottom: 10px">
+                    <a onclick=''><span class="k-icon k-i-close"></span></a>
+                    <a style="" id="Checked" href='#'>Test1</a>
+                </div>
+                <div style="width: 33%;float:left; margin-bottom: 10px">
+                    <a onclick=''><span class="k-icon k-i-close"></span></a>
+                    <a style="" id="Checked" href='#'>Test2</a>
+                </div>
+                <div style="width: 33%;float:left; margin-bottom: 10px">
+                    <a onclick=''><span class="k-icon k-i-close"></span></a>
+                    <a style="" id="Checked" href='#'>Test3</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="Language" class="DetailDiv">
+            <div id="windowLanguage"></div>
+            <label class="k-label headerFont" id="lbnameLanguage">Language</label>
+            <input id="AddLanguage" type="button" class="m-button btnAdd" value="Add" onclick="ShowAttachment()" />
+            @*<textarea id="txtLanguage" class="k-textbox TextAreaNote"></textarea>*@
+            <div class="DivDetailChecked">
+                <div style="width: 33%;float:left; margin-bottom: 10px">
+                    <a onclick=''><span class="k-icon k-i-close"></span></a>
+                    <a style="" id="Checked" href='#'>Test1</a>
+                </div>
+                <div style="width: 33%;float:left; margin-bottom: 10px">
+                    <a onclick=''><span class="k-icon k-i-close"></span></a>
+                    <a style="" id="Checked" href='#'>Test2</a>
+                </div>
+                <div style="width: 33%;float:left; margin-bottom: 10px">
+                    <a onclick=''><span class="k-icon k-i-close"></span></a>
+                    <a style="" id="Checked" href='#'>Test3</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="Market" class="DetailDiv">
+            <div id="windowMarket"></div>
+            <label class="k-label headerFont" id="lbnameMarket">Market</label>
+            <input id="AddMarket" type="button" class="m-button btnAdd" value="Add" onclick="ShowAttachment()" />
+            @*<textarea id="txtMarket" class="k-textbox TextAreaNote"></textarea>*@
+            <div class="DivDetailChecked">
+                <div style="width: 33%;float:left; margin-bottom: 10px">
+                    <a onclick=''><span class="k-icon k-i-close"></span></a>
+                    <a style="" id="Checked" href='#'>Test1</a>
+                </div>
+                <div style="width: 33%;float:left; margin-bottom: 10px">
+                    <a onclick=''><span class="k-icon k-i-close"></span></a>
+                    <a style="" id="Checked" href='#'>Test2</a>
+                </div>
+                <div style="width: 33%;float:left; margin-bottom: 10px">
+                    <a onclick=''><span class="k-icon k-i-close"></span></a>
+                    <a style="" id="Checked" href='#'>Test3</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="SalesChanel" class="DetailDiv">
+            <div id="windowSalesChanel"></div>
+            <label class="k-label headerFont" id="lbnameSalesChanel">Sales Chanel</label>
+            <input id="AddSalesChanel" type="button" class="m-button btnAdd" value="Add" onclick="ShowAttachment()" />
+            @*<textarea id="txtSalesChanel" class="k-textbox TextAreaNote"></textarea>*@
+            <div class="DivDetailChecked">
+                <div style="width: 33%;float:left; margin-bottom: 10px">
+                    <a onclick=''><span class="k-icon k-i-close"></span></a>
+                    <a style="" id="Checked" href='#'>Test1</a>
+                </div>
+                <div style="width: 33%;float:left; margin-bottom: 10px">
+                    <a onclick=''><span class="k-icon k-i-close"></span></a>
+                    <a style="" id="Checked" href='#'>Test2</a>
+                </div>
+                <div style="width: 33%;float:left; margin-bottom: 10px">
+                    <a onclick=''><span class="k-icon k-i-close"></span></a>
+                    <a style="" id="Checked" href='#'>Test3</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="PaymentTerm" class="DetailDiv">
+            <div id="windowPaymentTerm"></div>
+            <label class="k-label headerFont" id="lbnamePaymentTerm">Payment Term</label>
+            <input id="AddPaymentTerm" type="button" class="m-button btnAdd" value="Add" onclick="ShowAttachment()" />
+            @*<textarea id="txtPaymentTerm" class="k-textbox TextAreaNote"></textarea>*@
+            <div class="DivDetailChecked">
+
+            </div>
+        </div>
+
+        <div id="Royalty" class="DetailDiv">
+            <div id="windowRoyalty"></div>
+            <label class="k-label headerFont" id="lbnameRoyalty">Royalty</label>
+            <input id="AddRoyalty" type="button" class="m-button btnAdd" value="Add" onclick="ShowAttachment()" />
+            @*<textarea id="txtRoyalty" class="k-textbox TextAreaNote"></textarea>*@
+            <div class="DivDetailChecked">
+
+            </div>
+        </div>
+        
+        
+        <div id="Attachment" class="DetailDiv100">
+            <div id="windowAttachment"></div>
+            <label class="k-label headerFont" id="lbnameAttachment">Attachment</label>
+            <input id="AddAttachment" type="button" class="m-button btnAdd" value="Add" onclick="ShowAttachment()" />
+            @*<textarea id="txtAttachment" class="k-textbox TextAreaNote"></textarea>*@
+            <div class="DivDetailChecked">
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<script>
+    $(document).ready(function () {
+        $('#txtLicensor').kendoComboBox({
+            //dataTextField: "CatalogueName",
+            //dataValueField: "CatalogueId",
+            //dataSource: result,
+            filter: "contains",
+            suggest: true,
+            placeholder: "Search Licensor ...",
+            height: 400
+        });
+        $('#txtEntity').kendoDropDownList();//txtPropertyGroup
+
+        $('#txtPropertyGroup').kendoComboBox({
+            //dataTextField: "CatalogueName",
+            //dataValueField: "CatalogueId",
+            //dataSource: result,
+            filter: "contains",
+            suggest: true,
+            placeholder: "Search Property Group ...",
+            height: 400
+        });
+
+        $('#txtTermStart').kendoDatePicker({ value: new Date(), format: 'dd/MM/yyyy' });
+        $('#txtTermEnd').kendoDatePicker({ value: new Date(), format: 'dd/MM/yyyy' });
+
+        $('#txtReport').kendoDropDownList();
+        $('#txtAccManager').kendoDropDownList();
+        $('#txtExecutedBy').kendoDropDownList();
+
+        $('#txtExecuteDate').kendoDatePicker({ value: new Date(), format: 'dd/MM/yyyy' });
+        $('#txtStatus').kendoDropDownList();
+
+      
+
+    });
+
+    function ShowLicensedProperty() {
+        $("#windowLicensedProperty").html('');
+        $("#windowLicensedProperty").kendoWindow({
+            width: "800px",
+            height: "800px",
+            title: "Show Licensed Property",
+        });
+        var html0 = '<div><label class="k-label" onclick=""><input type="checkbox" id="chkSearchAll" style="margin-left: 20px;margin-bottom: 5px" />Test 11111111111111</label></div>';
+        var html1 = '<div><label class="k-label" onclick=""><input type="checkbox" id="chkSearchAll" style="margin-left: 20px;margin-bottom: 5px" />Test 11111111111111</label></div>';
+        var html2 = '<div><label class="k-label" onclick=""><input type="checkbox" id="chkSearchAll" style="margin-left: 20px;margin-bottom: 5px" />Test 11111111111111</label></div>';
+        var html3 = '<div><input style="float: left;margin-left: 45%;" id="ok" type="button" class="m-button btnAdd" value="OK" /></div>';
+        $("#windowLicensedProperty").html(html0 + html1 + html2 + html3);
+
+        $("#windowLicensedProperty").data("kendoWindow").open().center();
+    };
+    function ShowAttachment() {
+        $("#windowAttachment").html('');
+        $("#windowAttachment").kendoWindow({
+            width: "800px",
+            height: "800px",
+            title: "Show Detail",
+        });
+
+        var html0 = '<div><label class="k-label" onclick=""><input type="checkbox" id="chkSearchAll" style="margin-left: 20px;margin-bottom: 5px" />Test 11111111111111</label></div>';
+        var html1 = '<div><label class="k-label" onclick=""><input type="checkbox" id="chkSearchAll" style="margin-left: 20px;margin-bottom: 5px" />Test 11111111111111</label></div>';
+        var html2 = '<div><label class="k-label" onclick=""><input type="checkbox" id="chkSearchAll" style="margin-left: 20px;margin-bottom: 5px" />Test 11111111111111</label></div>';
+        var html3 = '<div><input style="float: left;margin-left: 45%;" id="ok" type="button" class="m-button btnAdd" value="OK" /></div>';
+        $("#windowAttachment").html(html0 + html1 + html2 + html3);
+
+        $("#windowAttachment").data("kendoWindow").open().center();
+    };
+
+</script>
+

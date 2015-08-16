@@ -1,0 +1,1474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\Publish\Royalty</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>10/22/2014 09:15:49</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>10/22/2014 09:15:42</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>10/22/2014 09:15:52</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CSharp.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>10/22/2014 09:15:53</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Mvc.FixedDisplayModes.dll">
+      <publishTime>10/22/2014 09:15:43</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>10/22/2014 09:15:41</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>10/22/2014 09:15:44</publishTime>
+    </File>
+    <File Include="bin/Royalty.Business.dll">
+      <publishTime>01/26/2015 16:03:46</publishTime>
+    </File>
+    <File Include="bin/Royalty.Business.pdb">
+      <publishTime>01/26/2015 16:03:46</publishTime>
+    </File>
+    <File Include="bin/Royalty.Data.dll">
+      <publishTime>01/26/2015 16:03:45</publishTime>
+    </File>
+    <File Include="bin/Royalty.Data.pdb">
+      <publishTime>01/26/2015 16:03:45</publishTime>
+    </File>
+    <File Include="bin/Royalty.Web.dll">
+      <publishTime>01/26/2015 16:03:46</publishTime>
+    </File>
+    <File Include="bin/Royalty.Web.pdb">
+      <publishTime>01/26/2015 16:03:46</publishTime>
+    </File>
+    <File Include="bin/System.ComponentModel.DataAnnotations.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/System.Configuration.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/System.Data.DataSetExtensions.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/System.Data.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/System.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/System.Drawing.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/System.EnterpriseServices.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>10/22/2014 09:15:43</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.WebRequest.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Abstractions.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.ApplicationServices.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.DynamicData.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Entity.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Extensions.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>10/22/2014 09:15:49</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>05/07/2013 13:09:16</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>10/22/2014 09:15:41</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>10/22/2014 09:15:44</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>10/22/2014 09:15:44</publishTime>
+    </File>
+    <File Include="bin/System.Web.Routing.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Services.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>10/22/2014 09:15:49</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>10/22/2014 09:15:49</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>10/22/2014 09:15:49</publishTime>
+    </File>
+    <File Include="bin/System.Xml.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/System.Xml.Linq.dll">
+      <publishTime>08/13/2013 00:19:06</publishTime>
+    </File>
+    <File Include="bin/TPF.Common.dll">
+      <publishTime>01/26/2015 16:03:45</publishTime>
+    </File>
+    <File Include="bin/TPF.Common.pdb">
+      <publishTime>01/26/2015 16:03:45</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>10/22/2014 09:15:51</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>12/17/2014 13:00:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>12/17/2014 13:00:22</publishTime>
+    </File>
+    <File Include="Content/Contract.css">
+      <publishTime>12/15/2014 08:12:05</publishTime>
+    </File>
+    <File Include="Content/FrameCss.css">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/images/ajax-loader.gif">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/images/bg-footer.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/images/delele.ico">
+      <publishTime>01/08/2015 11:36:01</publishTime>
+    </File>
+    <File Include="Content/images/form-login.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/images/kit-item-icon.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/images/NoImageAvailable.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/images/normal-item-icon.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/images/sprite.png">
+      <publishTime>01/23/2015 13:39:18</publishTime>
+    </File>
+    <File Include="Content/images/tpflogo.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/images/tpf_logo.gif">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/Black/editor.png">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Black/imagebrowser.png">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Black/indeterminate.gif">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Black/loading-image.gif">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Black/loading.gif">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Black/loading_2x.gif">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Black/markers.png">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Black/markers_2x.png">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Black/slider-h.gif">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Black/slider-v.gif">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Black/sprite.png">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Black/sprite_2x.png">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/BlueOpal/editor.png">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/BlueOpal/imagebrowser.png">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/BlueOpal/indeterminate.gif">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/BlueOpal/loading-image.gif">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/BlueOpal/loading.gif">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/BlueOpal/loading_2x.gif">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/BlueOpal/markers.png">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/BlueOpal/markers_2x.png">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/BlueOpal/slider-h.gif">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/BlueOpal/slider-v.gif">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/BlueOpal/sprite.png">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/BlueOpal/sprite_2x.png">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/Bootstrap/editor.png">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Bootstrap/imagebrowser.png">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Bootstrap/indeterminate.gif">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Bootstrap/loading-image.gif">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Bootstrap/loading.gif">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Bootstrap/loading_2x.gif">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Bootstrap/markers.png">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Bootstrap/markers_2x.png">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Bootstrap/slider-h.gif">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Bootstrap/slider-v.gif">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Bootstrap/sprite.png">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Bootstrap/sprite_2x.png">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/Default/editor.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/Default/imagebrowser.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/Default/indeterminate.gif">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/Default/loading-image.gif">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/Default/loading.gif">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/Default/loading_2x.gif">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/Default/markers.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/Default/markers_2x.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/Default/slider-h.gif">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/Default/slider-v.gif">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/Default/sprite.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/Default/sprite_2x.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/Flat/editor.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Flat/imagebrowser.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Flat/indeterminate.gif">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Flat/loading-image.gif">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Flat/loading.gif">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Flat/loading_2x.gif">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Flat/markers.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Flat/markers_2x.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Flat/slider-h.gif">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Flat/slider-v.gif">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Flat/sprite.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Flat/sprite_2x.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/HighContrast/editor.png">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/HighContrast/imagebrowser.png">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/HighContrast/indeterminate.gif">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/HighContrast/loading-image.gif">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/HighContrast/loading.gif">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/HighContrast/loading_2x.gif">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/HighContrast/markers.png">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/HighContrast/markers_2x.png">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/HighContrast/slider-h.gif">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/HighContrast/slider-v.gif">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/HighContrast/sprite.png">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/HighContrast/sprite_2x.png">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/images/back.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/images/kendoui.ttf">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/images/kendoui.woff">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/images/wp8_icons.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/images/wp8_inverseicons.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.black.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.black.mobile.min.css">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.blueopal.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.blueopal.mobile.min.css">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.bootstrap.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.bootstrap.mobile.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.common-bootstrap.core.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.common-bootstrap.min.css">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.common.core.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.common.min.css">
+      <publishTime>12/15/2014 08:38:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.dataviz.black.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.dataviz.blueopal.min.css">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.dataviz.bootstrap.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.dataviz.default.min.css">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.dataviz.flat.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.dataviz.highcontrast.min.css">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.dataviz.metro.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.dataviz.metroblack.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.dataviz.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.dataviz.mobile.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.dataviz.moonlight.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.dataviz.silver.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.dataviz.uniform.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.default.min.css">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.default.mobile.min.css">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.flat.min.css">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.flat.mobile.min.css">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.highcontrast.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.highcontrast.mobile.min.css">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.metro.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.metro.mobile.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.metroblack.min.css">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.metroblack.mobile.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.mobile.all.min.css">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.mobile.android.dark.min.css">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.mobile.android.light.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.mobile.blackberry.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.mobile.common.min.css">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.mobile.flat.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.mobile.ios.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.mobile.meego.min.css">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.mobile.wp8.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.moonlight.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.moonlight.mobile.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.rtl.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.silver.min.css">
+      <publishTime>12/15/2014 07:40:25</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.silver.mobile.min.css">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.uniform.min.css">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/kendo.uniform.mobile.min.css">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/Metro/editor.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Metro/imagebrowser.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Metro/indeterminate.gif">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Metro/loading-image.gif">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Metro/loading.gif">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Metro/loading_2x.gif">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Metro/markers.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Metro/markers_2x.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Metro/slider-h.gif">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Metro/slider-v.gif">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Metro/sprite.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Metro/sprite_2x.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/MetroBlack/editor.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/MetroBlack/imagebrowser.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/MetroBlack/indeterminate.gif">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/MetroBlack/loading-image.gif">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/MetroBlack/loading.gif">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/MetroBlack/loading_2x.gif">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/MetroBlack/markers.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/MetroBlack/markers_2x.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/MetroBlack/slider-h.gif">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/MetroBlack/slider-v.gif">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/MetroBlack/sprite.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/MetroBlack/sprite_2x.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/Moonlight/editor.png">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/Moonlight/imagebrowser.png">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/Moonlight/indeterminate.gif">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/Moonlight/loading-image.gif">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/Moonlight/loading.gif">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/Moonlight/loading_2x.gif">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/Moonlight/markers.png">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/Moonlight/markers_2x.png">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/Moonlight/slider-h.gif">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/Moonlight/slider-v.gif">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/Moonlight/sprite.png">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/Moonlight/sprite_2x.png">
+      <publishTime>12/15/2014 07:40:23</publishTime>
+    </File>
+    <File Include="Content/kendoui/Silver/editor.png">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/Silver/imagebrowser.png">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/Silver/indeterminate.gif">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/Silver/loading-image.gif">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/Silver/loading.gif">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/Silver/loading_2x.gif">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/Silver/markers.png">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/Silver/markers_2x.png">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/Silver/slider-h.gif">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/Silver/slider-v.gif">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/Silver/sprite.png">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/Silver/sprite_2x.png">
+      <publishTime>12/15/2014 07:40:24</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/brushed-metal.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/dots1.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/dots10.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/dots11.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/dots12.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/dots13.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/dots2.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/dots3.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/dots4.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/dots5.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/dots6.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/dots7.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/dots8.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/dots9.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/glass-lighter.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/glass.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/highlight.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/hsv-gradient.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/hue.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/leather1.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/leather2.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/noise.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/stripe1.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/stripe2.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/stripe3.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/stripe4.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/stripe5.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/stripe6.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/transparency.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/textures/transtexture.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Content/kendoui/Uniform/editor.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Uniform/imagebrowser.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Uniform/indeterminate.gif">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Uniform/loading-image.gif">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Uniform/loading.gif">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Uniform/loading_2x.gif">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Uniform/markers.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Uniform/markers_2x.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Uniform/slider-h.gif">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Uniform/slider-v.gif">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Uniform/sprite.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/kendoui/Uniform/sprite_2x.png">
+      <publishTime>12/15/2014 07:40:22</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>01/23/2015 07:41:59</publishTime>
+    </File>
+    <File Include="Content/TabCss.css">
+      <publishTime>01/05/2015 09:51:16</publishTime>
+    </File>
+    <File Include="Content/tp-style.css">
+      <publishTime>01/26/2015 14:54:43</publishTime>
+    </File>
+    <File Include="Default1.htm">
+      <publishTime>01/23/2015 13:39:18</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>12/15/2014 07:40:20</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>12/15/2014 07:40:20</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>12/15/2014 07:40:20</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>12/15/2014 07:40:20</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/accent.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/Avatars/NoImageAvailable.png">
+      <publishTime>01/05/2015 07:12:59</publishTime>
+    </File>
+    <File Include="Images/bg-waiting.png">
+      <publishTime>01/05/2015 07:12:59</publishTime>
+    </File>
+    <File Include="Images/bullet.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/close-button.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/heroAccent.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/active.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/background-footer.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/button-icon.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/deletebutton.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/Edit-icon.gif">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/facebox.jpg">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/facebox.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/facebox_03.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/form-login.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/hovermidle.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/icon-jpeg.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/jcIcon2.gif">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/left-menu.jpg">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/left-tab.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/line-menu.jpg">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/line-tab-hover.jpg">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/line-tab.jpg">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/line-tab.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/lock.gif">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/menu.bmp">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/PDF-icon.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/right-menu.jpg">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/right-tab.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/sap-menu-detail_03.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/saperator.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/saperatorblack.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/tpflogo.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/tpf_logo.gif">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/layout/unlock.gif">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/orderedList0.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/orderedList1.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/orderedList2.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/orderedList3.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/orderedList4.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/orderedList5.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/orderedList6.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/orderedList7.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/orderedList8.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/orderedList9.png">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Images/quote/icon-pending.png">
+      <publishTime>01/23/2015 07:41:59</publishTime>
+    </File>
+    <File Include="Images/quote/icon-repending.png">
+      <publishTime>01/23/2015 07:41:59</publishTime>
+    </File>
+    <File Include="Images/Submission/images/Cricket-Drink-Bottle_REF.jpg">
+      <publishTime>12/16/2014 12:47:18</publishTime>
+    </File>
+    <File Include="Images/Submission/images/cwal.jpg">
+      <publishTime>12/16/2014 12:47:18</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Resources/AvatarContractParty/noimageavailable.png">
+      <publishTime>01/07/2015 16:14:50</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>12/15/2014 07:40:20</publishTime>
+    </File>
+    <File Include="Scripts/facebox/closelabel.png">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/facebox/facebox.css">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/facebox/facebox.js">
+      <publishTime>01/26/2015 10:13:34</publishTime>
+    </File>
+    <File Include="Scripts/facebox/jquery.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/facebox/loading.gif">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.8.2.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.24.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.24.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery.blockUI-2.65.0.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/cultures/kendo.culture.en-029.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/cultures/kendo.culture.en-AU.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/cultures/kendo.culture.en-BZ.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/cultures/kendo.culture.en-CA.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/cultures/kendo.culture.en-GB.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/cultures/kendo.culture.en-IE.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/cultures/kendo.culture.en-IN.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/cultures/kendo.culture.en-JM.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/cultures/kendo.culture.en-MY.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/cultures/kendo.culture.en-NZ.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/cultures/kendo.culture.en-PH.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/cultures/kendo.culture.en-SG.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/cultures/kendo.culture.en-TT.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/cultures/kendo.culture.en-US.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/cultures/kendo.culture.en-ZA.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/cultures/kendo.culture.en-ZW.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/cultures/kendo.culture.en.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/jquery.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/jquery.min.map">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/kendo.all.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/kendo.all.min.js.map">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/kendo.web.min.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/kendoui/kendo.web.min.js.map">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/knockout-2.2.0.debug.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/knockout-2.2.0.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/modules/common/common.js">
+      <publishTime>01/23/2015 09:13:41</publishTime>
+    </File>
+    <File Include="Scripts/modules/common/jszip.min.js">
+      <publishTime>12/15/2014 07:40:20</publishTime>
+    </File>
+    <File Include="Scripts/modules/common/valueTypes.js">
+      <publishTime>01/12/2015 10:19:49</publishTime>
+    </File>
+    <File Include="Scripts/modules/common/xlsx.js">
+      <publishTime>12/15/2014 07:40:20</publishTime>
+    </File>
+    <File Include="Scripts/modules/controllers/ContractController.js">
+      <publishTime>01/22/2015 15:57:02</publishTime>
+    </File>
+    <File Include="Scripts/modules/controllers/ContractObjectController.js">
+      <publishTime>01/26/2015 13:36:44</publishTime>
+    </File>
+    <File Include="Scripts/modules/controllers/ContractPartialController.js">
+      <publishTime>01/26/2015 14:54:43</publishTime>
+    </File>
+    <File Include="Scripts/modules/controllers/ContractPartyController.js">
+      <publishTime>01/13/2015 10:25:58</publishTime>
+    </File>
+    <File Include="Scripts/modules/controllers/GroupController.js">
+      <publishTime>01/21/2015 07:58:37</publishTime>
+    </File>
+    <File Include="Scripts/modules/controllers/ProductController.js">
+      <publishTime>01/26/2015 13:12:47</publishTime>
+    </File>
+    <File Include="Scripts/modules/controllers/ProductGroupController.js">
+      <publishTime>01/07/2015 16:14:51</publishTime>
+    </File>
+    <File Include="Scripts/modules/controllers/SubmissionController.js">
+      <publishTime>01/26/2015 13:09:23</publishTime>
+    </File>
+    <File Include="Scripts/modules/controllers/SubmissionPartialController.js">
+      <publishTime>01/23/2015 13:39:18</publishTime>
+    </File>
+    <File Include="Scripts/modules/services/ContractobjectService.js">
+      <publishTime>01/22/2015 11:32:51</publishTime>
+    </File>
+    <File Include="Scripts/modules/services/ContractPartyService.js">
+      <publishTime>01/13/2015 10:25:58</publishTime>
+    </File>
+    <File Include="Scripts/modules/services/ContractService.js">
+      <publishTime>01/23/2015 08:42:15</publishTime>
+    </File>
+    <File Include="Scripts/modules/services/GroupService.js">
+      <publishTime>01/19/2015 14:50:23</publishTime>
+    </File>
+    <File Include="Scripts/modules/services/ProductGroupService.js">
+      <publishTime>01/06/2015 08:18:49</publishTime>
+    </File>
+    <File Include="Scripts/modules/services/ProductService.js">
+      <publishTime>01/26/2015 13:12:47</publishTime>
+    </File>
+    <File Include="Scripts/modules/services/shellService.js">
+      <publishTime>12/15/2014 07:40:20</publishTime>
+    </File>
+    <File Include="Scripts/modules/services/SubmissionService.js">
+      <publishTime>01/23/2015 07:41:59</publishTime>
+    </File>
+    <File Include="Scripts/resources/resources.js">
+      <publishTime>12/15/2014 07:40:20</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>12/15/2014 07:40:19</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>12/15/2014 07:40:20</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Views/Account/TestView.cshtml">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Views/Contract/AvailableRight.cshtml">
+      <publishTime>01/12/2015 10:19:49</publishTime>
+    </File>
+    <File Include="Views/Contract/ContractAttachedFile.cshtml">
+      <publishTime>01/21/2015 07:58:37</publishTime>
+    </File>
+    <File Include="Views/Contract/ContractDetail.cshtml">
+      <publishTime>01/21/2015 11:33:20</publishTime>
+    </File>
+    <File Include="Views/Contract/ContractLicenseFee.cshtml">
+      <publishTime>01/15/2015 08:31:03</publishTime>
+    </File>
+    <File Include="Views/Contract/ContractProduct.cshtml">
+      <publishTime>12/16/2014 11:26:49</publishTime>
+    </File>
+    <File Include="Views/Contract/ContractReportSchedule.cshtml">
+      <publishTime>01/15/2015 08:31:03</publishTime>
+    </File>
+    <File Include="Views/Contract/Group.cshtml">
+      <publishTime>01/20/2015 07:21:39</publishTime>
+    </File>
+    <File Include="Views/Contract/Index.cshtml">
+      <publishTime>01/23/2015 13:39:18</publishTime>
+    </File>
+    <File Include="Views/Contract/LicenseeList.cshtml">
+      <publishTime>01/05/2015 13:48:24</publishTime>
+    </File>
+    <File Include="Views/Contract/ListContract.cshtml">
+      <publishTime>01/14/2015 13:30:42</publishTime>
+    </File>
+    <File Include="Views/Contract/PartialReview/_attachment.cshtml">
+      <publishTime>01/23/2015 10:12:32</publishTime>
+    </File>
+    <File Include="Views/Contract/PartialReview/_availabelRight.cshtml">
+      <publishTime>01/23/2015 13:39:18</publishTime>
+    </File>
+    <File Include="Views/Contract/PartialReview/_bankGuarantee.cshtml">
+      <publishTime>01/05/2015 07:12:59</publishTime>
+    </File>
+    <File Include="Views/Contract/PartialReview/_group.cshtml">
+      <publishTime>01/22/2015 11:04:00</publishTime>
+    </File>
+    <File Include="Views/Contract/PartialReview/_intellectureProperty.cshtml">
+      <publishTime>01/07/2015 16:14:51</publishTime>
+    </File>
+    <File Include="Views/Contract/PartialReview/_licencessList.cshtml">
+      <publishTime>01/23/2015 10:12:32</publishTime>
+    </File>
+    <File Include="Views/Contract/PartialReview/_paymentTerm.cshtml">
+      <publishTime>01/23/2015 10:12:32</publishTime>
+    </File>
+    <File Include="Views/Contract/PartialReview/_productGroup.cshtml">
+      <publishTime>01/22/2015 12:11:24</publishTime>
+    </File>
+    <File Include="Views/Contract/PartialReview/_reportSchedule.cshtml">
+      <publishTime>01/12/2015 10:19:49</publishTime>
+    </File>
+    <File Include="Views/Contract/PartialReview/_royaltyRate.cshtml">
+      <publishTime>01/14/2015 13:30:42</publishTime>
+    </File>
+    <File Include="Views/Contract/Review.cshtml">
+      <publishTime>01/26/2015 15:41:52</publishTime>
+    </File>
+    <File Include="Views/Contract/_addBank.cshtml">
+      <publishTime>01/16/2015 08:20:53</publishTime>
+    </File>
+    <File Include="Views/Contract/_addContractObject.cshtml">
+      <publishTime>01/07/2015 16:14:51</publishTime>
+    </File>
+    <File Include="Views/Contract/_paymentTerm.cshtml">
+      <publishTime>01/23/2015 13:39:18</publishTime>
+    </File>
+    <File Include="Views/Contract/_reportSchedule.cshtml">
+      <publishTime>01/21/2015 07:58:37</publishTime>
+    </File>
+    <File Include="Views/Contract/_royaltyRate.cshtml">
+      <publishTime>01/16/2015 08:20:53</publishTime>
+    </File>
+    <File Include="Views/Contract/_tplContractList.cshtml">
+      <publishTime>01/12/2015 10:19:49</publishTime>
+    </File>
+    <File Include="Views/ContractParty/Edit.cshtml">
+      <publishTime>01/21/2015 11:33:20</publishTime>
+    </File>
+    <File Include="Views/ContractParty/List.cshtml">
+      <publishTime>01/15/2015 08:31:03</publishTime>
+    </File>
+    <File Include="Views/Group/_editPartial.cshtml">
+      <publishTime>01/19/2015 14:50:23</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>01/15/2015 08:31:03</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>01/14/2015 13:30:42</publishTime>
+    </File>
+    <File Include="Views/Other/IntellectualProperty.cshtml">
+      <publishTime>01/05/2015 16:38:10</publishTime>
+    </File>
+    <File Include="Views/Other/Languages.cshtml">
+      <publishTime>12/19/2014 08:47:59</publishTime>
+    </File>
+    <File Include="Views/Other/Markets.cshtml">
+      <publishTime>12/19/2014 12:11:14</publishTime>
+    </File>
+    <File Include="Views/Other/NewGroup.cshtml">
+      <publishTime>01/19/2015 14:50:23</publishTime>
+    </File>
+    <File Include="Views/Other/Products.cshtml">
+      <publishTime>01/26/2015 13:12:47</publishTime>
+    </File>
+    <File Include="Views/Other/SaleChannels.cshtml">
+      <publishTime>12/19/2014 12:11:58</publishTime>
+    </File>
+    <File Include="Views/Other/Territories.cshtml">
+      <publishTime>12/19/2014 12:10:42</publishTime>
+    </File>
+    <File Include="Views/ProductSearch/_searchInventoryList.cshtml">
+      <publishTime>01/19/2015 14:29:58</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>12/15/2014 07:40:20</publishTime>
+    </File>
+    <File Include="Views/Shared/Partials/Menu.cshtml">
+      <publishTime>01/26/2015 10:16:24</publishTime>
+    </File>
+    <File Include="Views/Shared/Partials/MySetting.cshtml">
+      <publishTime>12/15/2014 07:40:20</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>01/15/2015 08:31:03</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout_temp.cshtml">
+      <publishTime>12/15/2014 07:40:21</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>12/15/2014 07:40:20</publishTime>
+    </File>
+    <File Include="Views/Submission/AddOrEditSubmission.cshtml">
+      <publishTime>01/23/2015 14:28:14</publishTime>
+    </File>
+    <File Include="Views/Submission/Index.cshtml">
+      <publishTime>12/17/2014 13:00:23</publishTime>
+    </File>
+    <File Include="Views/Submission/ListSubmission.cshtml">
+      <publishTime>01/22/2015 15:57:02</publishTime>
+    </File>
+    <File Include="Views/Submission/PartialReview/_groupFooter.cshtml">
+      <publishTime>01/26/2015 08:44:01</publishTime>
+    </File>
+    <File Include="Views/Submission/PartialReview/_groupHeader.cshtml">
+      <publishTime>01/26/2015 14:54:43</publishTime>
+    </File>
+    <File Include="Views/Submission/PartialReview/_productAttachedList.cshtml">
+      <publishTime>01/26/2015 13:12:47</publishTime>
+    </File>
+    <File Include="Views/Submission/PartialReview/_productList.cshtml">
+      <publishTime>01/26/2015 14:54:43</publishTime>
+    </File>
+    <File Include="Views/Submission/PartialReview/_productPriceList.cshtml">
+      <publishTime>01/26/2015 15:41:52</publishTime>
+    </File>
+    <File Include="Views/Submission/PartialReview/_productSKUList.cshtml">
+      <publishTime>01/26/2015 08:44:01</publishTime>
+    </File>
+    <File Include="Views/Submission/Review.cshtml">
+      <publishTime>01/26/2015 14:54:43</publishTime>
+    </File>
+    <File Include="Views/Submission/SubmissionDetail.cshtml">
+      <publishTime>12/17/2014 13:00:23</publishTime>
+    </File>
+    <File Include="Views/Submission/submissiondetail/_detailPrice.cshtml">
+      <publishTime>01/23/2015 13:04:52</publishTime>
+    </File>
+    <File Include="Views/Submission/submissiondetail/_detailSKU.cshtml">
+      <publishTime>01/23/2015 13:29:39</publishTime>
+    </File>
+    <File Include="Views/Submission/submissiondetail/_detailsubmission.cshtml">
+      <publishTime>01/23/2015 11:06:48</publishTime>
+    </File>
+    <File Include="Views/Submission/submissiondetail/_productdetail.cshtml">
+      <publishTime>01/26/2015 14:49:35</publishTime>
+    </File>
+    <File Include="Views/Submission/UploadAndComments.cshtml">
+      <publishTime>12/17/2014 13:00:23</publishTime>
+    </File>
+    <File Include="Views/Test/ContractLicenseFee.cshtml">
+      <publishTime>01/05/2015 07:12:59</publishTime>
+    </File>
+    <File Include="Views/Test/Index.cshtml">
+      <publishTime>01/05/2015 07:12:59</publishTime>
+    </File>
+    <File Include="Views/Test/Index1.cshtml">
+      <publishTime>01/05/2015 07:12:59</publishTime>
+    </File>
+    <File Include="Views/Test/TestData.cshtml">
+      <publishTime>01/05/2015 07:12:59</publishTime>
+    </File>
+    <File Include="Views/Test/_alertSchedule.cshtml">
+      <publishTime>12/22/2014 15:55:06</publishTime>
+    </File>
+    <File Include="Views/Test/_detail.cshtml">
+      <publishTime>12/23/2014 12:02:07</publishTime>
+    </File>
+    <File Include="Views/Test/_intellectualProperty.cshtml">
+      <publishTime>12/22/2014 15:55:06</publishTime>
+    </File>
+    <File Include="Views/Test/_language.cshtml">
+      <publishTime>12/22/2014 15:55:06</publishTime>
+    </File>
+    <File Include="Views/Test/_licenseFee.cshtml">
+      <publishTime>12/23/2014 12:02:07</publishTime>
+    </File>
+    <File Include="Views/Test/_market.cshtml">
+      <publishTime>12/22/2014 15:55:06</publishTime>
+    </File>
+    <File Include="Views/Test/_reportSchedule.cshtml">
+      <publishTime>12/22/2014 15:55:06</publishTime>
+    </File>
+    <File Include="Views/Test/_saleChannel.cshtml">
+      <publishTime>12/22/2014 15:55:06</publishTime>
+    </File>
+    <File Include="Views/Test/_territory.cshtml">
+      <publishTime>12/22/2014 15:55:06</publishTime>
+    </File>
+    <File Include="Views/Test/_testDiv.cshtml">
+      <publishTime>12/22/2014 15:55:06</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>01/19/2015 15:51:51</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>12/22/2014 12:05:35</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/26/2015 16:03:55</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

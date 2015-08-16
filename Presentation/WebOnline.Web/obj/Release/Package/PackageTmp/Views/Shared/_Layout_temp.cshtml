@@ -1,0 +1,233 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+          "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/KendoCSS/kendo.common.min.css" rel="stylesheet" />
+    <link href="~/Content/KendoCSS/kendo.default.min.css" rel="stylesheet" />
+
+    <link href="~/Content/FrameCss.css" rel="stylesheet" />
+    <script src="~/Scripts/Jquery/jquery-1.8.0.min.js"></script>
+    <script src="~/Scripts/KendoJS/kendo.web.min.js"></script>
+
+    <script src="~/Scripts/noty/jquery.noty.js"></script>
+    <script src="~/Scripts/noty/themes/default.js"></script>
+    <script src="~/Scripts/noty/layouts/topRight.js"></script>
+    <script src="~/Scripts/noty/layouts/center.js"></script>
+
+
+    <script src="~/Scripts/facebox/facebox.js"></script>
+    <link href="~/Scripts/facebox/facebox.css" rel="stylesheet" />
+    <script type="text/javascript">
+        $(document).bind("ready", function () {
+            
+           
+        });
+       
+
+        function openMenu(e) {
+            $(e.item).children(".k-link").removeClass("backgwhite");
+        }
+        function closeMenu(e) {
+            if ($(e.item).hasClass("m-button-active")) {
+
+            } else {
+                $(e.item).children(".k-link").addClass("backgwhite");
+            }
+        }
+        function imgError(image) {
+            image.onerror = "";
+            image.src = "@Url.Content("~/Content/NoImageAvailable.png")";
+            return true;
+        }
+
+        function checkdate(textbox) {
+            if (!/^\d{1,2}\/\d{1,2}\/\d{4}$/.test($(textbox).val())) {
+                $(textbox).data("kendoDatePicker").value("");
+            }
+        }
+
+
+        function setAction(aString, target) {
+            for (m = 0; m < document.forms.length; m++) {
+                if (document.forms[m].name == "form1") {
+                    document.forms[m].action = String(aString);
+                }
+                if (String(target) != "undefined") {
+                    document.forms[m].target = String(target);
+                } else {
+                    document.forms[m].target = "_self";
+                }
+            }
+        }
+        
+        function WriteNoty(type, text) {
+            var n = noty({
+                text: text,
+                type: type,//sucess || alert || confirm || warning || information ||error
+                dismissQueue: true,
+                layout: 'topRight',
+                theme: 'defaultTheme'
+            });
+        }
+
+    </script>
+    <style type="text/css">
+ #KendoMenu li, #KendoMenu {
+        border-left: 0 !important;
+        border-right: 0 !important;
+    }
+
+
+    #KendoMenu {
+        border: 0 none !important;
+    }
+
+        #KendoMenu  li  ul > li {
+             border-bottom: 1px solid #8B8B8B;
+
+        }
+
+     #KendoMenu li a:hover {
+            color: #464745 !important;
+        }
+
+     #KendoMenu li {
+         height: 31px !important;
+
+     }
+        #KendoMenu .k-state-hover {
+            background-image: url('@Url.Content("~/Images/layout")/line-menu.jpg') !important;
+            background-repeat: repeat-x;
+
+            color: #464745 !important;
+
+        }
+
+     #KendoMenu .m-button-active, #KendoMenu .k-state-active {
+            background-image: url('@Url.Content("~/Images/layout")/line-menu.jpg') !important;
+            background-repeat: repeat-x;
+            /*height: 31px;*/
+            color: #464745 !important;
+
+        }
+
+
+     #KendoMenu li div ul li a {
+            -moz-border-bottom: 1px solid #676766;
+            -webkit-border-bottom: 1px solid #676766;
+            /*border-bottom: 1px solid #ccc;*/
+            text-align: left !important;
+            color: white !important;
+        }
+
+
+
+    #KendoMenu li .backgwhite {
+        /*padding: 9.7px 26.7px 9.7px 26.7px !important;*/
+        color: white;
+    }
+
+    .saperate {
+        background-image: url('@Url.Content("~/Images/layout")/saperator.png');
+        background-repeat: no-repeat;
+       /* background-position: right;
+        text-decoration: none;*/
+    }
+     .saperate-black {
+        background-image: url('@Url.Content("~/Images/layout")/saperatorblack.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        text-decoration: none;
+    }
+
+
+       #KendoMenu li, #KendoMenu {
+        -webkit-border-left: 1px solid #676766;
+        -moz-border-left: 1px solid #676766;
+        border-left: 1px solid #676766;
+        border-right: none;
+    }
+
+
+       #KendoMenu li a {
+        padding: 9.7px 26.7px 9.7px 26.7px !important;
+        font-weight: normal !important;
+        font-size: 11px !important;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        
+        <div style="font-size: 11px !important; padding-top: 0 !important; margin-bottom: 5px;" class="content-wrapper main-content clear-fix">
+            
+            If you have any feeback or new idea about inventory, please feel free to contact with me. My email is <a href="mailto:tuandang@tpfvietnam.vn">tuandang@tpfvietnam.vn</a>
+            <div class="" style="float: left; margin-top: 15px;">
+                <a class=" clear-fix site-title"  href="@Url.Action("", "")">
+                    <h1 class="PageTitle " style="font-size: 1.7em;">Inventory</h1>
+                </a>
+            </div>
+            <div class="float-right-important width-20per margin-top15 height20 ">
+                <input class="m-textbox-50per float-right-important margin0" style="width:200px;height:25px" type="text" name="name" id="txtSearch" value="" placeholder="Product name or code" />
+            </div>
+            <div style="float: right; position: relative; top: 35px; width: 64%">
+                <div style="min-width: 15%;float: right;margin-bottom: 5px;">
+                
+                    @if (Session["sessionName"] == null)
+                    {
+                        <a  class="Logout" href="@Url.Action("Login", "Home", new {area= ""})">Log in</a>
+                    }
+                    else
+                    {
+                        <b style="float: left;">Hello <a style="color: black !important; font-weight: bold !important;">
+                                                          <label style="color: #7c7c7c !important; font-weight: normal !important">@Session["sessionName"]</label></a> |</b> 
+                        <div style="float: left; color: #7c7c7c !important;">@Html.ActionLink(" Log out ", "LogOff", "Home", null, new { @class = "Logout" }) &nbsp;</div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="float-left" style="width: 100%; margin-bottom: 8px;">
+
+            <div class="menucont" style="">
+                <div id="div_menu" style="" class="content-wrapper main-content clear-fix">
+
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <div id="body" style="background-color: white; min-height: 800px;">
+        <section class="content-wrapper main-content clear-fix">
+            <div class="clearfix"></div>
+            @RenderBody()
+        </section>
+    </div>
+    <div class="clear-fix"></div>
+    <footer class="foter" style="">
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>Inventory System</p>
+            </div>
+            <div class="site-title" style="width: 18%; float: right; margin-top: 10px;">
+                <a href="@Url.Action("", "")">
+                    <img src="@Url.Content("~/Images/layout/tpf_logo.gif")" title="TPF Logo" width="200"/></a>
+            </div>
+        </div>
+    </footer>
+    
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
+

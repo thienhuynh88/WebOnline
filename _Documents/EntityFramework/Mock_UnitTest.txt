@@ -1,0 +1,10 @@
+Nuget: moq
+Moq: an enjoyable mocking library
+
+-- https://github.com/Moq/moq4
+
+- Methods
+https://github.com/Moq/moq4/wiki/Quickstart
+
+-- Testing with a mocking framework
+http://msdn.microsoft.com/en-us/data/dn314429.aspx

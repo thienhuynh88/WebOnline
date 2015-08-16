@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TPFSystem2013Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Com_MenuItems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Url" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Priority" Type="int" Nullable="false" />
+    <Property Name="MenuID" Type="int" Nullable="false" />
+    <Property Name="PermissionID" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Com_Menus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Url" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Com_Permissions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Com_Roles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="Notes" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Com_UserMenus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Priority" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Com_UserRoles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Com_Users">
+    <Key>
+      <PropertyRef Name="staffID" />
+    </Key>
+    <Property Name="staffID" Type="int" Nullable="false" />
+    <Property Name="fname" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="lname" Type="nvarchar" MaxLength="30" />
+    <Property Name="username" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="psentence" Type="nvarchar" MaxLength="50" />
+    <Property Name="DOB" Type="varchar" MaxLength="15" />
+    <Property Name="address" Type="nvarchar" MaxLength="150" />
+    <Property Name="suburb" Type="nvarchar" MaxLength="75" />
+    <Property Name="postcode" Type="varchar" MaxLength="25" />
+    <Property Name="state" Type="nvarchar" MaxLength="50" />
+    <Property Name="country" Type="varchar" MaxLength="20" />
+    <Property Name="companyphone" Type="bit" />
+    <Property Name="phoneNo" Type="varchar" MaxLength="30" />
+    <Property Name="mobNo" Type="varchar" MaxLength="30" />
+    <Property Name="hkNo" Type="varchar" MaxLength="50" />
+    <Property Name="extensionNo" Type="varchar" MaxLength="10" />
+    <Property Name="directNo" Type="varchar" MaxLength="25" />
+    <Property Name="faxNo" Type="nvarchar" MaxLength="25" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="departID" Type="int" />
+    <Property Name="location" Type="nvarchar" MaxLength="30" />
+    <Property Name="startdate" Type="varchar" MaxLength="20" />
+    <Property Name="enddate" Type="varchar" MaxLength="20" />
+    <Property Name="staffposition" Type="nvarchar" MaxLength="150" />
+    <Property Name="sortcode" Type="varchar" MaxLength="5" />
+    <Property Name="salesNo" Type="varchar" MaxLength="5" />
+    <Property Name="BDCNo" Type="nvarchar" MaxLength="15" />
+    <Property Name="jobtype" Type="varchar" MaxLength="20" />
+    <Property Name="payrate" Type="real" />
+    <Property Name="signon" Type="varchar" MaxLength="5" />
+    <Property Name="kitchenduty" Type="varchar" MaxLength="5" />
+    <Property Name="jobdescription" Type="nvarchar" MaxLength="200" />
+    <Property Name="interest" Type="nvarchar" MaxLength="200" />
+    <Property Name="photo" Type="nvarchar" MaxLength="20" />
+    <Property Name="status" Type="nvarchar" MaxLength="15" />
+    <Property Name="psallocate" Type="nvarchar" MaxLength="20" />
+    <Property Name="quotpermission" Type="nvarchar" MaxLength="60" />
+    <Property Name="groupnumber" Type="int" />
+    <Property Name="plGroupID" Type="int" />
+    <Property Name="contactperson" Type="nvarchar" MaxLength="20" />
+    <Property Name="contactphone" Type="nvarchar" MaxLength="20" />
+    <Property Name="alapproval" Type="int" />
+    <Property Name="manager" Type="nvarchar" MaxLength="50" />
+    <Property Name="almngr" Type="nvarchar" MaxLength="50" />
+    <Property Name="alaccrued" Type="nvarchar" MaxLength="8" />
+    <Property Name="stafflisting" Type="nvarchar" MaxLength="8" />
+    <Property Name="companyid" Type="int" />
+    <Property Name="skype" Type="nvarchar" MaxLength="50" />
+    <Property Name="admin" Type="int" />
+    <Property Name="roll" Type="nvarchar" MaxLength="150" />
+    <Property Name="StartDateLSL" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_Com_MenuItems_Com_Menus">
+    <End Role="Com_Menus" Type="Self.Com_Menus" Multiplicity="1" />
+    <End Role="Com_MenuItems" Type="Self.Com_MenuItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Com_Menus">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Com_MenuItems">
+        <PropertyRef Name="MenuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Com_MenuItems_Com_Permissions">
+    <End Role="Com_Permissions" Type="Self.Com_Permissions" Multiplicity="1" />
+    <End Role="Com_MenuItems" Type="Self.Com_MenuItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Com_Permissions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Com_MenuItems">
+        <PropertyRef Name="PermissionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Com_Permissions_Com_Roles">
+    <End Role="Com_Roles" Type="Self.Com_Roles" Multiplicity="1" />
+    <End Role="Com_Permissions" Type="Self.Com_Permissions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Com_Roles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Com_Permissions">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Com_UserMenus_Com_Menus">
+    <End Role="Com_Menus" Type="Self.Com_Menus" Multiplicity="1" />
+    <End Role="Com_UserMenus" Type="Self.Com_UserMenus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Com_Menus">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Com_UserMenus">
+        <PropertyRef Name="MenuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Com_UserMenus_Com_Users">
+    <End Role="Com_Users" Type="Self.Com_Users" Multiplicity="1" />
+    <End Role="Com_UserMenus" Type="Self.Com_UserMenus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Com_Users">
+        <PropertyRef Name="staffID" />
+      </Principal>
+      <Dependent Role="Com_UserMenus">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Com_UserRoles_Com_Roles">
+    <End Role="Com_Roles" Type="Self.Com_Roles" Multiplicity="1" />
+    <End Role="Com_UserRoles" Type="Self.Com_UserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Com_Roles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Com_UserRoles">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Com_UserRoles_Com_Users">
+    <End Role="Com_Users" Type="Self.Com_Users" Multiplicity="1" />
+    <End Role="Com_UserRoles" Type="Self.Com_UserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Com_Users">
+        <PropertyRef Name="staffID" />
+      </Principal>
+      <Dependent Role="Com_UserRoles">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TPFSystem2013ModelStoreContainer">
+    <EntitySet Name="Com_MenuItems" EntityType="Self.Com_MenuItems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Com_Menus" EntityType="Self.Com_Menus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Com_Permissions" EntityType="Self.Com_Permissions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Com_Roles" EntityType="Self.Com_Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Com_UserMenus" EntityType="Self.Com_UserMenus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Com_UserRoles" EntityType="Self.Com_UserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Com_Users" EntityType="Self.Com_Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Com_MenuItems_Com_Menus" Association="Self.FK_Com_MenuItems_Com_Menus">
+      <End Role="Com_Menus" EntitySet="Com_Menus" />
+      <End Role="Com_MenuItems" EntitySet="Com_MenuItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Com_MenuItems_Com_Permissions" Association="Self.FK_Com_MenuItems_Com_Permissions">
+      <End Role="Com_Permissions" EntitySet="Com_Permissions" />
+      <End Role="Com_MenuItems" EntitySet="Com_MenuItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Com_Permissions_Com_Roles" Association="Self.FK_Com_Permissions_Com_Roles">
+      <End Role="Com_Roles" EntitySet="Com_Roles" />
+      <End Role="Com_Permissions" EntitySet="Com_Permissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Com_UserMenus_Com_Menus" Association="Self.FK_Com_UserMenus_Com_Menus">
+      <End Role="Com_Menus" EntitySet="Com_Menus" />
+      <End Role="Com_UserMenus" EntitySet="Com_UserMenus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Com_UserMenus_Com_Users" Association="Self.FK_Com_UserMenus_Com_Users">
+      <End Role="Com_Users" EntitySet="Com_Users" />
+      <End Role="Com_UserMenus" EntitySet="Com_UserMenus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Com_UserRoles_Com_Roles" Association="Self.FK_Com_UserRoles_Com_Roles">
+      <End Role="Com_Roles" EntitySet="Com_Roles" />
+      <End Role="Com_UserRoles" EntitySet="Com_UserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Com_UserRoles_Com_Users" Association="Self.FK_Com_UserRoles_Com_Users">
+      <End Role="Com_Users" EntitySet="Com_Users" />
+      <End Role="Com_UserRoles" EntitySet="Com_UserRoles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

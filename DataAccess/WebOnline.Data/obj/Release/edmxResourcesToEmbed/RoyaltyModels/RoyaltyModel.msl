@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RoyaltyModelStoreContainer" CdmEntityContainer="RoyaltyEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="RoyaltyModel.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Licenseeid" ColumnName="Licenseeid" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AttachedFiles">
+      <EntityTypeMapping TypeName="RoyaltyModel.AttachedFile">
+        <MappingFragment StoreEntitySet="AttachedFiles">
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Sid" ColumnName="Sid" />
+          <ScalarProperty Name="Rowid" ColumnName="Rowid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AttachedImages">
+      <EntityTypeMapping TypeName="RoyaltyModel.AttachedImage">
+        <MappingFragment StoreEntitySet="AttachedImages">
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="Sid" ColumnName="Sid" />
+          <ScalarProperty Name="Rowid" ColumnName="Rowid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contracts">
+      <EntityTypeMapping TypeName="RoyaltyModel.Contract">
+        <MappingFragment StoreEntitySet="Contract">
+          <ScalarProperty Name="Licenseeid" ColumnName="Licenseeid" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="CommencementDate" ColumnName="CommencementDate" />
+          <ScalarProperty Name="ContractName" ColumnName="ContractName" />
+          <ScalarProperty Name="ContractNo" ColumnName="ContractNo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractAttachments">
+      <EntityTypeMapping TypeName="RoyaltyModel.ContractAttachment">
+        <MappingFragment StoreEntitySet="ContractAttachment">
+          <ScalarProperty Name="Conid" ColumnName="Conid" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Rowid" ColumnName="Rowid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractCatalogues">
+      <EntityTypeMapping TypeName="RoyaltyModel.ContractCatalogue">
+        <MappingFragment StoreEntitySet="ContractCatalogue">
+          <ScalarProperty Name="Catalogueid" ColumnName="Catalogueid" />
+          <ScalarProperty Name="LPid" ColumnName="LPid" />
+          <ScalarProperty Name="Conid" ColumnName="Conid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractCategories">
+      <EntityTypeMapping TypeName="RoyaltyModel.ContractCategory">
+        <MappingFragment StoreEntitySet="ContractCategory">
+          <ScalarProperty Name="Categoryid" ColumnName="Categoryid" />
+          <ScalarProperty Name="Catalogueid" ColumnName="Catalogueid" />
+          <ScalarProperty Name="LPid" ColumnName="LPid" />
+          <ScalarProperty Name="Conid" ColumnName="Conid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractInvoices">
+      <EntityTypeMapping TypeName="RoyaltyModel.ContractInvoice">
+        <MappingFragment StoreEntitySet="ContractInvoice">
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Conid" ColumnName="Conid" />
+          <ScalarProperty Name="Rowid" ColumnName="Rowid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractLicensedProperties">
+      <EntityTypeMapping TypeName="RoyaltyModel.ContractLicensedProperty">
+        <MappingFragment StoreEntitySet="ContractLicensedProperty">
+          <ScalarProperty Name="Conid" ColumnName="Conid" />
+          <ScalarProperty Name="LPid" ColumnName="LPid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractProducts">
+      <EntityTypeMapping TypeName="RoyaltyModel.ContractProduct">
+        <MappingFragment StoreEntitySet="ContractProduct">
+          <ScalarProperty Name="Proid" ColumnName="Proid" />
+          <ScalarProperty Name="Categoryid" ColumnName="Categoryid" />
+          <ScalarProperty Name="Catalogueid" ColumnName="Catalogueid" />
+          <ScalarProperty Name="LPid" ColumnName="LPid" />
+          <ScalarProperty Name="Conid" ColumnName="Conid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractProductPrices">
+      <EntityTypeMapping TypeName="RoyaltyModel.ContractProductPrice">
+        <MappingFragment StoreEntitySet="ContractProductPrices">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="PPid" ColumnName="PPid" />
+          <ScalarProperty Name="Proid" ColumnName="Proid" />
+          <ScalarProperty Name="Categoryid" ColumnName="Categoryid" />
+          <ScalarProperty Name="Catalogueid" ColumnName="Catalogueid" />
+          <ScalarProperty Name="LPid" ColumnName="LPid" />
+          <ScalarProperty Name="Conid" ColumnName="Conid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Languages">
+      <EntityTypeMapping TypeName="RoyaltyModel.Language">
+        <MappingFragment StoreEntitySet="Language">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LicensedProperties">
+      <EntityTypeMapping TypeName="RoyaltyModel.LicensedProperty">
+        <MappingFragment StoreEntitySet="LicensedProperty">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Licensees">
+      <EntityTypeMapping TypeName="RoyaltyModel.Licensee">
+        <MappingFragment StoreEntitySet="Licensee">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="ABN" ColumnName="ABN" />
+          <ScalarProperty Name="ACN" ColumnName="ACN" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LicenseTypes">
+      <EntityTypeMapping TypeName="RoyaltyModel.LicenseType">
+        <MappingFragment StoreEntitySet="LicenseType">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Markets">
+      <EntityTypeMapping TypeName="RoyaltyModel.Market">
+        <MappingFragment StoreEntitySet="Market">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentTerms">
+      <EntityTypeMapping TypeName="RoyaltyModel.PaymentTerm">
+        <MappingFragment StoreEntitySet="PaymentTerms">
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="MinAmount" ColumnName="MinAmount" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Conid" ColumnName="Conid" />
+          <ScalarProperty Name="Rowid" ColumnName="Rowid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PriceProfiles">
+      <EntityTypeMapping TypeName="RoyaltyModel.PriceProfile">
+        <MappingFragment StoreEntitySet="PriceProfiles">
+          <ScalarProperty Name="Conid" ColumnName="Conid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Royalties">
+      <EntityTypeMapping TypeName="RoyaltyModel.Royalty">
+        <MappingFragment StoreEntitySet="Royalty">
+          <ScalarProperty Name="rebate_percent" ColumnName="rebate_percent" />
+          <ScalarProperty Name="ref_profile" ColumnName="ref_profile" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Conid" ColumnName="Conid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesChanels">
+      <EntityTypeMapping TypeName="RoyaltyModel.SalesChanel">
+        <MappingFragment StoreEntitySet="SalesChanel">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesUploadReports">
+      <EntityTypeMapping TypeName="RoyaltyModel.SalesUploadReport">
+        <MappingFragment StoreEntitySet="SalesUploadReports">
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Market" ColumnName="Market" />
+          <ScalarProperty Name="SalesChanel" ColumnName="SalesChanel" />
+          <ScalarProperty Name="Teritories" ColumnName="Teritories" />
+          <ScalarProperty Name="SKU_" ColumnName="SKU#" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="Conid" ColumnName="Conid" />
+          <ScalarProperty Name="Rowid" ColumnName="Rowid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SKUs">
+      <EntityTypeMapping TypeName="RoyaltyModel.SKU">
+        <MappingFragment StoreEntitySet="SKUs">
+          <ScalarProperty Name="Sid" ColumnName="Sid" />
+          <ScalarProperty Name="AlternateSKU_" ColumnName="AlternateSKU#" />
+          <ScalarProperty Name="SKU_" ColumnName="SKU#" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Rowid" ColumnName="Rowid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubLanguages">
+      <EntityTypeMapping TypeName="RoyaltyModel.SubLanguage">
+        <MappingFragment StoreEntitySet="SubLanguage">
+          <ScalarProperty Name="Sid" ColumnName="Sid" />
+          <ScalarProperty Name="Langid" ColumnName="Langid" />
+          <ScalarProperty Name="Rowid" ColumnName="Rowid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubMarkets">
+      <EntityTypeMapping TypeName="RoyaltyModel.SubMarket">
+        <MappingFragment StoreEntitySet="SubMarket">
+          <ScalarProperty Name="Sid" ColumnName="Sid" />
+          <ScalarProperty Name="Mid" ColumnName="Mid" />
+          <ScalarProperty Name="Rowid" ColumnName="Rowid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Submissions">
+      <EntityTypeMapping TypeName="RoyaltyModel.Submission">
+        <MappingFragment StoreEntitySet="Submission">
+          <ScalarProperty Name="StateStatus" ColumnName="StateStatus" />
+          <ScalarProperty Name="CurrentState" ColumnName="CurrentState" />
+          <ScalarProperty Name="CProid" ColumnName="CProid" />
+          <ScalarProperty Name="CCategoryid" ColumnName="CCategoryid" />
+          <ScalarProperty Name="CCatalogueid" ColumnName="CCatalogueid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LPid" ColumnName="LPid" />
+          <ScalarProperty Name="Conid" ColumnName="Conid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubSalesChanels">
+      <EntityTypeMapping TypeName="RoyaltyModel.SubSalesChanel">
+        <MappingFragment StoreEntitySet="SubSalesChanel">
+          <ScalarProperty Name="Sid" ColumnName="Sid" />
+          <ScalarProperty Name="SCid" ColumnName="SCid" />
+          <ScalarProperty Name="Rowid" ColumnName="Rowid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubTerritories">
+      <EntityTypeMapping TypeName="RoyaltyModel.SubTerritory">
+        <MappingFragment StoreEntitySet="SubTerritories">
+          <ScalarProperty Name="Sid" ColumnName="Sid" />
+          <ScalarProperty Name="Tid" ColumnName="Tid" />
+          <ScalarProperty Name="Rowid" ColumnName="Rowid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="RoyaltyModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Territories">
+      <EntityTypeMapping TypeName="RoyaltyModel.Territory">
+        <MappingFragment StoreEntitySet="Territory">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ContractLanguage" TypeName="RoyaltyModel.ContractLanguage" StoreEntitySet="ContractLanguage">
+      <EndProperty Name="Language">
+        <ScalarProperty Name="ID" ColumnName="Langid" />
+      </EndProperty>
+      <EndProperty Name="Contract">
+        <ScalarProperty Name="ID" ColumnName="Conid" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ContractMarket" TypeName="RoyaltyModel.ContractMarket" StoreEntitySet="ContractMarket">
+      <EndProperty Name="Market">
+        <ScalarProperty Name="ID" ColumnName="Mid" />
+      </EndProperty>
+      <EndProperty Name="Contract">
+        <ScalarProperty Name="ID" ColumnName="Conid" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ContractSalesChanel" TypeName="RoyaltyModel.ContractSalesChanel" StoreEntitySet="ContractSalesChanel">
+      <EndProperty Name="SalesChanel">
+        <ScalarProperty Name="ID" ColumnName="SCid" />
+      </EndProperty>
+      <EndProperty Name="Contract">
+        <ScalarProperty Name="ID" ColumnName="Conid" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ContractTeritories" TypeName="RoyaltyModel.ContractTeritories" StoreEntitySet="ContractTeritories">
+      <EndProperty Name="Territory">
+        <ScalarProperty Name="ID" ColumnName="Territoryid" />
+      </EndProperty>
+      <EndProperty Name="Contract">
+        <ScalarProperty Name="ID" ColumnName="Conid" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

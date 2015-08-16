@@ -1,0 +1,148 @@
+﻿
+<style type="text/css">
+ #KendoMenu li, #KendoMenu {
+        border-left: 0 !important;
+        border-right: 0 !important;
+    }
+
+
+    #KendoMenu {
+        border: 0 none !important;
+    }
+
+        #KendoMenu  li  ul > li {
+             border-bottom: 1px solid #8B8B8B;
+
+        }
+
+     #KendoMenu li a:hover {
+            color: #464745 !important;
+        }
+
+     #KendoMenu li {
+         height: 31px !important;
+
+     }
+        #KendoMenu .k-state-hover {
+            background-image: url('@Url.Content("~/Images/layout")/line-menu.jpg') !important;
+            background-repeat: repeat-x;
+
+            color: #464745 !important;
+
+        }
+
+     #KendoMenu .m-button-active, #KendoMenu .k-state-active {
+            background-image: url('@Url.Content("~/Images/layout")/line-menu.jpg') !important;
+            background-repeat: repeat-x;
+            /*height: 31px;*/
+            color: #464745 !important;
+
+        }
+
+
+     #KendoMenu li div ul li a {
+            -moz-border-bottom: 1px solid #676766;
+            -webkit-border-bottom: 1px solid #676766;
+            /*border-bottom: 1px solid #ccc;*/
+            text-align: left !important;
+            color: white !important;
+        }
+
+
+
+    #KendoMenu li .backgwhite {
+        /*padding: 9.7px 26.7px 9.7px 26.7px !important;*/
+        color: white;
+    }
+
+    .saperate {
+        background-image: url('@Url.Content("~/Images/layout")/saperator.png');
+        background-repeat: no-repeat;
+       /* background-position: right;
+        text-decoration: none;*/
+    }
+     .saperate-black {
+        background-image: url('@Url.Content("~/Images/layout")/saperatorblack.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        text-decoration: none;
+    }
+
+
+       #KendoMenu li, #KendoMenu {
+        -webkit-border-left: 1px solid #676766;
+        -moz-border-left: 1px solid #676766;
+        border-left: 1px solid #676766;
+        border-right: none;
+    }
+
+
+       #KendoMenu li a {
+        padding: 9.7px 26.7px 8px 26.7px ;
+
+        font-weight: normal !important;
+        font-size: 11px !important;
+    }
+</style>
+<ul id="KendoMenu" class="" style="height: 31px; margin-top: 0.5px; display: none ">
+    <li>
+        @Html.ActionLink("Home", "Index", "Home", null, new { @class = "colo1 saperate backgwhite" })
+    </li>
+    <li>
+        @Html.ActionLink("Contract", "Index", "Contract", null, new { @class = "colo1 saperate backgwhite" })
+    </li>
+    <li>
+        @Html.ActionLink("Contract Product", "ContractProduct", "Contract", null, new { @class = "colo1 saperate backgwhite" })
+    </li>
+    <li>
+        @Html.ActionLink("Submision", "index", "submission", null, new { @class = "colo1 saperate backgwhite" })
+    </li>
+    @* <li>
+            <a href="@Url.Action("Index", "Catalogues")" class="colo1 saperate backgwhite">Catalogue Management</a>
+        </li>
+        <li>
+            <a href="@Url.Action("AddNewCatalogue", "Catalogues")" class="colo1 saperate backgwhite">Add Catalogue</a>
+        </li>
+        @if (@AdminManager.UserLoginInfo!=null && (@AdminManager.UserLoginInfo.UserId == 698 || @AdminManager.UserLoginInfo.UserId == 697 || @AdminManager.UserLoginInfo.UserId == 599))
+        {
+            <li>
+                <a href="@Url.Action("Index", "StockAdjustment")" class="colo1 saperate backgwhite">Stock Adjustment</a>
+            </li>
+             <li>
+                <a href="@Url.Action("Index", "SalesUpload")" class="colo1 saperate backgwhite">Sale Event Upload</a>
+            </li>
+        }
+
+
+        <li>
+            <a class="colo1 saperate backgwhite">Reports</a>
+            <ul>
+                <li><a href="@Url.Action("QuantityValueReport","ReportInventory")" >Quantity-Value Report</a></li>
+                <li><a href="@Url.Action("SellThroughReport","ReportInventory")" >Sell Through</a></li>
+                <li><a href="@Url.Action("InventoryReport","ReportInventory")">Inventory Report</a></li>
+                <li><a href="@Url.Action("SaleReportInventory", "ReportInventory")" >Sale Report</a></li>
+                <li><a href="@Url.Action("GetDataUserReport", "ReportInventory")">User Report</a></li>
+                <li><a href="@Url.Action("StockDifferentPricePointsReport", "ReportInventory")">Stock Different Price Points Report</a></li>
+                <li><a href="@Url.Action("NewProductReportInventory", "ReportInventory")">New Product Report</a></li>
+
+            </ul>
+        </li>*@
+
+</ul>
+
+<div style="float: right; padding-right: 150px !important; line-height: 30px; text-transform: none !important;">
+    <a style="color: black !important; text-transform: none !important;text-decoration: none;font-weight: normal;font-size: 14px;" href="http://extranet.tpf.com.au/">Back to TPF System</a>
+</div>
+<div style="float: right;margin-right:30px; padding-right: 0 !important; line-height: 30px; text-transform: none !important;">
+    <a style="color: black !important; text-transform: none !important;text-decoration: none;font-weight: normal;font-size: 14px;" href="http://workspace.tpf.com.au/">TPF Works Space</a>
+</div>
+
+<script>
+
+    //$(document).ready(function () {
+    //            $('a[rel*=facebox]').facebox({
+    //                loadingImage: '../../Scripts/facebox/loading.gif',
+    //                closeImage: '../../Scripts/facebox/closelabel.png'
+    //            });
+    //});
+</script>

@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{76833C84-0108-475C-AE3C-634AC3193C0F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Royalty.Web</RootNamespace>
+    <AssemblyName>Royalty.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Abstractions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.1.2\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.1.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease">
+      <HintPath>..\..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\EnumBase.cs" />
+    <Compile Include="Utility\FilterAttributes\CustomHandleError.cs" />
+    <Compile Include="Utility\JsonNetFormatter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Contract.css" />
+    <Content Include="Content\FrameCss.css" />
+    <Content Include="Content\images\ajax-loader.gif" />
+    <Content Include="Content\images\bg-footer.png" />
+    <Content Include="Content\images\delele.ico" />
+    <Content Include="Content\images\form-login.png" />
+    <Content Include="Content\images\icon-search.png" />
+    <Content Include="Content\images\kit-item-icon.png" />
+    <Content Include="Content\images\new logo.png" />
+    <Content Include="Content\images\new_logo.png" />
+    <Content Include="Content\images\NoImageAvailable.png" />
+    <Content Include="Content\images\normal-item-icon.png" />
+    <Content Include="Content\images\sprite.png" />
+    <Content Include="Content\images\tpflogo.png" />
+    <Content Include="Content\images\tpf_logo.gif" />
+    <Content Include="Content\kendoui\Black\editor.png" />
+    <Content Include="Content\kendoui\Black\imagebrowser.png" />
+    <Content Include="Content\kendoui\Black\indeterminate.gif" />
+    <Content Include="Content\kendoui\Black\loading-image.gif" />
+    <Content Include="Content\kendoui\Black\loading.gif" />
+    <Content Include="Content\kendoui\Black\loading_2x.gif" />
+    <Content Include="Content\kendoui\Black\markers.png" />
+    <Content Include="Content\kendoui\Black\markers_2x.png" />
+    <Content Include="Content\kendoui\Black\slider-h.gif" />
+    <Content Include="Content\kendoui\Black\slider-v.gif" />
+    <Content Include="Content\kendoui\Black\sprite.png" />
+    <Content Include="Content\kendoui\Black\sprite_2x.png" />
+    <Content Include="Content\kendoui\BlueOpal\editor.png" />
+    <Content Include="Content\kendoui\BlueOpal\imagebrowser.png" />
+    <Content Include="Content\kendoui\BlueOpal\indeterminate.gif" />
+    <Content Include="Content\kendoui\BlueOpal\loading-image.gif" />
+    <Content Include="Content\kendoui\BlueOpal\loading.gif" />
+    <Content Include="Content\kendoui\BlueOpal\loading_2x.gif" />
+    <Content Include="Content\kendoui\BlueOpal\markers.png" />
+    <Content Include="Content\kendoui\BlueOpal\markers_2x.png" />
+    <Content Include="Content\kendoui\BlueOpal\slider-h.gif" />
+    <Content Include="Content\kendoui\BlueOpal\slider-v.gif" />
+    <Content Include="Content\kendoui\BlueOpal\sprite.png" />
+    <Content Include="Content\kendoui\BlueOpal\sprite_2x.png" />
+    <Content Include="Content\kendoui\Bootstrap\editor.png" />
+    <Content Include="Content\kendoui\Bootstrap\imagebrowser.png" />
+    <Content Include="Content\kendoui\Bootstrap\indeterminate.gif" />
+    <Content Include="Content\kendoui\Bootstrap\loading-image.gif" />
+    <Content Include="Content\kendoui\Bootstrap\loading.gif" />
+    <Content Include="Content\kendoui\Bootstrap\loading_2x.gif" />
+    <Content Include="Content\kendoui\Bootstrap\markers.png" />
+    <Content Include="Content\kendoui\Bootstrap\markers_2x.png" />
+    <Content Include="Content\kendoui\Bootstrap\slider-h.gif" />
+    <Content Include="Content\kendoui\Bootstrap\slider-v.gif" />
+    <Content Include="Content\kendoui\Bootstrap\sprite.png" />
+    <Content Include="Content\kendoui\Bootstrap\sprite_2x.png" />
+    <Content Include="Content\kendoui\Default\editor.png" />
+    <Content Include="Content\kendoui\Default\imagebrowser.png" />
+    <Content Include="Content\kendoui\Default\indeterminate.gif" />
+    <Content Include="Content\kendoui\Default\loading-image.gif" />
+    <Content Include="Content\kendoui\Default\loading.gif" />
+    <Content Include="Content\kendoui\Default\loading_2x.gif" />
+    <Content Include="Content\kendoui\Default\markers.png" />
+    <Content Include="Content\kendoui\Default\markers_2x.png" />
+    <Content Include="Content\kendoui\Default\slider-h.gif" />
+    <Content Include="Content\kendoui\Default\slider-v.gif" />
+    <Content Include="Content\kendoui\Default\sprite.png" />
+    <Content Include="Content\kendoui\Default\sprite_2x.png" />
+    <Content Include="Content\kendoui\Flat\editor.png" />
+    <Content Include="Content\kendoui\Flat\imagebrowser.png" />
+    <Content Include="Content\kendoui\Flat\indeterminate.gif" />
+    <Content Include="Content\kendoui\Flat\loading-image.gif" />
+    <Content Include="Content\kendoui\Flat\loading.gif" />
+    <Content Include="Content\kendoui\Flat\loading_2x.gif" />
+    <Content Include="Content\kendoui\Flat\markers.png" />
+    <Content Include="Content\kendoui\Flat\markers_2x.png" />
+    <Content Include="Content\kendoui\Flat\slider-h.gif" />
+    <Content Include="Content\kendoui\Flat\slider-v.gif" />
+    <Content Include="Content\kendoui\Flat\sprite.png" />
+    <Content Include="Content\kendoui\Flat\sprite_2x.png" />
+    <Content Include="Content\kendoui\HighContrast\editor.png" />
+    <Content Include="Content\kendoui\HighContrast\imagebrowser.png" />
+    <Content Include="Content\kendoui\HighContrast\indeterminate.gif" />
+    <Content Include="Content\kendoui\HighContrast\loading-image.gif" />
+    <Content Include="Content\kendoui\HighContrast\loading.gif" />
+    <Content Include="Content\kendoui\HighContrast\loading_2x.gif" />
+    <Content Include="Content\kendoui\HighContrast\markers.png" />
+    <Content Include="Content\kendoui\HighContrast\markers_2x.png" />
+    <Content Include="Content\kendoui\HighContrast\slider-h.gif" />
+    <Content Include="Content\kendoui\HighContrast\slider-v.gif" />
+    <Content Include="Content\kendoui\HighContrast\sprite.png" />
+    <Content Include="Content\kendoui\HighContrast\sprite_2x.png" />
+    <Content Include="Content\kendoui\images\back.png" />
+    <Content Include="Content\kendoui\images\wp8_icons.png" />
+    <Content Include="Content\kendoui\images\wp8_inverseicons.png" />
+    <Content Include="Content\kendoui\kendo.black.min.css" />
+    <Content Include="Content\kendoui\kendo.black.mobile.min.css" />
+    <Content Include="Content\kendoui\kendo.blueopal.min.css" />
+    <Content Include="Content\kendoui\kendo.blueopal.mobile.min.css" />
+    <Content Include="Content\kendoui\kendo.bootstrap.min.css" />
+    <Content Include="Content\kendoui\kendo.bootstrap.mobile.min.css" />
+    <Content Include="Content\kendoui\kendo.common-bootstrap.core.min.css" />
+    <Content Include="Content\kendoui\kendo.common-bootstrap.min.css" />
+    <Content Include="Content\kendoui\kendo.common.core.min.css" />
+    <Content Include="Content\kendoui\kendo.common.min.css" />
+    <Content Include="Content\kendoui\kendo.dataviz.black.min.css" />
+    <Content Include="Content\kendoui\kendo.dataviz.blueopal.min.css" />
+    <Content Include="Content\kendoui\kendo.dataviz.bootstrap.min.css" />
+    <Content Include="Content\kendoui\kendo.dataviz.default.min.css" />
+    <Content Include="Content\kendoui\kendo.dataviz.flat.min.css" />
+    <Content Include="Content\kendoui\kendo.dataviz.highcontrast.min.css" />
+    <Content Include="Content\kendoui\kendo.dataviz.metro.min.css" />
+    <Content Include="Content\kendoui\kendo.dataviz.metroblack.min.css" />
+    <Content Include="Content\kendoui\kendo.dataviz.min.css" />
+    <Content Include="Content\kendoui\kendo.dataviz.mobile.min.css" />
+    <Content Include="Content\kendoui\kendo.dataviz.moonlight.min.css" />
+    <Content Include="Content\kendoui\kendo.dataviz.silver.min.css" />
+    <Content Include="Content\kendoui\kendo.dataviz.uniform.min.css" />
+    <Content Include="Content\kendoui\kendo.default.min.css" />
+    <Content Include="Content\kendoui\kendo.default.mobile.min.css" />
+    <Content Include="Content\kendoui\kendo.flat.min.css" />
+    <Content Include="Content\kendoui\kendo.flat.mobile.min.css" />
+    <Content Include="Content\kendoui\kendo.highcontrast.min.css" />
+    <Content Include="Content\kendoui\kendo.highcontrast.mobile.min.css" />
+    <Content Include="Content\kendoui\kendo.metro.min.css" />
+    <Content Include="Content\kendoui\kendo.metro.mobile.min.css" />
+    <Content Include="Content\kendoui\kendo.metroblack.min.css" />
+    <Content Include="Content\kendoui\kendo.metroblack.mobile.min.css" />
+    <Content Include="Content\kendoui\kendo.mobile.all.min.css" />
+    <Content Include="Content\kendoui\kendo.mobile.android.dark.min.css" />
+    <Content Include="Content\kendoui\kendo.mobile.android.light.min.css" />
+    <Content Include="Content\kendoui\kendo.mobile.blackberry.min.css" />
+    <Content Include="Content\kendoui\kendo.mobile.common.min.css" />
+    <Content Include="Content\kendoui\kendo.mobile.flat.min.css" />
+    <Content Include="Content\kendoui\kendo.mobile.ios.min.css" />
+    <Content Include="Content\kendoui\kendo.mobile.meego.min.css" />
+    <Content Include="Content\kendoui\kendo.mobile.wp8.min.css" />
+    <Content Include="Content\kendoui\kendo.moonlight.min.css" />
+    <Content Include="Content\kendoui\kendo.moonlight.mobile.min.css" />
+    <Content Include="Content\kendoui\kendo.rtl.min.css" />
+    <Content Include="Content\kendoui\kendo.silver.min.css" />
+    <Content Include="Content\kendoui\kendo.silver.mobile.min.css" />
+    <Content Include="Content\kendoui\kendo.uniform.min.css" />
+    <Content Include="Content\kendoui\kendo.uniform.mobile.min.css" />
+    <Content Include="Content\kendoui\MetroBlack\editor.png" />
+    <Content Include="Content\kendoui\MetroBlack\imagebrowser.png" />
+    <Content Include="Content\kendoui\MetroBlack\indeterminate.gif" />
+    <Content Include="Content\kendoui\MetroBlack\loading-image.gif" />
+    <Content Include="Content\kendoui\MetroBlack\loading.gif" />
+    <Content Include="Content\kendoui\MetroBlack\loading_2x.gif" />
+    <Content Include="Content\kendoui\MetroBlack\markers.png" />
+    <Content Include="Content\kendoui\MetroBlack\markers_2x.png" />
+    <Content Include="Content\kendoui\MetroBlack\slider-h.gif" />
+    <Content Include="Content\kendoui\MetroBlack\slider-v.gif" />
+    <Content Include="Content\kendoui\MetroBlack\sprite.png" />
+    <Content Include="Content\kendoui\MetroBlack\sprite_2x.png" />
+    <Content Include="Content\kendoui\Metro\editor.png" />
+    <Content Include="Content\kendoui\Metro\imagebrowser.png" />
+    <Content Include="Content\kendoui\Metro\indeterminate.gif" />
+    <Content Include="Content\kendoui\Metro\loading-image.gif" />
+    <Content Include="Content\kendoui\Metro\loading.gif" />
+    <Content Include="Content\kendoui\Metro\loading_2x.gif" />
+    <Content Include="Content\kendoui\Metro\markers.png" />
+    <Content Include="Content\kendoui\Metro\markers_2x.png" />
+    <Content Include="Content\kendoui\Metro\slider-h.gif" />
+    <Content Include="Content\kendoui\Metro\slider-v.gif" />
+    <Content Include="Content\kendoui\Metro\sprite.png" />
+    <Content Include="Content\kendoui\Metro\sprite_2x.png" />
+    <Content Include="Content\kendoui\Moonlight\editor.png" />
+    <Content Include="Content\kendoui\Moonlight\imagebrowser.png" />
+    <Content Include="Content\kendoui\Moonlight\indeterminate.gif" />
+    <Content Include="Content\kendoui\Moonlight\loading-image.gif" />
+    <Content Include="Content\kendoui\Moonlight\loading.gif" />
+    <Content Include="Content\kendoui\Moonlight\loading_2x.gif" />
+    <Content Include="Content\kendoui\Moonlight\markers.png" />
+    <Content Include="Content\kendoui\Moonlight\markers_2x.png" />
+    <Content Include="Content\kendoui\Moonlight\slider-h.gif" />
+    <Content Include="Content\kendoui\Moonlight\slider-v.gif" />
+    <Content Include="Content\kendoui\Moonlight\sprite.png" />
+    <Content Include="Content\kendoui\Moonlight\sprite_2x.png" />
+    <Content Include="Content\kendoui\Silver\editor.png" />
+    <Content Include="Content\kendoui\Silver\imagebrowser.png" />
+    <Content Include="Content\kendoui\Silver\indeterminate.gif" />
+    <Content Include="Content\kendoui\Silver\loading-image.gif" />
+    <Content Include="Content\kendoui\Silver\loading.gif" />
+    <Content Include="Content\kendoui\Silver\loading_2x.gif" />
+    <Content Include="Content\kendoui\Silver\markers.png" />
+    <Content Include="Content\kendoui\Silver\markers_2x.png" />
+    <Content Include="Content\kendoui\Silver\slider-h.gif" />
+    <Content Include="Content\kendoui\Silver\slider-v.gif" />
+    <Content Include="Content\kendoui\Silver\sprite.png" />
+    <Content Include="Content\kendoui\Silver\sprite_2x.png" />
+    <Content Include="Content\kendoui\textures\brushed-metal.png" />
+    <Content Include="Content\kendoui\textures\dots1.png" />
+    <Content Include="Content\kendoui\textures\dots10.png" />
+    <Content Include="Content\kendoui\textures\dots11.png" />
+    <Content Include="Content\kendoui\textures\dots12.png" />
+    <Content Include="Content\kendoui\textures\dots13.png" />
+    <Content Include="Content\kendoui\textures\dots2.png" />
+    <Content Include="Content\kendoui\textures\dots3.png" />
+    <Content Include="Content\kendoui\textures\dots4.png" />
+    <Content Include="Content\kendoui\textures\dots5.png" />
+    <Content Include="Content\kendoui\textures\dots6.png" />
+    <Content Include="Content\kendoui\textures\dots7.png" />
+    <Content Include="Content\kendoui\textures\dots8.png" />
+    <Content Include="Content\kendoui\textures\dots9.png" />
+    <Content Include="Content\kendoui\textures\glass-lighter.png" />
+    <Content Include="Content\kendoui\textures\glass.png" />
+    <Content Include="Content\kendoui\textures\highlight.png" />
+    <Content Include="Content\kendoui\textures\hsv-gradient.png" />
+    <Content Include="Content\kendoui\textures\hue.png" />
+    <Content Include="Content\kendoui\textures\leather1.png" />
+    <Content Include="Content\kendoui\textures\leather2.png" />
+    <Content Include="Content\kendoui\textures\noise.png" />
+    <Content Include="Content\kendoui\textures\stripe1.png" />
+    <Content Include="Content\kendoui\textures\stripe2.png" />
+    <Content Include="Content\kendoui\textures\stripe3.png" />
+    <Content Include="Content\kendoui\textures\stripe4.png" />
+    <Content Include="Content\kendoui\textures\stripe5.png" />
+    <Content Include="Content\kendoui\textures\stripe6.png" />
+    <Content Include="Content\kendoui\textures\transparency.png" />
+    <Content Include="Content\kendoui\textures\transtexture.png" />
+    <Content Include="Content\kendoui\Uniform\editor.png" />
+    <Content Include="Content\kendoui\Uniform\imagebrowser.png" />
+    <Content Include="Content\kendoui\Uniform\indeterminate.gif" />
+    <Content Include="Content\kendoui\Uniform\loading-image.gif" />
+    <Content Include="Content\kendoui\Uniform\loading.gif" />
+    <Content Include="Content\kendoui\Uniform\loading_2x.gif" />
+    <Content Include="Content\kendoui\Uniform\markers.png" />
+    <Content Include="Content\kendoui\Uniform\markers_2x.png" />
+    <Content Include="Content\kendoui\Uniform\slider-h.gif" />
+    <Content Include="Content\kendoui\Uniform\slider-v.gif" />
+    <Content Include="Content\kendoui\Uniform\sprite.png" />
+    <Content Include="Content\kendoui\Uniform\sprite_2x.png" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\TabCss.css" />
+    <Content Include="Content\tp-style.css" />
+    <Content Include="Default1.htm" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\Avatars\NoImageAvailable.png" />
+    <Content Include="Images\bg-waiting.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\close-button.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\layout\active.png" />
+    <Content Include="Images\layout\background-footer.png" />
+    <Content Include="Images\layout\button-icon.png" />
+    <Content Include="Images\layout\deletebutton.png" />
+    <Content Include="Images\layout\Edit-icon.gif" />
+    <Content Include="Images\layout\facebox.jpg" />
+    <Content Include="Images\layout\facebox.png" />
+    <Content Include="Images\layout\facebox_03.png" />
+    <Content Include="Images\layout\form-login.png" />
+    <Content Include="Images\layout\hovermidle.png" />
+    <Content Include="Images\layout\icon-jpeg.png" />
+    <Content Include="Images\layout\jcIcon2.gif" />
+    <Content Include="Images\layout\left-menu.jpg" />
+    <Content Include="Images\layout\left-tab.png" />
+    <Content Include="Images\layout\line-menu.jpg" />
+    <Content Include="Images\layout\line-tab-hover.jpg" />
+    <Content Include="Images\layout\line-tab.jpg" />
+    <Content Include="Images\layout\line-tab.png" />
+    <Content Include="Images\layout\lock.gif" />
+    <Content Include="Images\layout\menu.bmp" />
+    <Content Include="Images\layout\PDF-icon.png" />
+    <Content Include="Images\layout\right-menu.jpg" />
+    <Content Include="Images\layout\right-tab.png" />
+    <Content Include="Images\layout\sap-menu-detail_03.png" />
+    <Content Include="Images\layout\saperator.png" />
+    <Content Include="Images\layout\saperatorblack.png" />
+    <Content Include="Images\layout\tpflogo.png" />
+    <Content Include="Images\layout\tpf_logo.gif" />
+    <Content Include="Images\layout\unlock.gif" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Images\quote\icon-pending.png" />
+    <Content Include="Images\quote\icon-repending.png" />
+    <Content Include="Images\Submission\images\Cricket-Drink-Bottle_REF.jpg" />
+    <Content Include="Images\Submission\images\cwal.jpg" />
+    <Content Include="Resources\AvatarContractParty\noimageavailable.png" />
+    <Content Include="Resources\FileAttachmentSubmission\Temp\alfie.pham.jpg" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\facebox\closelabel.png" />
+    <Content Include="Scripts\facebox\facebox.css" />
+    <Content Include="Scripts\facebox\facebox.js" />
+    <Content Include="Scripts\facebox\jquery.js" />
+    <Content Include="Scripts\facebox\loading.gif" />
+    <Content Include="Content\kendoui\images\kendoui.ttf" />
+    <Content Include="Content\kendoui\images\kendoui.woff" />
+    <None Include="Properties\PublishProfiles\Royalty.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.blockUI-2.65.0.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <None Include="Scripts\kendo.all.min.intellisense.js" />
+    <Content Include="Scripts\kendoui\cultures\kendo.culture.en-029.min.js" />
+    <Content Include="Scripts\kendoui\cultures\kendo.culture.en-AU.min.js" />
+    <Content Include="Scripts\kendoui\cultures\kendo.culture.en-BZ.min.js" />
+    <Content Include="Scripts\kendoui\cultures\kendo.culture.en-CA.min.js" />
+    <Content Include="Scripts\kendoui\cultures\kendo.culture.en-GB.min.js" />
+    <Content Include="Scripts\kendoui\cultures\kendo.culture.en-IE.min.js" />
+    <Content Include="Scripts\kendoui\cultures\kendo.culture.en-IN.min.js" />
+    <Content Include="Scripts\kendoui\cultures\kendo.culture.en-JM.min.js" />
+    <Content Include="Scripts\kendoui\cultures\kendo.culture.en-MY.min.js" />
+    <Content Include="Scripts\kendoui\cultures\kendo.culture.en-NZ.min.js" />
+    <Content Include="Scripts\kendoui\cultures\kendo.culture.en-PH.min.js" />
+    <Content Include="Scripts\kendoui\cultures\kendo.culture.en-SG.min.js" />
+    <Content Include="Scripts\kendoui\cultures\kendo.culture.en-TT.min.js" />
+    <Content Include="Scripts\kendoui\cultures\kendo.culture.en-US.min.js" />
+    <Content Include="Scripts\kendoui\cultures\kendo.culture.en-ZA.min.js" />
+    <Content Include="Scripts\kendoui\cultures\kendo.culture.en-ZW.min.js" />
+    <Content Include="Scripts\kendoui\cultures\kendo.culture.en.min.js" />
+    <Content Include="Scripts\kendoui\jquery.min.js" />
+    <Content Include="Scripts\kendoui\kendo.all.min.js" />
+    <Content Include="Scripts\kendoui\kendo.web.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\modules\common\common.js" />
+    <Content Include="Scripts\modules\common\jszip.min.js" />
+    <Content Include="Scripts\modules\common\valueTypes.js" />
+    <Content Include="Scripts\modules\common\xlsx.js" />
+    <Content Include="Scripts\modules\controllers\ContractController.js" />
+    <Content Include="Scripts\modules\services\ContractService.js" />
+    <Content Include="Scripts\modules\services\shellService.js" />
+    <Content Include="Scripts\resources\resources.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Images\Avatars\temp\" />
+    <Folder Include="Resources\AvatarContractParty\Temp\" />
+    <Folder Include="Resources\FileAttachment\Temp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Business\WebOnline.Business\WebOnline.Business.csproj">
+      <Project>{499cde13-d57e-4ae4-bbbe-9116093fc5f9}</Project>
+      <Name>WebOnline.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\TPF.Common\TPF.Common.csproj">
+      <Project>{e7f3dbd9-e0a4-45ac-b622-87a81cc2f23a}</Project>
+      <Name>TPF.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\TestView.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\Partials\Menu.cshtml" />
+    <Content Include="Views\Shared\Partials\MySetting.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\kendoui\jquery.min.map" />
+    <Content Include="Scripts\kendoui\kendo.all.min.js.map" />
+    <Content Include="Scripts\kendoui\kendo.web.min.js.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2830</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2830/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "Online";
+}
+
+
+@*<div id="" style="min-height: 750px;">
+    <div style="padding-top: 10%;padding-left: 34%;"><img alt="TPF" src="~/Images/layout/tpf_logo.gif" width="32%" /></div>
+    <div style="align-content: center;padding-left: 30%;padding-top: 20px;">
+        <input type="text" id="txtKeywordSearch" name="keyword" style="width: 44%; height: 50px;" value="" class="k-textbox" />
+        @*<input type="button" id="btnSearchHome" name="keyword" style="display: none;" onclick="controllerContract.searchContract();" value="" class="k-textbox" />
+    </div>
+    <div style="padding-top: -20%">
+        <div id="wdListContract"></div>
+    </div>
+</div>*@
+
+
+
+<style>
+    .backgrounddiv {
+        position: absolute;
+        width:60.7% !important;
+        margin-left: 45px;
+        height: 45px;
+        background: #bdbdbd;
+        border-radius: 0 10px 8px 0;
+    }
+
+    .spanbackground {
+        width: 74% !important;
+        padding-right: 3em !important;
+        border-radius: 0px 8px 8px 0 !important;
+        /*background: #7e7e7e !important;*/
+        background: #26bfd8 !important;
+        padding: 0 50px 0 0 !important;
+    }
+
+    .inpurstyle {
+        font-size: 16px !important;
+        height: 40px !important;
+        float: left !important;
+        border-radius: 0px !important;
+        /*border: 1px solid #e5e5e5 !important;*/
+        border: 1px solid #26bfd8 !important;
+    }
+
+    .astyle {
+        right: 12px !important;
+        background: url(/Content/images/icon-search.png) no-repeat !important;
+        height: 24px !important;
+        width: 23px !important;
+        top: 18px !important;
+    }
+</style>
+
+
+
+
+<div id="" style="min-height: 50%;">
+    @*<div style="padding-top: 15%;padding-left: 35%;"><img alt="TPF" src="~/Content/images/new logo.png"style="width: 35%; height: 40px" /></div>*@
+    <div style="padding-top: 15%;padding-left: 35%;"><img alt="TPF" src="~/Content/images/new_logo.png" style="width: 35%; height: 40px" /></div>
+    <div style="align-content: center;padding-left: 15%;padding-top: 20px;">
+        <div id="Searchdiv">
+            <div class="backgrounddiv"></div>
+            <ul>
+                <li>
+                    <span class="k-textbox k-space-right spanbackground">
+                        <input type="text" id="txtKeywordSearch" name="keyword" placeholder="SEARCH..." class="inpurstyle" autofocus />
+                        <a href="#" class="k-icon k-i-search astyle" onclick="controllerContract.bntSearch()">&nbsp;</a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        
+
+    </div>
+    <div style="padding-top: -20%">
+        <div id="wdListContract"></div>
+    </div>
+</div>
+
+
+
+@section scripts{
+    @Scripts.Render("~/Scripts/modules/controllers/ContractController.js")
+    @Scripts.Render("~/Scripts/modules/services/ContractService.js")
+    <script>
+        $(document).ready(function () {
+            controllerContract.onPressSearch();
+        });
+
+    </script>
+}

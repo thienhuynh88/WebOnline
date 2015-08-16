@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TPFSystem2013ModelStoreContainer" CdmEntityContainer="TPFSystem2013Entities1">
+    <EntitySetMapping Name="Com_MenuItems">
+      <EntityTypeMapping TypeName="TPFSystem2013Model.Com_MenuItems">
+        <MappingFragment StoreEntitySet="Com_MenuItems">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="PermissionID" ColumnName="PermissionID" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Com_Menus">
+      <EntityTypeMapping TypeName="TPFSystem2013Model.Com_Menus">
+        <MappingFragment StoreEntitySet="Com_Menus">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Com_Permissions">
+      <EntityTypeMapping TypeName="TPFSystem2013Model.Com_Permissions">
+        <MappingFragment StoreEntitySet="Com_Permissions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Com_Roles">
+      <EntityTypeMapping TypeName="TPFSystem2013Model.Com_Roles">
+        <MappingFragment StoreEntitySet="Com_Roles">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Com_UserMenus">
+      <EntityTypeMapping TypeName="TPFSystem2013Model.Com_UserMenus">
+        <MappingFragment StoreEntitySet="Com_UserMenus">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Com_UserRoles">
+      <EntityTypeMapping TypeName="TPFSystem2013Model.Com_UserRoles">
+        <MappingFragment StoreEntitySet="Com_UserRoles">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Com_Users">
+      <EntityTypeMapping TypeName="TPFSystem2013Model.Com_Users">
+        <MappingFragment StoreEntitySet="Com_Users">
+          <ScalarProperty Name="staffID" ColumnName="staffID" />
+          <ScalarProperty Name="fname" ColumnName="fname" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="psentence" ColumnName="psentence" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="suburb" ColumnName="suburb" />
+          <ScalarProperty Name="postcode" ColumnName="postcode" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="companyphone" ColumnName="companyphone" />
+          <ScalarProperty Name="phoneNo" ColumnName="phoneNo" />
+          <ScalarProperty Name="mobNo" ColumnName="mobNo" />
+          <ScalarProperty Name="hkNo" ColumnName="hkNo" />
+          <ScalarProperty Name="extensionNo" ColumnName="extensionNo" />
+          <ScalarProperty Name="directNo" ColumnName="directNo" />
+          <ScalarProperty Name="faxNo" ColumnName="faxNo" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="departID" ColumnName="departID" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="startdate" ColumnName="startdate" />
+          <ScalarProperty Name="enddate" ColumnName="enddate" />
+          <ScalarProperty Name="staffposition" ColumnName="staffposition" />
+          <ScalarProperty Name="sortcode" ColumnName="sortcode" />
+          <ScalarProperty Name="salesNo" ColumnName="salesNo" />
+          <ScalarProperty Name="BDCNo" ColumnName="BDCNo" />
+          <ScalarProperty Name="jobtype" ColumnName="jobtype" />
+          <ScalarProperty Name="payrate" ColumnName="payrate" />
+          <ScalarProperty Name="signon" ColumnName="signon" />
+          <ScalarProperty Name="kitchenduty" ColumnName="kitchenduty" />
+          <ScalarProperty Name="jobdescription" ColumnName="jobdescription" />
+          <ScalarProperty Name="interest" ColumnName="interest" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="psallocate" ColumnName="psallocate" />
+          <ScalarProperty Name="quotpermission" ColumnName="quotpermission" />
+          <ScalarProperty Name="groupnumber" ColumnName="groupnumber" />
+          <ScalarProperty Name="plGroupID" ColumnName="plGroupID" />
+          <ScalarProperty Name="contactperson" ColumnName="contactperson" />
+          <ScalarProperty Name="contactphone" ColumnName="contactphone" />
+          <ScalarProperty Name="alapproval" ColumnName="alapproval" />
+          <ScalarProperty Name="manager" ColumnName="manager" />
+          <ScalarProperty Name="almngr" ColumnName="almngr" />
+          <ScalarProperty Name="alaccrued" ColumnName="alaccrued" />
+          <ScalarProperty Name="stafflisting" ColumnName="stafflisting" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="skype" ColumnName="skype" />
+          <ScalarProperty Name="admin" ColumnName="admin" />
+          <ScalarProperty Name="roll" ColumnName="roll" />
+          <ScalarProperty Name="StartDateLSL" ColumnName="StartDateLSL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

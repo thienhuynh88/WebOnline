@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<style>
+    #search_form {
+        width: 600px;
+        height: 50px;
+        position: fixed;
+    }
+</style>
+
+
+<form action="@Url.Action("About", "Home", new { page = 1 })" id="search_form" style="text-align:center">
+    <img src="~/Images/layout/tpf_logo.gif" style="width:50%; margin-bottom:10px" />
+    <input type="text" name="keyword" style="width:100%;height:30px" autofocus class="k-textbox"/>
+    
+   
+    
+
+    <div style="margin:10px auto">
+        <input style="float:left; margin-left: 240px" type="submit" value="Search" class="m-button">
+        
+       
+        <label style="position: relative;left: -95px;top: 3px;">
+            Exact Match
+        </label>
+        <input style="float:left; margin-left: 20px; margin-top: 5px;" type="checkbox"  class="k-checkbox" name="exactMatch" value="true">
+       
+    </div>
+</form>
+
+
+<div id="user_content">
+    
+</div>
+
+
+
+<script>
+    $(function () {
+        cangiua(); //gọi hàm khi load web
+        $(window).resize(function () { //gọi lại hàm khi thay đổi kích thước trình duyệt
+            cangiua();
+        });
+        function cangiua() { //xây dựng hàm căn giữak
+            $('#search_form').css({ 'top': ($(window).height() - $('#search_form').height()) / 2, 'left': ($(window).width() - $('#search_form').width()) / 2, 'display': 'table' });
+        }
+        
+    });
+
+</script>

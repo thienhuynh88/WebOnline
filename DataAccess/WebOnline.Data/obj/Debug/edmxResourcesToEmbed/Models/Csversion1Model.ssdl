@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Csversion1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="catalogue">
+    <Key>
+      <PropertyRef Name="catalogueID" />
+    </Key>
+    <Property Name="catalogueID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cataloguename" Type="nvarchar" MaxLength="80" />
+    <Property Name="urladdress" Type="nvarchar" MaxLength="200" />
+    <Property Name="emailcat" Type="nvarchar" MaxLength="40" />
+    <Property Name="emailrec" Type="nvarchar" MaxLength="40" />
+    <Property Name="stocknotification" Type="nvarchar" MaxLength="50" />
+    <Property Name="catstatus" Type="nvarchar" MaxLength="15" />
+    <Property Name="display" Type="nvarchar" MaxLength="50" />
+    <Property Name="isEvent" Type="int" Nullable="false" />
+    <Property Name="cataloguegroup" Type="nvarchar" MaxLength="50" />
+    <Property Name="folder" Type="nvarchar" MaxLength="80" />
+    <Property Name="freeNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="TPFcontactName" Type="nvarchar" MaxLength="50" />
+    <Property Name="login" Type="nvarchar" MaxLength="50" />
+    <Property Name="freightcat" Type="nvarchar" MaxLength="10" />
+    <Property Name="payoptions" Type="nvarchar" MaxLength="50" />
+    <Property Name="sellcurrency" Type="nvarchar" MaxLength="50" />
+    <Property Name="createDate" Type="datetime" />
+    <Property Name="code" Type="nvarchar" MaxLength="4" />
+    <Property Name="staffid" Type="bigint" />
+    <Property Name="clientID" Type="bigint" />
+    <Property Name="sendwithGoods" Type="nvarchar" MaxLength="16" />
+    <Property Name="toBeInvoiced" Type="nvarchar" MaxLength="16" />
+    <Property Name="bdcNo" Type="bigint" />
+    <Property Name="orderingSystem" Type="int" />
+    <Property Name="googleid" Type="nvarchar" MaxLength="20" />
+    <Property Name="defaultEntityId" Type="int" />
+    <Property Name="autoDeliveryRequest" Type="bit" />
+    <Property Name="assetsfolder" Type="nvarchar" MaxLength="50" />
+    <Property Name="partofReportingSystem" Type="bit" />
+    <Property Name="usingDotNet" Type="bit" />
+    <Property Name="livehelpID" Type="int" />
+    <Property Name="invCatalogueID" Type="int" />
+    <Property Name="magentokey" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="categoryID" />
+    </Key>
+    <Property Name="categoryID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="catalogueID" Type="int" />
+    <Property Name="categoryname" Type="nvarchar" MaxLength="40" />
+    <Property Name="description" Type="nvarchar" MaxLength="150" />
+    <Property Name="discatpriority" Type="smallint" />
+    <Property Name="catestatus" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="proID" />
+    </Key>
+    <Property Name="proID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="categoryID" Type="bigint" />
+    <Property Name="code1" Type="nvarchar" MaxLength="5" />
+    <Property Name="code2" Type="nvarchar" MaxLength="5" />
+    <Property Name="proname" Type="nvarchar" MaxLength="80" />
+    <Property Name="websafename" Type="nvarchar" MaxLength="80" />
+    <Property Name="prodescription" Type="nvarchar" MaxLength="2000" />
+    <Property Name="pronew" Type="nvarchar" MaxLength="8" />
+    <Property Name="prospecial" Type="nvarchar" MaxLength="4" />
+    <Property Name="subcategory" Type="nvarchar" MaxLength="120" />
+    <Property Name="subcatdesc" Type="nvarchar" MaxLength="500" />
+    <Property Name="hasgst" Type="nvarchar" MaxLength="10" />
+    <Property Name="proprice" Type="float" />
+    <Property Name="propriceexc" Type="float" />
+    <Property Name="pricedesc" Type="nvarchar" MaxLength="25" />
+    <Property Name="nzdprice" Type="nvarchar" MaxLength="10" />
+    <Property Name="discount" Type="nvarchar" MaxLength="4" />
+    <Property Name="prodiscprice" Type="nvarchar" MaxLength="8" />
+    <Property Name="isPack" Type="int" />
+    <Property Name="isPersonalised" Type="int" Nullable="false" />
+    <Property Name="generateVoucherCode" Type="int" Nullable="false" />
+    <Property Name="MOQ" Type="int" />
+    <Property Name="imagename" Type="nvarchar" MaxLength="50" />
+    <Property Name="DSMSetRevision" Type="int" />
+    <Property Name="duedate" Type="nvarchar" MaxLength="15" />
+    <Property Name="dispriority" Type="smallint" />
+    <Property Name="status" Type="nvarchar" MaxLength="15" />
+    <Property Name="nismessage" Type="nvarchar" MaxLength="500" />
+    <Property Name="buy" Type="nvarchar" MaxLength="3" />
+    <Property Name="priceft" Type="nvarchar" MaxLength="8" />
+    <Property Name="pricef" Type="nvarchar" MaxLength="8" />
+    <Property Name="pricepub" Type="nvarchar" MaxLength="8" />
+    <Property Name="p_landedcost" Type="float" />
+    <Property Name="p_minguarantee" Type="float" />
+    <Property Name="p_roypercent" Type="float" />
+    <Property Name="royaltykey" Type="nvarchar" MaxLength="50" />
+    <Property Name="p_rebatepercent" Type="float" />
+    <Property Name="nonDim" Type="nvarchar" MaxLength="4" />
+    <Property Name="lastupdate" Type="nvarchar" MaxLength="1200" />
+    <Property Name="buffer" Type="int" />
+    <Property Name="Licencee" Type="nvarchar" MaxLength="50" />
+    <Property Name="ownedby" Type="nvarchar" MaxLength="80" />
+    <Property Name="hiResImg" Type="nvarchar" MaxLength="4" />
+    <Property Name="variationID" Type="int" />
+    <Property Name="production_productColour" Type="nvarchar" MaxLength="500" />
+    <Property Name="production_productNotes" Type="nvarchar" MaxLength="500" />
+    <Property Name="orderNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="pgid" Type="bigint" />
+    <Property Name="p_reportstatus" Type="nvarchar" MaxLength="5" />
+    <Property Name="p_bostatus" Type="char" MaxLength="1" />
+    <Property Name="p_inventorystatus" Type="nvarchar" MaxLength="20" />
+    <Property Name="p_reportgroup" Type="int" />
+    <Property Name="p_proweight" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="landedcost_ref" Type="nvarchar" MaxLength="12" />
+    <Property Name="financeNote" Type="nvarchar" MaxLength="1200" />
+    <Property Name="newlandedcost" Type="float" />
+    <Property Name="financestatus" Type="nvarchar" MaxLength="10" />
+    <Property Name="financenotes" Type="nvarchar" MaxLength="2000" />
+    <Property Name="wh_id" Type="int" />
+    <Property Name="declaration_name" Type="nvarchar" MaxLength="250" />
+    <Property Name="dim_length" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="dim_width" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="dim_height" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="dim_volume" Type="decimal" Precision="18" Scale="10" />
+    <Property Name="packed_item" Type="int" />
+    <Property Name="custom_declaration_value" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="productionexportID" Type="smallint" Nullable="false" />
+    <Property Name="createdate" Type="datetime" />
+    <Property Name="lastupdatedate" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_category_catalogue">
+    <End Role="catalogue" Type="Self.catalogue" Multiplicity="0..1" />
+    <End Role="category" Type="Self.category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="catalogue">
+        <PropertyRef Name="catalogueID" />
+      </Principal>
+      <Dependent Role="category">
+        <PropertyRef Name="catalogueID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="th_sp_SearchInventoryRoyalty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="KeySearch" Type="varchar" Mode="In" />
+    <Parameter Name="catalogueId" Type="int" Mode="In" />
+    <Parameter Name="page" Type="int" Mode="In" />
+    <Parameter Name="pageSize" Type="int" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="Csversion1ModelStoreContainer">
+    <EntitySet Name="catalogue" EntityType="Self.catalogue" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="category" EntityType="Self.category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="product" EntityType="Self.product" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_category_catalogue" Association="Self.FK_category_catalogue">
+      <End Role="catalogue" EntitySet="catalogue" />
+      <End Role="category" EntitySet="category" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

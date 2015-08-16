@@ -1,0 +1,8 @@
+E:\Change Code New\DataAccess\Royalty.Data\bin\Debug\Royalty.Data.dll.config
+E:\Change Code New\DataAccess\Royalty.Data\bin\Debug\Royalty.Data.dll
+E:\Change Code New\DataAccess\Royalty.Data\bin\Debug\Royalty.Data.pdb
+E:\Change Code New\DataAccess\Royalty.Data\bin\Debug\EntityFramework.dll
+E:\Change Code New\DataAccess\Royalty.Data\bin\Debug\EntityFramework.xml
+E:\Change Code New\DataAccess\Royalty.Data\obj\Debug\Royalty.Data.dll
+E:\Change Code New\DataAccess\Royalty.Data\obj\Debug\Royalty.Data.pdb
+E:\Change Code New\DataAccess\Royalty.Data\obj\Debug\Royalty.Data.csprojResolveAssemblyReference.cache

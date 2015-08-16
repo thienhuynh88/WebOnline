@@ -1,0 +1,14 @@
+E:\Change Code New\Business\Royalty.Business\bin\Release\Royalty.Business.dll.config
+E:\Change Code New\Business\Royalty.Business\bin\Release\Royalty.Business.dll
+E:\Change Code New\Business\Royalty.Business\bin\Release\Royalty.Business.pdb
+E:\Change Code New\Business\Royalty.Business\bin\Release\EntityFramework.dll
+E:\Change Code New\Business\Royalty.Business\bin\Release\Royalty.Data.dll
+E:\Change Code New\Business\Royalty.Business\bin\Release\TPF.Common.dll
+E:\Change Code New\Business\Royalty.Business\bin\Release\log4net.dll
+E:\Change Code New\Business\Royalty.Business\bin\Release\TPF.Common.pdb
+E:\Change Code New\Business\Royalty.Business\bin\Release\Royalty.Data.pdb
+E:\Change Code New\Business\Royalty.Business\bin\Release\EntityFramework.xml
+E:\Change Code New\Business\Royalty.Business\bin\Release\log4net.xml
+E:\Change Code New\Business\Royalty.Business\obj\Release\Royalty.Business.csprojResolveAssemblyReference.cache
+E:\Change Code New\Business\Royalty.Business\obj\Release\Royalty.Business.dll
+E:\Change Code New\Business\Royalty.Business\obj\Release\Royalty.Business.pdb

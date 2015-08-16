@@ -1,0 +1,26 @@
+
+- Clients: MVC, SPA
+- Services: WCF, WebApi
+
+-----------------------------
+I. Modify the template file 'StudioJobModel.tt' to add: 
+
+- using Repository.Pattern.Ef6;
+- TEntity: Entity
+
+1. within the method:
+ public void BeginNamespace(CodeGenerationTools code)
+
+ --- add more code here
+ using Repository.Pattern.Ef6;
+namespace <#=code.EscapeNamespace(codeNamespace)#>
+
+2. within the method: 
+public string EntityClassOpening(EntityType entity)
+
+"{0} {1}partial class {2}{3} : Entity",
+
+II. Modify the template file 'StudioJobModel.Context.tt' to add: 
+- Entity : DataContext
+
+<#=Accessibility.ForType(container)#> partial class <#=code.Escape(container)#> :

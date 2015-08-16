@@ -1,0 +1,6 @@
+E:\Change Code New\Common\TPF.Common\bin\Release\TPF.Common.dll
+E:\Change Code New\Common\TPF.Common\bin\Release\TPF.Common.pdb
+E:\Change Code New\Common\TPF.Common\bin\Release\log4net.dll
+E:\Change Code New\Common\TPF.Common\bin\Release\log4net.xml
+E:\Change Code New\Common\TPF.Common\obj\Release\TPF.Common.dll
+E:\Change Code New\Common\TPF.Common\obj\Release\TPF.Common.pdb

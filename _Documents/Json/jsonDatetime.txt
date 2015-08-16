@@ -1,0 +1,14 @@
+-- Convert JSON date to JavaScript date
+http://codeasp.net/blogs/raghav_khunger/microsoft-net/1105/convert-json-date-to-javascript-date
+
+-- Convert JSON "/Date(1297246301973)/" to javascript date only
+http://forums.asp.net/t/1651593.aspx?Convert+JSON+Date+1297246301973+to+javascript+date+only
+
+-- jQuery parseJSON automatic date conversion for Asp.net and ISO date strings
+http://erraticdev.blogspot.com/2010/12/converting-dates-in-json-strings-using.html
+
+--Converting JSON date string to javascript date object
+http://blog.degree.no/2012/10/converting-json-date-string-to-javascript-date-object/
+
+--How I handle JSON dates returned by ASP.NET AJAX
+http://encosia.com/how-i-handle-json-dates-returned-by-aspnet-ajax/

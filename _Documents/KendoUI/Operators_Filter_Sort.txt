@@ -1,0 +1,13 @@
+* Filter - Operators: 
+- Is equal to "eq"
+- Is not equal to "neq"
+- Starts with "startswith"
+- Contains "contains"
+- Does not contain "doesnotcontain"
+- Ends with "endswith"
+
+logic: "and"    "or"
+
+
+* Sort
+Direction:  "asc"     "desc"

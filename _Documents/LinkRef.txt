@@ -1,0 +1,19 @@
+-- Implementing a Dispose Method
+http://msdn.microsoft.com/en-us/library/fs2xkftw(v=vs.110).aspx
+
+-- WCF
+http://stackoverflow.com/questions/884235/wcf-how-to-increase-message-size-quota
+http://stackoverflow.com/questions/16265725/wcf-error-the-maximum-message-size-quota-for-incoming-messages-65536-has-bee
+
+-- Entity Framework 6 Mocking and Unit Testing
+http://frankdecaire.blogspot.com/2013/11/entity-framework-6-mocking-and-unit.html
+http://msdn.microsoft.com/en-us/data/dn314429.aspx
+
+-- ASP.NET MVC Samples
+http://www.asp.net/aspnet/samples
+
+-- Web API
+http://www.asp.net/web-api/
+
+-- Unit of Work Design Pattern
+http://www.codeproject.com/Articles/581487/Unit-of-Work-Design-Pattern

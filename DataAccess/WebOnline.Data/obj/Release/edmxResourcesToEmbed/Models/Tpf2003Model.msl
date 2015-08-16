@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Tpf2003ModelStoreContainer" CdmEntityContainer="Tpf2003Entities">
+    <EntitySetMapping Name="staffs">
+      <EntityTypeMapping TypeName="Tpf2003Model.staff">
+        <MappingFragment StoreEntitySet="staff">
+          <ScalarProperty Name="staffID" ColumnName="staffID" />
+          <ScalarProperty Name="fname" ColumnName="fname" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="psentence" ColumnName="psentence" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="suburb" ColumnName="suburb" />
+          <ScalarProperty Name="postcode" ColumnName="postcode" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="companyphone" ColumnName="companyphone" />
+          <ScalarProperty Name="phoneNo" ColumnName="phoneNo" />
+          <ScalarProperty Name="mobNo" ColumnName="mobNo" />
+          <ScalarProperty Name="hkNo" ColumnName="hkNo" />
+          <ScalarProperty Name="extensionNo" ColumnName="extensionNo" />
+          <ScalarProperty Name="directNo" ColumnName="directNo" />
+          <ScalarProperty Name="faxNo" ColumnName="faxNo" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="departID" ColumnName="departID" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="startdate" ColumnName="startdate" />
+          <ScalarProperty Name="enddate" ColumnName="enddate" />
+          <ScalarProperty Name="staffposition" ColumnName="staffposition" />
+          <ScalarProperty Name="sortcode" ColumnName="sortcode" />
+          <ScalarProperty Name="salesNo" ColumnName="salesNo" />
+          <ScalarProperty Name="BDCNo" ColumnName="BDCNo" />
+          <ScalarProperty Name="jobtype" ColumnName="jobtype" />
+          <ScalarProperty Name="payrate" ColumnName="payrate" />
+          <ScalarProperty Name="signon" ColumnName="signon" />
+          <ScalarProperty Name="kitchenduty" ColumnName="kitchenduty" />
+          <ScalarProperty Name="jobdescription" ColumnName="jobdescription" />
+          <ScalarProperty Name="interest" ColumnName="interest" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="psallocate" ColumnName="psallocate" />
+          <ScalarProperty Name="quotpermission" ColumnName="quotpermission" />
+          <ScalarProperty Name="groupnumber" ColumnName="groupnumber" />
+          <ScalarProperty Name="plGroupID" ColumnName="plGroupID" />
+          <ScalarProperty Name="contactperson" ColumnName="contactperson" />
+          <ScalarProperty Name="contactphone" ColumnName="contactphone" />
+          <ScalarProperty Name="alapproval" ColumnName="alapproval" />
+          <ScalarProperty Name="manager" ColumnName="manager" />
+          <ScalarProperty Name="almngr" ColumnName="almngr" />
+          <ScalarProperty Name="alaccrued" ColumnName="alaccrued" />
+          <ScalarProperty Name="stafflisting" ColumnName="stafflisting" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="skype" ColumnName="skype" />
+          <ScalarProperty Name="admin" ColumnName="admin" />
+          <ScalarProperty Name="roll" ColumnName="roll" />
+          <ScalarProperty Name="StartDateLSL" ColumnName="StartDateLSL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="inv_mp_sp_GetStaff" FunctionName="Tpf2003Model.Store.inv_mp_sp_GetStaff">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Tpf2003Model.inv_mp_sp_GetStaff_Result">
+          <ScalarProperty Name="staffID" ColumnName="staffID" />
+          <ScalarProperty Name="staffname" ColumnName="staffname" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

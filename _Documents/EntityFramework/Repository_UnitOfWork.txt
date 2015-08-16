@@ -1,0 +1,18 @@
+http://blog.longle.net/2013/05/11/genericizing-the-unit-of-work-pattern-repository-pattern-with-entity-framework-in-mvc/
+-------------------------------------------
+* Two important objectives we will try to with our UoW pattern implementation are:
+Abstract away the ORM tool, in our case EF.
+Ensuring that all interactions with the database are happening under one DbContext instance per page request.
+-------
+* Best Practice, Coding Against Abstractions or Interfaces
+Abstractions serve as a nice flexibility point later, allowing us to implement different variations of the abstraction (interface). 
+This will be very useful later when we implement DI (Dependency Injection and IoC (Inverse of Control) patterns. 
+Coding to an abstraction will also help us easily create unit test, allowing us to inject faked or mocked instances as well. 
+If your a bit unclear on how this helps set stage for DI, IoC and Unit Testing
+-------
+* UnitOfWork: will store all the activated instances of repositories for each and every requests. 
+One there is a request for a given repository we will first check to see if our Hashtable (container to hold all of our activated repository instances) has been created, 
+if not, will go ahead and create our container. Next, we’ll scan our container to see if the requested repository instance has already been created, if it has, then will return it, 
+if it hasn’t, we will activate the requested repository instance, store it in our container, and then return it. If it helps, you can think of this as lazy loading our repository instances, 
+meaning we are only creating repository instances on demand, this allows us to only create the repository instances needed for a given web request. Last but not least, 
+notice here how we are following best practices mentioned earlier, we are not return the concrete implementation for the Repository, but the abstraction, IRepository.

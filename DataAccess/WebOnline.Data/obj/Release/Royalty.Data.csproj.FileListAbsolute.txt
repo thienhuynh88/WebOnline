@@ -1,0 +1,7 @@
+E:\Change Code New\DataAccess\Royalty.Data\bin\Release\Royalty.Data.dll.config
+E:\Change Code New\DataAccess\Royalty.Data\bin\Release\Royalty.Data.dll
+E:\Change Code New\DataAccess\Royalty.Data\bin\Release\Royalty.Data.pdb
+E:\Change Code New\DataAccess\Royalty.Data\bin\Release\EntityFramework.dll
+E:\Change Code New\DataAccess\Royalty.Data\bin\Release\EntityFramework.xml
+E:\Change Code New\DataAccess\Royalty.Data\obj\Release\Royalty.Data.dll
+E:\Change Code New\DataAccess\Royalty.Data\obj\Release\Royalty.Data.pdb

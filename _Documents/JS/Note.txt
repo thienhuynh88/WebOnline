@@ -1,0 +1,11 @@
+-- 3 ways to define a JavaScript class
+http://www.phpied.com/3-ways-to-define-a-javascript-class/
+
+--What's the best way to define a class in JavaScript?
+http://stackoverflow.com/questions/387707/whats-the-best-way-to-define-a-class-in-javascript
+
+-- singleton
+http://stackoverflow.com/questions/1479319/simplest-cleanest-way-to-implement-singleton-in-javascript
+
+-- 45-useful-javascript-tips-tricks-and-best-practices
+http://flippinawesome.org/2013/12/23/45-useful-javascript-tips-tricks-and-best-practices/

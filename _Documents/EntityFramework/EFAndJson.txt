@@ -1,0 +1,2 @@
+-- Entity Framework Circular References
+http://truncatedcodr.wordpress.com/2012/09/10/entity-framework-circular-references/

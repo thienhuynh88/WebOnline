@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Tpf2003Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="staff">
+    <Key>
+      <PropertyRef Name="staffID" />
+    </Key>
+    <Property Name="staffID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="lname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="psentence" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DOB" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="suburb" Type="String" MaxLength="75" FixedLength="false" Unicode="true" />
+    <Property Name="postcode" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="country" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="companyphone" Type="Boolean" />
+    <Property Name="phoneNo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="mobNo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="hkNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="extensionNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="directNo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="faxNo" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="departID" Type="Int32" />
+    <Property Name="location" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="startdate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="enddate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="staffposition" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="sortcode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="salesNo" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="BDCNo" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="jobtype" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="payrate" Type="Single" />
+    <Property Name="signon" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="kitchenduty" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="jobdescription" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="interest" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="photo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="psallocate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="quotpermission" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="groupnumber" Type="Int32" />
+    <Property Name="plGroupID" Type="Int32" />
+    <Property Name="contactperson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="contactphone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="alapproval" Type="Int32" />
+    <Property Name="manager" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="almngr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="alaccrued" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="stafflisting" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="companyid" Type="Int32" />
+    <Property Name="skype" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="admin" Type="Int32" />
+    <Property Name="roll" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="StartDateLSL" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="Tpf2003Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="staffs" EntityType="Self.staff" />
+    <FunctionImport Name="inv_mp_sp_GetStaff" ReturnType="Collection(Tpf2003Model.inv_mp_sp_GetStaff_Result)" />
+  </EntityContainer>
+  <ComplexType Name="inv_mp_sp_GetStaff_Result">
+    <Property Type="Int32" Name="staffID" Nullable="false" />
+    <Property Type="String" Name="staffname" Nullable="true" MaxLength="61" />
+  </ComplexType>
+</Schema>

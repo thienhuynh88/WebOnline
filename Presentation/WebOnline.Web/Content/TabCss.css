@@ -1,0 +1,292 @@
+﻿
+a {
+    cursor: pointer;
+}
+
+.m-buttonselect {
+    color: white !important;
+    background-image: url('../Images/layout/button-icon.png') !important;
+    background-repeat: repeat-x;
+    -moz-border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    border-radius: 4px !important;
+    text-align: center;
+    padding: 4px 10px 4px 10px;
+    padding-bottom: 5px !important;
+    margin-bottom: 10px;
+    background-position: 50% 50%;
+    font-size: 11px !important;
+    cursor: pointer;
+}
+
+.k-upload-button span {
+    color: white !important;
+}
+
+.k-upload ul {
+    width: 98.5% !important;
+    float: left;
+}
+
+html .k-upload {
+    border: 1px solid #CCCCCC !important;
+    position: relative;
+    border-width: 1px !important;
+}
+
+.k-dropzone {
+}
+
+.display-sel label {
+    margin-top: 13px;
+    float: left;
+    margin-left: 8px;
+}
+
+.k-upload-button {
+    margin-top: 8px;
+}
+
+.label-select {
+    position: relative;
+    top: -26px;
+    left: 260px;
+    font-weight: bold !important;
+    color: black;
+    width: 200px;
+    float: left;
+}
+
+.label-select1 {
+    display: none;
+}
+
+#forecast {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.tab {
+    text-transform: uppercase;
+    font-weight: bold !important;
+    color: #333 !important;
+}
+
+
+.container-tab {
+    width: 100%;
+    background-color: #f6f6f6;
+    float: left;
+}
+
+#tabstrip {
+    width: 100%;
+    float: left;
+    border: none;
+    padding: 0 !important;
+    background-color: white;
+}
+
+    #tabstrip ul .k-state-active {
+        background-image: url('../Images/Layout/line-tab-hover.jpg') !important;
+        background-position: 50% 50%;
+        background-repeat: repeat-x;
+        height: 28px;
+        color: black !important;
+        top: -0px;
+    }
+
+    #tabstrip .k-state-active, .k-state-active:hover, .k-active-filter {
+        background-color: #fff;
+        border-color: #CCCCCC;
+        color: #2e2e2e;
+    }
+
+    #tabstrip .k-state-active, .k-state-active:hover, .k-active-filter {
+        background-color: white;
+        border-color: #CCCCCC;
+        color: #2e2e2e;
+    }
+
+    #tabstrip .k-tabstrip-items .k-item {
+        background-image: url('../Images/Layout/line-tab.jpg');
+        background-position: 50% 50%;
+        height: 28px;
+    }
+
+.k-tabstrip .k-content, .k-panelbar .k-tabstrip .k-content {
+    position: static;
+    border-style: solid;
+    zoom: 1;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#tabstrip .k-content {
+    /*border-top-width: 0px;*/
+    position: relative;
+    top: -1px;
+    float: left;
+    height: auto;
+    width: 100%;
+}
+
+#tabstrip ul {
+    float: left;
+}
+
+.k-header {
+    background-image: url('textures/highlight.png');
+    /*background-image: none,-webkit-linear-gradient(top,white 0,white 100%);
+        background-image: none,-moz-linear-gradient(top,white 0,white 100%);
+        background-image: none,-o-linear-gradient(top,white 0,white 100%);
+        background-image: none,linear-gradient(to bottom,white 0,white 100%);*/
+    background-position: 50% 50%;
+}
+
+.k-header {
+    color: #2e2e2e;
+}
+
+
+
+
+.k-tabstrip .k-tabstrip-items {
+    padding: 0 !important;
+}
+
+.contain-info {
+    float: left;
+    padding: 30px;
+    width: 100%;
+    /*min-height: 1000px;*/
+}
+
+
+.textBox-small {
+    width: 60px !important;
+}
+
+#firstProof {
+    width: 98%;
+    height: 170px;
+    margin-top: 20px;
+}
+
+.marginLeft10 {
+    margin-left: 10px;
+}
+
+.err {
+    float: right;
+    margin-right: 5px;
+    line-height: 19px;
+}
+
+
+
+.dr .k-dropdown {
+    width: 90% !important;
+}
+
+.dr1 .k-dropdown {
+    width: 98% !important;
+}
+
+.conte {
+    width: 100%;
+    float: right;
+    min-height: 100px;
+}
+
+ul li {
+    list-style: none;
+}
+
+#tabstrip1 {
+    width: 100%;
+    float: left;
+    border: none;
+    padding: 0 !important;
+    background-color: white;
+}
+
+    #tabstrip1 ul .k-state-active {
+        background-image: url('../Images/Layout/line-tab-hover.jpg') !important;
+        background-position: 50% 50%;
+        background-repeat: repeat-x;
+        height: 28px;
+        color: black !important;
+        top: -0px;
+    }
+
+    #tabstrip1 .k-state-active, .k-state-active:hover, .k-active-filter {
+        background-color: #fff;
+        /*border-color: #CCCCCC;*/
+        color: #2e2e2e;
+    }
+
+    #tabstrip1 .k-state-active, .k-state-active:hover, .k-active-filter {
+        background-color: white;
+        /*border-color: #CCCCCC;*/
+        color: #2e2e2e;
+    }
+
+    #tabstrip1 .k-tabstrip-items .k-item {
+        background-image: url('../Images/Layout/line-tab.jpg');
+        background-position: 50% 50%;
+        height: 28px;
+    }
+
+.k-tabstrip1 .k-content, .k-panelbar .k-tabstrip .k-content {
+    position: static;
+    border-style: solid;
+    zoom: 1;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#tabstrip1 .k-content {
+    /*border-top-width: 0px;*/
+    position: relative;
+    top: -1px;
+    float: left;
+    height: auto;
+    width: 100%;
+}
+
+#tabstrip1 ul {
+    float: left;
+}
+
+
+.ddlType {
+    font-size: 12px;
+    border: 1px solid #ccc;
+    padding: 3px;
+    border-radius: 4px;
+    margin: 1px 10px 1px 5px;
+}
+
+.lableHeader {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.box {
+    /*border: 1px solid #CCCCCC;*/
+    /*margin-bottom: 5px;*/
+    background-color: #F6F6F6;
+    float: left;
+    border-radius: 4px;
+    width: 100%;
+    padding:5px 0 5px 0;
+}
+

@@ -1,0 +1,124 @@
+﻿
+<style type="text/css">
+ #KendoMenu li, #KendoMenu {
+        border-left: 0 !important;
+        border-right: 0 !important;
+    }
+
+
+    #KendoMenu {
+        border: 0 none !important;
+    }
+
+        #KendoMenu  li  ul > li {
+             border-bottom: 1px solid #8B8B8B;
+
+        }
+
+     #KendoMenu li a:hover {
+            color: #464745 !important;
+        }
+
+     #KendoMenu li {
+         height: 31px !important;
+
+     }
+        #KendoMenu .k-state-hover {
+            background-image: url('@Url.Content("~/Images/layout")/line-menu.jpg') !important;
+            background-repeat: repeat-x;
+
+            color: #464745 !important;
+
+        }
+
+     #KendoMenu .m-button-active, #KendoMenu .k-state-active {
+            background-image: url('@Url.Content("~/Images/layout")/line-menu.jpg') !important;
+            background-repeat: repeat-x;
+            /*height: 31px;*/
+            color: #464745 !important;
+
+        }
+
+
+     #KendoMenu li div ul li a {
+            -moz-border-bottom: 1px solid #676766;
+            -webkit-border-bottom: 1px solid #676766;
+            /*border-bottom: 1px solid #ccc;*/
+            text-align: left !important;
+            color: white !important;
+        }
+
+
+
+    #KendoMenu li .backgwhite {
+        /*padding: 9.7px 26.7px 9.7px 26.7px !important;*/
+        color: white;
+    }
+
+    .saperate {
+        background-image: url('@Url.Content("~/Images/layout")/saperator.png');
+        background-repeat: no-repeat;
+       /* background-position: right;
+        text-decoration: none;*/
+    }
+     .saperate-black {
+        background-image: url('@Url.Content("~/Images/layout")/saperatorblack.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        text-decoration: none;
+    }
+
+
+       #KendoMenu li, #KendoMenu {
+        -webkit-border-left: 1px solid #676766;
+        -moz-border-left: 1px solid #676766;
+        border-left: 1px solid #676766;
+        border-right: none;
+    }
+
+
+       #KendoMenu li a {
+        padding: 9.7px 26.7px 8px 26.7px ;
+
+        font-weight: normal !important;
+        font-size: 11px !important;
+    }
+</style>
+<ul id="KendoMenu" class="" style="height: 31px; margin-top: 0.5px; display: none ">
+    <li>
+        @Html.ActionLink("Home", "Index", "Home", null, new { @class = "colo1 saperate backgwhite" })
+    </li>
+    @*<li>
+        <a class="saperate backgwhite">Contract Parties</a>
+        <ul>
+            <li><a href="@Url.Action("list", "contractparty")" title="Contract Parties List">List Parties </a></li>
+            <li><a href="@Url.Action("edit", "contractparty", new { @id = string.Empty })" title="New Contract Parties">New Party</a></li>
+        </ul>
+    </li>
+    <li>
+        <a class="saperate backgwhite">Contract</a>
+        <ul>
+            <li><a href="@Url.Action("ListContract", "Contract")">List Contracts</a></li>
+            <li><a href="@Url.Action("EditContract", "Contract", new { id = string.Empty })">New Contract</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a class="saperate backgwhite">Submission</a>
+        <ul>
+            <li><a href="@Url.Action("ListSubmission", "Submission")">List Submissions </a></li>
+            <li><a href="@Url.Action("AddOrEditSubmission", "Submission", new { @id = string.Empty }, null)">New Submission</a></li>
+        </ul>
+    </li>*@
+
+   
+</ul>
+<script>
+
+    //$(document).ready(function () {
+    //            $('a[rel*=facebox]').facebox({
+    //                loadingImage: '../../Scripts/facebox/loading.gif',
+    //                closeImage: '../../Scripts/facebox/closelabel.png'
+    //            });
+    //});
+</script>

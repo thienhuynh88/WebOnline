@@ -1,0 +1,90 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .cont {
+        padding: 20px 15px 25px 15px;
+    }
+
+    label {
+        color: #333 !important;
+        font-weight: normal !important;
+    }
+
+    .foter {
+        background-image: url(../../Images/layout/background-footer.png);
+        clear: both;
+        font-size: 0.8em;
+        height: 40px !important;
+        border-top: 1px solid #bfbfbf;
+        background-repeat: repeat-x;
+        position: absolute !important;
+        width: 100%;
+        bottom: 0px;
+        margin-top: 20px;
+    }
+</style>
+
+<div id="cent" style="padding-left: 0px; text-align: center;margin: 0 auto; display: none; vertical-align: middle">
+    @using (Html.BeginForm(new { returnUrl = ViewBag.ReturnUrl }))
+    {
+        const string username = "";
+        const string password = "";
+
+        <div class="fomrlogin shadow">
+                        <div class="cont">
+                            <div class="site-title" style="text-align: left; margin-bottom: 30px; text-align: left; margin-left: 10px; margin-top: 30px;">
+                                <a href="@Url.Action("", "")">
+                                    <img src="@Url.Content("~/Content/images/new_logo.png")" title="TPF Logo" width="200" />
+                                </a>
+                            </div>
+                            <div>
+                                <label for="username">Username :</label>
+                                <input style="width: 250px;" type="text" name="username" id="username" value="@username" class="k-textbox" />
+                                <br />
+                                <br />
+                                <label for="password">Password :</label>
+                                <input style="width: 250px;" type="password" name="password" id="password" value="@password" class="k-textbox" />
+                                <div style=" text-align: center; padding-top: 10px;margin-bottom:50px">
+                                    <label style="position: relative;left: -17px;top: 6px;">
+                                        Remember me
+                                    </label>
+                                    <input style="float: left; margin-left: 136px; margin-top: 8px;" type="checkbox" id="RememberMe" name="RememberMe" value="true" checked="@(username !="")" />
+
+                                    <input class="m-button" type="submit" id="btnsubmit" value="Login" style="margin-left: 12px;margin-right: 69px; float: right; padding: 5px 20px 5px 20px;" />
+                                </div>
+
+                            </div>
+                        </div>
+         </div>
+                
+    }
+    
+    <div style="font-size:11px">
+        @Html.ValidationSummary(true, "Login Failed. Please retry.")
+    </div>
+
+  
+</div>
+<style>
+    #cent {
+        width: 370px;
+        height: 355px;
+        position: fixed;
+    }
+</style>
+<script>
+    $(function () {
+        cangiua(); //gọi hàm khi load web
+        $(window).resize(function () { //gọi lại hàm khi thay đổi kích thước trình duyệt
+            cangiua();
+        });
+
+        function cangiua() { //xây dựng hàm căn giữa
+            $('#cent').css({ 'top': ($(window).height() - $('#cent').height()) / 2, 'left': ($(window).width() - $('#cent').width()) / 2, 'display': 'table' });
+        }
+
+    });
+</script> 
+

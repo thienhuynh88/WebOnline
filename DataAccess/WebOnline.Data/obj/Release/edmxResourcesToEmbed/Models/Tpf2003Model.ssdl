@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Tpf2003Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="staff">
+    <Key>
+      <PropertyRef Name="staffID" />
+    </Key>
+    <Property Name="staffID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fname" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="lname" Type="nvarchar" MaxLength="30" />
+    <Property Name="username" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="psentence" Type="nvarchar" MaxLength="50" />
+    <Property Name="DOB" Type="varchar" MaxLength="15" />
+    <Property Name="address" Type="nvarchar" MaxLength="150" />
+    <Property Name="suburb" Type="nvarchar" MaxLength="75" />
+    <Property Name="postcode" Type="varchar" MaxLength="25" />
+    <Property Name="state" Type="nvarchar" MaxLength="50" />
+    <Property Name="country" Type="varchar" MaxLength="20" />
+    <Property Name="companyphone" Type="bit" />
+    <Property Name="phoneNo" Type="varchar" MaxLength="30" />
+    <Property Name="mobNo" Type="varchar" MaxLength="30" />
+    <Property Name="hkNo" Type="varchar" MaxLength="50" />
+    <Property Name="extensionNo" Type="varchar" MaxLength="10" />
+    <Property Name="directNo" Type="varchar" MaxLength="25" />
+    <Property Name="faxNo" Type="nvarchar" MaxLength="25" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="departID" Type="int" />
+    <Property Name="location" Type="nvarchar" MaxLength="30" />
+    <Property Name="startdate" Type="varchar" MaxLength="20" />
+    <Property Name="enddate" Type="varchar" MaxLength="20" />
+    <Property Name="staffposition" Type="nvarchar" MaxLength="150" />
+    <Property Name="sortcode" Type="varchar" MaxLength="5" />
+    <Property Name="salesNo" Type="varchar" MaxLength="5" />
+    <Property Name="BDCNo" Type="nvarchar" MaxLength="15" />
+    <Property Name="jobtype" Type="varchar" MaxLength="20" />
+    <Property Name="payrate" Type="real" />
+    <Property Name="signon" Type="varchar" MaxLength="5" />
+    <Property Name="kitchenduty" Type="varchar" MaxLength="5" />
+    <Property Name="jobdescription" Type="nvarchar" MaxLength="200" />
+    <Property Name="interest" Type="nvarchar" MaxLength="200" />
+    <Property Name="photo" Type="nvarchar" MaxLength="20" />
+    <Property Name="status" Type="nvarchar" MaxLength="15" />
+    <Property Name="psallocate" Type="nvarchar" MaxLength="20" />
+    <Property Name="quotpermission" Type="nvarchar" MaxLength="60" />
+    <Property Name="groupnumber" Type="int" />
+    <Property Name="plGroupID" Type="int" />
+    <Property Name="contactperson" Type="nvarchar" MaxLength="20" />
+    <Property Name="contactphone" Type="nvarchar" MaxLength="20" />
+    <Property Name="alapproval" Type="int" />
+    <Property Name="manager" Type="nvarchar" MaxLength="50" />
+    <Property Name="almngr" Type="nvarchar" MaxLength="50" />
+    <Property Name="alaccrued" Type="nvarchar" MaxLength="8" />
+    <Property Name="stafflisting" Type="nvarchar" MaxLength="8" />
+    <Property Name="companyid" Type="int" />
+    <Property Name="skype" Type="nvarchar" MaxLength="50" />
+    <Property Name="admin" Type="int" />
+    <Property Name="roll" Type="nvarchar" MaxLength="150" />
+    <Property Name="StartDateLSL" Type="datetime" />
+  </EntityType>
+  <Function Name="inv_mp_sp_GetStaff" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="Tpf2003ModelStoreContainer">
+    <EntitySet Name="staff" EntityType="Self.staff" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

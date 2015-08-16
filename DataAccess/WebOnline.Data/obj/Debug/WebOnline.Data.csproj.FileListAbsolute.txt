@@ -1,0 +1,7 @@
+E:\ProjectWebOnline\DataAccess\WebOnline.Data\bin\Debug\Royalty.Data.dll.config
+E:\ProjectWebOnline\DataAccess\WebOnline.Data\bin\Debug\Royalty.Data.dll
+E:\ProjectWebOnline\DataAccess\WebOnline.Data\bin\Debug\Royalty.Data.pdb
+E:\ProjectWebOnline\DataAccess\WebOnline.Data\bin\Debug\EntityFramework.dll
+E:\ProjectWebOnline\DataAccess\WebOnline.Data\bin\Debug\EntityFramework.xml
+E:\ProjectWebOnline\DataAccess\WebOnline.Data\obj\Debug\Royalty.Data.dll
+E:\ProjectWebOnline\DataAccess\WebOnline.Data\obj\Debug\Royalty.Data.pdb

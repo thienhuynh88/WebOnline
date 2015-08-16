@@ -1,0 +1,175 @@
+﻿
+@{
+    ViewBag.Title = "ContractProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+     .DivTrueView {
+        border: 1px solid #c5c5c5;
+        padding: 10px;
+        margin-top: 10px;
+        width: 20%;
+        float:left;
+        border-radius: 5px;
+        min-height: 818px;
+    }
+        .ContractInformationRight {
+          width: 78%;
+          float: left;
+          border: 1px solid #c5c5c5;
+          padding: 10px;
+          margin-top: 10px;
+          border-radius: 5px;
+          margin-left: 10px;
+          min-height: 818px;
+    }
+
+     .div_listproduct {
+          width: 100%;
+          float: left;
+          border: 1px solid #c5c5c5;
+          padding: 10px;
+          border-radius: 5px;
+          height: 735px;
+    }
+     .tableHeaderListProduct {
+    height: 30px;
+    text-align: center;
+    background-color: #26BFD8;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 2px 2px;
+ }
+     .tableHeaderListProductTD10{
+     vertical-align: middle
+ }
+</style>
+
+<div id="ContractProduct">
+    <div id="LeftTrueView">
+        <div class="DivTrueView">
+            <input type="button" class="m-button" style="width: 99%" value="Add Catalogue"/>
+            <div><label class="k-label" style="font-size: 16px;">Label :</label></div>
+            <div id="treeview-left"></div>
+        </div>
+    </div>
+    
+    <div class="ContractInformationRight">
+         
+        <div id="bntAddNew">
+            <span>
+                <input type="button" class="m-button" style="" value="Add Category" />
+                <input type="button" class="m-button" style="" value="Add Product" />
+            </span>
+       
+        </div>
+        
+        <div><label class="k-label" style="font-size: 16px;">Product List :</label></div>
+        <div id="divListProduct" class="div_listproduct">
+            <table id="detail_PO">
+                <tbody>
+                    <tr class="tableHeaderListProduct">
+                        <td class="tableHeaderListProductTD10" style="width: 3%;"><span></span></td>
+                        <td class="tableHeaderListProductTD10" style="width: 10%;"><span></span></td>
+                        <td class="tableHeaderListProductTD10" style="width: 10%;"><span>INTERNAL CODE</span></td>
+                        <td class="tableHeaderListProductTD10" style="width: 10%;"><span>USER CODE</span></td>
+                        <td class="tableHeaderListProductTD10" style=""><span>NAME</span></td>
+                        <td class="tableHeaderListProductTD10" style="width: 10%;"><span>PRICE 1</span></td>
+                        <td class="tableHeaderListProductTD10" style="width: 10%;"><span>PRICE 2</span></td>
+                        <td class="tableHeaderListProductTD10" style="width: 10%;"><span>PRICE 3</span></td>
+                        <td class="tableHeaderListProductTD10" style="width: 11%;"><span></span></td>
+
+                    </tr>
+                </tbody>
+                <tr style="text-align: center" >
+                    <td class="tableHeaderListProductTD10" style="width: 3%;"><span>1</span></td>
+                    <td class="tableHeaderListProductTD10" style="width: 10%;"><img style="width: 80px;height: 80px" src="~/Content/images/NoImageAvailable.png" /></td>
+                    <td class="tableHeaderListProductTD10" style="width: 10%;"><span>TPF000123367</span></td>
+                    <td class="tableHeaderListProductTD10" style="width: 10%;"><span>LH1010</span></td>
+                    <td class="tableHeaderListProductTD10" style="float: left;padding-top: 30px">Living Here Women's Mid Rise Adjustable Waist Pant Cool Stretch - Charcoal</td>
+                    <td class="tableHeaderListProductTD10" style="width: 10%;"><span>$30.35</span></td>
+                    <td class="tableHeaderListProductTD10" style="width: 10%;"><span>$30.35</span></td>
+                    <td class="tableHeaderListProductTD10" style="width: 10%;"><span>$30.35</span></td>
+                    <td class="tableHeaderListProductTD10" style="width: 11%;">
+                        <span>
+                            <input type="button" class="m-button" style="" value="Edit Price" />
+                            <input type="button" class="m-button" style="" value="Remove" />
+                              </span>
+                    </td>
+                </tr>
+                <tr style="text-align: center">
+                    <td class="tableHeaderListProductTD10" style="width: 3%;"><span>2</span></td>
+                    <td class="tableHeaderListProductTD10" style="width: 10%;"><img style="width: 80px;height: 80px" src="~/Content/images/NoImageAvailable.png" /></td>
+                    <td class="tableHeaderListProductTD10" style="width: 10%;"><span>TPF000123367</span></td>
+                    <td class="tableHeaderListProductTD10" style="width: 10%;"><span>LH1010</span></td>
+                    <td class="tableHeaderListProductTD10" style="float: left;padding-top: 30px">Living Here Women's Mid Rise Adjustable Waist Pant Cool Stretch - Charcoal</td>
+                    <td class="tableHeaderListProductTD10" style="width: 10%;"><span>$30.35</span></td>
+                    <td class="tableHeaderListProductTD10" style="width: 10%;"><span>$30.35</span></td>
+                    <td class="tableHeaderListProductTD10" style="width: 10%;"><span>$30.35</span></td>
+                    <td class="tableHeaderListProductTD10" style="width: 11%;">
+                        <span>
+                            <input type="button" class="m-button" style="" value="Edit Price" />
+                            <input type="button" class="m-button" style="" value="Remove" />
+                        </span>
+                    </td>
+                </tr>
+                <tr style="text-align: center">
+                    <td class="tableHeaderListProductTD10" style="width: 3%;"><span>3</span></td>
+                    <td class="tableHeaderListProductTD10" style="width: 10%;"><img style="width: 80px;height: 80px" src="~/Content/images/NoImageAvailable.png" /></td>
+                    <td class="tableHeaderListProductTD10" style="width: 10%;"><span>TPF000123367</span></td>
+                    <td class="tableHeaderListProductTD10" style="width: 10%;"><span>LH1010</span></td>
+                    <td class="tableHeaderListProductTD10" style="float: left;padding-top: 30px">Living Here Women's Mid Rise Adjustable Waist Pant Cool Stretch - Charcoal</td>
+                    <td class="tableHeaderListProductTD10" style="width: 10%;"><span>$30.35</span></td>
+                    <td class="tableHeaderListProductTD10" style="width: 10%;"><span>$30.35</span></td>
+                    <td class="tableHeaderListProductTD10" style="width: 10%;"><span>$30.35</span></td>
+                    <td class="tableHeaderListProductTD10" style="width: 11%;">
+                        <span>
+                            <input type="button" class="m-button" style="" value="Edit Price" />
+                            <input type="button" class="m-button" style="" value="Remove" />
+                        </span>
+                    </td>
+                </tr>
+            </table>
+            
+            <div style="margin-top: 50px">
+                <span>
+                    <input type="button" class="m-button" style=" margin-left: 45%" value="Save" />
+                    <input type="button" class="m-button" style="" value="Cancel" />
+                </span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script>
+    var inlineDefault = new kendo.data.HierarchicalDataSource({
+        data: [
+            {
+                text: "Catalogue1", items: [
+                  { text: "Category1" },
+                  { text: "Category2" },
+                  { text: "Category1" }
+                ]
+            },
+            {
+                text: "Catalogue2", items: [
+                { text: "Category1" },
+                { text: "Category2" },
+                { text: "Category3" }
+                ]
+            }
+        ]
+    });
+
+    $("#treeview-left").kendoTreeView({
+        dataSource: inlineDefault
+    });
+
+
+</script>

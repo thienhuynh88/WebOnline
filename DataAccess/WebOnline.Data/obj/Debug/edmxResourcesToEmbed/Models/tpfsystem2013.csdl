@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TPFSystem2013Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Com_MenuItems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Url" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Priority" Type="Int32" Nullable="false" />
+    <Property Name="MenuID" Type="Int32" Nullable="false" />
+    <Property Name="PermissionID" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Com_Menus" Relationship="Self.FK_Com_MenuItems_Com_Menus" FromRole="Com_MenuItems" ToRole="Com_Menus" />
+    <NavigationProperty Name="Com_Permissions" Relationship="Self.FK_Com_MenuItems_Com_Permissions" FromRole="Com_MenuItems" ToRole="Com_Permissions" />
+  </EntityType>
+  <EntityType Name="Com_Menus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Url" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Com_MenuItems" Relationship="Self.FK_Com_MenuItems_Com_Menus" FromRole="Com_Menus" ToRole="Com_MenuItems" />
+    <NavigationProperty Name="Com_UserMenus" Relationship="Self.FK_Com_UserMenus_Com_Menus" FromRole="Com_Menus" ToRole="Com_UserMenus" />
+  </EntityType>
+  <EntityType Name="Com_Permissions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="Notes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Com_MenuItems" Relationship="Self.FK_Com_MenuItems_Com_Permissions" FromRole="Com_Permissions" ToRole="Com_MenuItems" />
+    <NavigationProperty Name="Com_Roles" Relationship="Self.FK_Com_Permissions_Com_Roles" FromRole="Com_Permissions" ToRole="Com_Roles" />
+  </EntityType>
+  <EntityType Name="Com_Roles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="Notes" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Com_Permissions" Relationship="Self.FK_Com_Permissions_Com_Roles" FromRole="Com_Roles" ToRole="Com_Permissions" />
+    <NavigationProperty Name="Com_UserRoles" Relationship="Self.FK_Com_UserRoles_Com_Roles" FromRole="Com_Roles" ToRole="Com_UserRoles" />
+  </EntityType>
+  <EntityType Name="Com_UserMenus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MenuID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Priority" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Com_Menus" Relationship="Self.FK_Com_UserMenus_Com_Menus" FromRole="Com_UserMenus" ToRole="Com_Menus" />
+    <NavigationProperty Name="Com_Users" Relationship="Self.FK_Com_UserMenus_Com_Users" FromRole="Com_UserMenus" ToRole="Com_Users" />
+  </EntityType>
+  <EntityType Name="Com_UserRoles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Com_Roles" Relationship="Self.FK_Com_UserRoles_Com_Roles" FromRole="Com_UserRoles" ToRole="Com_Roles" />
+    <NavigationProperty Name="Com_Users" Relationship="Self.FK_Com_UserRoles_Com_Users" FromRole="Com_UserRoles" ToRole="Com_Users" />
+  </EntityType>
+  <EntityType Name="Com_Users">
+    <Key>
+      <PropertyRef Name="staffID" />
+    </Key>
+    <Property Name="staffID" Type="Int32" Nullable="false" />
+    <Property Name="fname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="lname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="psentence" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DOB" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="suburb" Type="String" MaxLength="75" FixedLength="false" Unicode="true" />
+    <Property Name="postcode" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="country" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="companyphone" Type="Boolean" />
+    <Property Name="phoneNo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="mobNo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="hkNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="extensionNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="directNo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="faxNo" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="departID" Type="Int32" />
+    <Property Name="location" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="startdate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="enddate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="staffposition" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="sortcode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="salesNo" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="BDCNo" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="jobtype" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="payrate" Type="Single" />
+    <Property Name="signon" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="kitchenduty" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="jobdescription" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="interest" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="photo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="psallocate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="quotpermission" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="groupnumber" Type="Int32" />
+    <Property Name="plGroupID" Type="Int32" />
+    <Property Name="contactperson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="contactphone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="alapproval" Type="Int32" />
+    <Property Name="manager" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="almngr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="alaccrued" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="stafflisting" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="companyid" Type="Int32" />
+    <Property Name="skype" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="admin" Type="Int32" />
+    <Property Name="roll" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="StartDateLSL" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Com_UserMenus" Relationship="Self.FK_Com_UserMenus_Com_Users" FromRole="Com_Users" ToRole="Com_UserMenus" />
+    <NavigationProperty Name="Com_UserRoles" Relationship="Self.FK_Com_UserRoles_Com_Users" FromRole="Com_Users" ToRole="Com_UserRoles" />
+  </EntityType>
+  <Association Name="FK_Com_MenuItems_Com_Menus">
+    <End Role="Com_Menus" Type="Self.Com_Menus" Multiplicity="1" />
+    <End Role="Com_MenuItems" Type="Self.Com_MenuItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Com_Menus">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Com_MenuItems">
+        <PropertyRef Name="MenuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Com_MenuItems_Com_Permissions">
+    <End Role="Com_Permissions" Type="Self.Com_Permissions" Multiplicity="1" />
+    <End Role="Com_MenuItems" Type="Self.Com_MenuItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Com_Permissions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Com_MenuItems">
+        <PropertyRef Name="PermissionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Com_UserMenus_Com_Menus">
+    <End Role="Com_Menus" Type="Self.Com_Menus" Multiplicity="1" />
+    <End Role="Com_UserMenus" Type="Self.Com_UserMenus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Com_Menus">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Com_UserMenus">
+        <PropertyRef Name="MenuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Com_Permissions_Com_Roles">
+    <End Role="Com_Roles" Type="Self.Com_Roles" Multiplicity="1" />
+    <End Role="Com_Permissions" Type="Self.Com_Permissions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Com_Roles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Com_Permissions">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Com_UserRoles_Com_Roles">
+    <End Role="Com_Roles" Type="Self.Com_Roles" Multiplicity="1" />
+    <End Role="Com_UserRoles" Type="Self.Com_UserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Com_Roles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Com_UserRoles">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Com_UserMenus_Com_Users">
+    <End Role="Com_Users" Type="Self.Com_Users" Multiplicity="1" />
+    <End Role="Com_UserMenus" Type="Self.Com_UserMenus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Com_Users">
+        <PropertyRef Name="staffID" />
+      </Principal>
+      <Dependent Role="Com_UserMenus">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Com_UserRoles_Com_Users">
+    <End Role="Com_Users" Type="Self.Com_Users" Multiplicity="1" />
+    <End Role="Com_UserRoles" Type="Self.Com_UserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Com_Users">
+        <PropertyRef Name="staffID" />
+      </Principal>
+      <Dependent Role="Com_UserRoles">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TPFSystem2013Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Com_MenuItems" EntityType="Self.Com_MenuItems" />
+    <EntitySet Name="Com_Menus" EntityType="Self.Com_Menus" />
+    <EntitySet Name="Com_Permissions" EntityType="Self.Com_Permissions" />
+    <EntitySet Name="Com_Roles" EntityType="Self.Com_Roles" />
+    <EntitySet Name="Com_UserMenus" EntityType="Self.Com_UserMenus" />
+    <EntitySet Name="Com_UserRoles" EntityType="Self.Com_UserRoles" />
+    <EntitySet Name="Com_Users" EntityType="Self.Com_Users" />
+    <AssociationSet Name="FK_Com_MenuItems_Com_Menus" Association="Self.FK_Com_MenuItems_Com_Menus">
+      <End Role="Com_Menus" EntitySet="Com_Menus" />
+      <End Role="Com_MenuItems" EntitySet="Com_MenuItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Com_MenuItems_Com_Permissions" Association="Self.FK_Com_MenuItems_Com_Permissions">
+      <End Role="Com_Permissions" EntitySet="Com_Permissions" />
+      <End Role="Com_MenuItems" EntitySet="Com_MenuItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Com_UserMenus_Com_Menus" Association="Self.FK_Com_UserMenus_Com_Menus">
+      <End Role="Com_Menus" EntitySet="Com_Menus" />
+      <End Role="Com_UserMenus" EntitySet="Com_UserMenus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Com_Permissions_Com_Roles" Association="Self.FK_Com_Permissions_Com_Roles">
+      <End Role="Com_Roles" EntitySet="Com_Roles" />
+      <End Role="Com_Permissions" EntitySet="Com_Permissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Com_UserRoles_Com_Roles" Association="Self.FK_Com_UserRoles_Com_Roles">
+      <End Role="Com_Roles" EntitySet="Com_Roles" />
+      <End Role="Com_UserRoles" EntitySet="Com_UserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Com_UserMenus_Com_Users" Association="Self.FK_Com_UserMenus_Com_Users">
+      <End Role="Com_Users" EntitySet="Com_Users" />
+      <End Role="Com_UserMenus" EntitySet="Com_UserMenus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Com_UserRoles_Com_Users" Association="Self.FK_Com_UserRoles_Com_Users">
+      <End Role="Com_Users" EntitySet="Com_Users" />
+      <End Role="Com_UserRoles" EntitySet="Com_UserRoles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

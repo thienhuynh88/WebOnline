@@ -1,0 +1,8 @@
+-- Circular reference detected exception while serializing object to JSON
+http://stackoverflow.com/questions/16949520/circular-reference-detected-exception-while-serializing-object-to-json
+
+-- Serializing Circular References with JSON.Net and Entity Framework
+http://johnnycode.com/2012/04/10/serializing-circular-references-with-json-net-and-entity-framework/
+
+-- Avoiding Circular Reference for Entity in JSON Serialization
+http://blogs.microsoft.co.il/gilf/2011/10/17/avoiding-circular-reference-for-entity-in-json-serialization/

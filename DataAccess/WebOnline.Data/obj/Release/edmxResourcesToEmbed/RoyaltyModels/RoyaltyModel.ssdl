@@ -1,0 +1,953 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RoyaltyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" />
+    <Property Name="Licenseeid" Type="bigint" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AttachedFiles">
+    <Key>
+      <PropertyRef Name="Rowid" />
+    </Key>
+    <Property Name="Rowid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sid" Type="bigint" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FilePath" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AttachedImages">
+    <Key>
+      <PropertyRef Name="Rowid" />
+    </Key>
+    <Property Name="Rowid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sid" Type="bigint" />
+    <Property Name="ImageName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Contract">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContractNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContractName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CommencementDate" Type="datetime" />
+    <Property Name="ExpiryDate" Type="datetime" />
+    <Property Name="CreateBy" Type="bigint" />
+    <Property Name="Licenseeid" Type="bigint" />
+  </EntityType>
+  <EntityType Name="ContractAttachment">
+    <Key>
+      <PropertyRef Name="Rowid" />
+    </Key>
+    <Property Name="Rowid" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Conid" Type="bigint" />
+  </EntityType>
+  <EntityType Name="ContractCatalogue">
+    <Key>
+      <PropertyRef Name="Conid" />
+      <PropertyRef Name="LPid" />
+      <PropertyRef Name="Catalogueid" />
+    </Key>
+    <Property Name="Conid" Type="bigint" Nullable="false" />
+    <Property Name="LPid" Type="bigint" Nullable="false" />
+    <Property Name="Catalogueid" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContractCategory">
+    <Key>
+      <PropertyRef Name="Conid" />
+      <PropertyRef Name="LPid" />
+      <PropertyRef Name="Catalogueid" />
+      <PropertyRef Name="Categoryid" />
+    </Key>
+    <Property Name="Conid" Type="bigint" Nullable="false" />
+    <Property Name="LPid" Type="bigint" Nullable="false" />
+    <Property Name="Catalogueid" Type="bigint" Nullable="false" />
+    <Property Name="Categoryid" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContractInvoice">
+    <Key>
+      <PropertyRef Name="Rowid" />
+    </Key>
+    <Property Name="Rowid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Conid" Type="bigint" />
+    <Property Name="Amount" Type="float" />
+  </EntityType>
+  <EntityType Name="ContractLanguage">
+    <Key>
+      <PropertyRef Name="Langid" />
+      <PropertyRef Name="Conid" />
+    </Key>
+    <Property Name="Langid" Type="bigint" Nullable="false" />
+    <Property Name="Conid" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContractLicensedProperty">
+    <Key>
+      <PropertyRef Name="LPid" />
+      <PropertyRef Name="Conid" />
+    </Key>
+    <Property Name="LPid" Type="bigint" Nullable="false" />
+    <Property Name="Conid" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContractMarket">
+    <Key>
+      <PropertyRef Name="Mid" />
+      <PropertyRef Name="Conid" />
+    </Key>
+    <Property Name="Mid" Type="bigint" Nullable="false" />
+    <Property Name="Conid" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContractProduct">
+    <Key>
+      <PropertyRef Name="Conid" />
+      <PropertyRef Name="LPid" />
+      <PropertyRef Name="Catalogueid" />
+      <PropertyRef Name="Categoryid" />
+      <PropertyRef Name="Proid" />
+    </Key>
+    <Property Name="Conid" Type="bigint" Nullable="false" />
+    <Property Name="LPid" Type="bigint" Nullable="false" />
+    <Property Name="Catalogueid" Type="bigint" Nullable="false" />
+    <Property Name="Categoryid" Type="bigint" Nullable="false" />
+    <Property Name="Proid" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContractProductPrices">
+    <Key>
+      <PropertyRef Name="Conid" />
+      <PropertyRef Name="LPid" />
+      <PropertyRef Name="Catalogueid" />
+      <PropertyRef Name="Categoryid" />
+      <PropertyRef Name="Proid" />
+      <PropertyRef Name="PPid" />
+    </Key>
+    <Property Name="Conid" Type="bigint" Nullable="false" />
+    <Property Name="LPid" Type="bigint" Nullable="false" />
+    <Property Name="Catalogueid" Type="bigint" Nullable="false" />
+    <Property Name="Categoryid" Type="bigint" Nullable="false" />
+    <Property Name="Proid" Type="bigint" Nullable="false" />
+    <Property Name="PPid" Type="bigint" Nullable="false" />
+    <Property Name="Value" Type="float" />
+  </EntityType>
+  <EntityType Name="ContractSalesChanel">
+    <Key>
+      <PropertyRef Name="SCid" />
+      <PropertyRef Name="Conid" />
+    </Key>
+    <Property Name="SCid" Type="bigint" Nullable="false" />
+    <Property Name="Conid" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContractTeritories">
+    <Key>
+      <PropertyRef Name="Territoryid" />
+      <PropertyRef Name="Conid" />
+    </Key>
+    <Property Name="Territoryid" Type="bigint" Nullable="false" />
+    <Property Name="Conid" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Language">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LicensedProperty">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Licensee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACN" Type="nvarchar" MaxLength="50" />
+    <Property Name="ABN" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LicenseType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Market">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PaymentTerms">
+    <Key>
+      <PropertyRef Name="Rowid" />
+    </Key>
+    <Property Name="Rowid" Type="bigint" Nullable="false" />
+    <Property Name="Conid" Type="bigint" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="MinAmount" Type="float" />
+    <Property Name="FromDate" Type="datetime" />
+    <Property Name="ToDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PriceProfiles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Conid" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Royalty">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Conid" Type="bigint" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="ref_profile" Type="bigint" />
+    <Property Name="rebate_percent" Type="float" />
+  </EntityType>
+  <EntityType Name="SalesChanel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SalesUploadReports">
+    <Key>
+      <PropertyRef Name="Rowid" />
+    </Key>
+    <Property Name="Rowid" Type="bigint" Nullable="false" />
+    <Property Name="Conid" Type="bigint" />
+    <Property Name="Userid" Type="bigint" />
+    <Property Name="TransactionDate" Type="datetime" />
+    <Property Name="TransactionType" Type="datetime" />
+    <Property Name="SKU#" Type="nvarchar" MaxLength="50" />
+    <Property Name="Teritories" Type="nvarchar" MaxLength="50" />
+    <Property Name="SalesChanel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Market" Type="nvarchar" MaxLength="50" />
+    <Property Name="Unit" Type="float" />
+  </EntityType>
+  <EntityType Name="SKUs">
+    <Key>
+      <PropertyRef Name="Rowid" />
+    </Key>
+    <Property Name="Rowid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="SKU#" Type="nvarchar" MaxLength="50" />
+    <Property Name="AlternateSKU#" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sid" Type="bigint" />
+  </EntityType>
+  <EntityType Name="SubLanguage">
+    <Key>
+      <PropertyRef Name="Langid" />
+      <PropertyRef Name="Sid" />
+    </Key>
+    <Property Name="Rowid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Langid" Type="bigint" Nullable="false" />
+    <Property Name="Sid" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SubMarket">
+    <Key>
+      <PropertyRef Name="Mid" />
+      <PropertyRef Name="Sid" />
+    </Key>
+    <Property Name="Rowid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Mid" Type="bigint" Nullable="false" />
+    <Property Name="Sid" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Submission">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Conid" Type="bigint" />
+    <Property Name="LPid" Type="bigint" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="CCatalogueid" Type="bigint" />
+    <Property Name="CCategoryid" Type="bigint" />
+    <Property Name="CProid" Type="bigint" />
+    <Property Name="CurrentState" Type="int" />
+    <Property Name="StateStatus" Type="int" />
+  </EntityType>
+  <EntityType Name="SubSalesChanel">
+    <Key>
+      <PropertyRef Name="SCid" />
+      <PropertyRef Name="Sid" />
+    </Key>
+    <Property Name="Rowid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SCid" Type="bigint" Nullable="false" />
+    <Property Name="Sid" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SubTerritories">
+    <Key>
+      <PropertyRef Name="Tid" />
+      <PropertyRef Name="Sid" />
+    </Key>
+    <Property Name="Rowid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tid" Type="bigint" Nullable="false" />
+    <Property Name="Sid" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Territory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Account_Licensee">
+    <End Role="Licensee" Type="Self.Licensee" Multiplicity="0..1" />
+    <End Role="Account" Type="Self.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Licensee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="Licenseeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AttachedFiles_Submission">
+    <End Role="Submission" Type="Self.Submission" Multiplicity="0..1" />
+    <End Role="AttachedFiles" Type="Self.AttachedFiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Submission">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AttachedFiles">
+        <PropertyRef Name="Sid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AttachedImages_Submission">
+    <End Role="Submission" Type="Self.Submission" Multiplicity="0..1" />
+    <End Role="AttachedImages" Type="Self.AttachedImages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Submission">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AttachedImages">
+        <PropertyRef Name="Sid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contract_Licensee">
+    <End Role="Licensee" Type="Self.Licensee" Multiplicity="0..1" />
+    <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Licensee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="Licenseeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractAttachment_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="0..1" />
+    <End Role="ContractAttachment" Type="Self.ContractAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractAttachment">
+        <PropertyRef Name="Conid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractCatalogue_ContractLicensedProperty">
+    <End Role="ContractLicensedProperty" Type="Self.ContractLicensedProperty" Multiplicity="1" />
+    <End Role="ContractCatalogue" Type="Self.ContractCatalogue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractLicensedProperty">
+        <PropertyRef Name="LPid" />
+        <PropertyRef Name="Conid" />
+      </Principal>
+      <Dependent Role="ContractCatalogue">
+        <PropertyRef Name="LPid" />
+        <PropertyRef Name="Conid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractCategory_ContractCatalogue">
+    <End Role="ContractCatalogue" Type="Self.ContractCatalogue" Multiplicity="1" />
+    <End Role="ContractCategory" Type="Self.ContractCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractCatalogue">
+        <PropertyRef Name="Catalogueid" />
+        <PropertyRef Name="LPid" />
+        <PropertyRef Name="Conid" />
+      </Principal>
+      <Dependent Role="ContractCategory">
+        <PropertyRef Name="Catalogueid" />
+        <PropertyRef Name="LPid" />
+        <PropertyRef Name="Conid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractInvoice_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="0..1" />
+    <End Role="ContractInvoice" Type="Self.ContractInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractInvoice">
+        <PropertyRef Name="Conid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractLanguage_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="1" />
+    <End Role="ContractLanguage" Type="Self.ContractLanguage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractLanguage">
+        <PropertyRef Name="Conid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractLanguage_Language">
+    <End Role="Language" Type="Self.Language" Multiplicity="1" />
+    <End Role="ContractLanguage" Type="Self.ContractLanguage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Language">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractLanguage">
+        <PropertyRef Name="Langid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractLicensedProperty_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="1" />
+    <End Role="ContractLicensedProperty" Type="Self.ContractLicensedProperty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractLicensedProperty">
+        <PropertyRef Name="Conid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractLicensedProperty_LicensedProperty">
+    <End Role="LicensedProperty" Type="Self.LicensedProperty" Multiplicity="1" />
+    <End Role="ContractLicensedProperty" Type="Self.ContractLicensedProperty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LicensedProperty">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractLicensedProperty">
+        <PropertyRef Name="LPid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractMarket_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="1" />
+    <End Role="ContractMarket" Type="Self.ContractMarket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractMarket">
+        <PropertyRef Name="Conid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractMarket_Market">
+    <End Role="Market" Type="Self.Market" Multiplicity="1" />
+    <End Role="ContractMarket" Type="Self.ContractMarket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Market">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractMarket">
+        <PropertyRef Name="Mid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractProduct_ContractCategory">
+    <End Role="ContractCategory" Type="Self.ContractCategory" Multiplicity="1" />
+    <End Role="ContractProduct" Type="Self.ContractProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractCategory">
+        <PropertyRef Name="Categoryid" />
+        <PropertyRef Name="LPid" />
+        <PropertyRef Name="Conid" />
+        <PropertyRef Name="Catalogueid" />
+      </Principal>
+      <Dependent Role="ContractProduct">
+        <PropertyRef Name="Categoryid" />
+        <PropertyRef Name="LPid" />
+        <PropertyRef Name="Conid" />
+        <PropertyRef Name="Catalogueid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractProductPrices_ContractProduct">
+    <End Role="ContractProduct" Type="Self.ContractProduct" Multiplicity="1" />
+    <End Role="ContractProductPrices" Type="Self.ContractProductPrices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractProduct">
+        <PropertyRef Name="Categoryid" />
+        <PropertyRef Name="Proid" />
+        <PropertyRef Name="LPid" />
+        <PropertyRef Name="Conid" />
+        <PropertyRef Name="Catalogueid" />
+      </Principal>
+      <Dependent Role="ContractProductPrices">
+        <PropertyRef Name="Categoryid" />
+        <PropertyRef Name="Proid" />
+        <PropertyRef Name="LPid" />
+        <PropertyRef Name="Conid" />
+        <PropertyRef Name="Catalogueid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractProductPrices_PriceProfiles">
+    <End Role="PriceProfiles" Type="Self.PriceProfiles" Multiplicity="1" />
+    <End Role="ContractProductPrices" Type="Self.ContractProductPrices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PriceProfiles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractProductPrices">
+        <PropertyRef Name="PPid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractSalesChanel_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="1" />
+    <End Role="ContractSalesChanel" Type="Self.ContractSalesChanel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractSalesChanel">
+        <PropertyRef Name="Conid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractSalesChanel_SalesChanel">
+    <End Role="SalesChanel" Type="Self.SalesChanel" Multiplicity="1" />
+    <End Role="ContractSalesChanel" Type="Self.ContractSalesChanel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesChanel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractSalesChanel">
+        <PropertyRef Name="SCid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractTeritories_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="1" />
+    <End Role="ContractTeritories" Type="Self.ContractTeritories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractTeritories">
+        <PropertyRef Name="Conid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractTeritories_Teritory">
+    <End Role="Territory" Type="Self.Territory" Multiplicity="1" />
+    <End Role="ContractTeritories" Type="Self.ContractTeritories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Territory">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractTeritories">
+        <PropertyRef Name="Territoryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PaymentTerms_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="0..1" />
+    <End Role="PaymentTerms" Type="Self.PaymentTerms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PaymentTerms">
+        <PropertyRef Name="Conid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PriceProfiles_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="0..1" />
+    <End Role="PriceProfiles" Type="Self.PriceProfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PriceProfiles">
+        <PropertyRef Name="Conid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Royalty_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="0..1" />
+    <End Role="Royalty" Type="Self.Royalty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Royalty">
+        <PropertyRef Name="Conid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Royalty_PriceProfiles">
+    <End Role="PriceProfiles" Type="Self.PriceProfiles" Multiplicity="0..1" />
+    <End Role="Royalty" Type="Self.Royalty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PriceProfiles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Royalty">
+        <PropertyRef Name="ref_profile" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesUploadReports_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="0..1" />
+    <End Role="SalesUploadReports" Type="Self.SalesUploadReports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SalesUploadReports">
+        <PropertyRef Name="Conid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SKUs_Submission">
+    <End Role="Submission" Type="Self.Submission" Multiplicity="0..1" />
+    <End Role="SKUs" Type="Self.SKUs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Submission">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SKUs">
+        <PropertyRef Name="Sid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubLanguage_Language">
+    <End Role="Language" Type="Self.Language" Multiplicity="1" />
+    <End Role="SubLanguage" Type="Self.SubLanguage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Language">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubLanguage">
+        <PropertyRef Name="Langid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubLanguage_Submission">
+    <End Role="Submission" Type="Self.Submission" Multiplicity="1" />
+    <End Role="SubLanguage" Type="Self.SubLanguage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Submission">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubLanguage">
+        <PropertyRef Name="Sid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubMarket_Market">
+    <End Role="Market" Type="Self.Market" Multiplicity="1" />
+    <End Role="SubMarket" Type="Self.SubMarket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Market">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubMarket">
+        <PropertyRef Name="Mid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubMarket_Submission">
+    <End Role="Submission" Type="Self.Submission" Multiplicity="1" />
+    <End Role="SubMarket" Type="Self.SubMarket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Submission">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubMarket">
+        <PropertyRef Name="Sid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Submission_Contract">
+    <End Role="Contract" Type="Self.Contract" Multiplicity="0..1" />
+    <End Role="Submission" Type="Self.Submission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Submission">
+        <PropertyRef Name="Conid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubSalesChanel_SalesChanel">
+    <End Role="SalesChanel" Type="Self.SalesChanel" Multiplicity="1" />
+    <End Role="SubSalesChanel" Type="Self.SubSalesChanel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesChanel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubSalesChanel">
+        <PropertyRef Name="SCid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubSalesChanel_Submission">
+    <End Role="Submission" Type="Self.Submission" Multiplicity="1" />
+    <End Role="SubSalesChanel" Type="Self.SubSalesChanel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Submission">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubSalesChanel">
+        <PropertyRef Name="Sid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubTerritories_Submission">
+    <End Role="Submission" Type="Self.Submission" Multiplicity="1" />
+    <End Role="SubTerritories" Type="Self.SubTerritories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Submission">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubTerritories">
+        <PropertyRef Name="Sid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubTerritories_Teritory">
+    <End Role="Territory" Type="Self.Territory" Multiplicity="1" />
+    <End Role="SubTerritories" Type="Self.SubTerritories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Territory">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubTerritories">
+        <PropertyRef Name="Tid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RoyaltyModelStoreContainer">
+    <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AttachedFiles" EntityType="Self.AttachedFiles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AttachedImages" EntityType="Self.AttachedImages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contract" EntityType="Self.Contract" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractAttachment" EntityType="Self.ContractAttachment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractCatalogue" EntityType="Self.ContractCatalogue" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractCategory" EntityType="Self.ContractCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractInvoice" EntityType="Self.ContractInvoice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractLanguage" EntityType="Self.ContractLanguage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractLicensedProperty" EntityType="Self.ContractLicensedProperty" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractMarket" EntityType="Self.ContractMarket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractProduct" EntityType="Self.ContractProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractProductPrices" EntityType="Self.ContractProductPrices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractSalesChanel" EntityType="Self.ContractSalesChanel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractTeritories" EntityType="Self.ContractTeritories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Language" EntityType="Self.Language" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LicensedProperty" EntityType="Self.LicensedProperty" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Licensee" EntityType="Self.Licensee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LicenseType" EntityType="Self.LicenseType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Market" EntityType="Self.Market" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentTerms" EntityType="Self.PaymentTerms" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PriceProfiles" EntityType="Self.PriceProfiles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Royalty" EntityType="Self.Royalty" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SalesChanel" EntityType="Self.SalesChanel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SalesUploadReports" EntityType="Self.SalesUploadReports" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SKUs" EntityType="Self.SKUs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubLanguage" EntityType="Self.SubLanguage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubMarket" EntityType="Self.SubMarket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Submission" EntityType="Self.Submission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubSalesChanel" EntityType="Self.SubSalesChanel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubTerritories" EntityType="Self.SubTerritories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Territory" EntityType="Self.Territory" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Account_Licensee" Association="Self.FK_Account_Licensee">
+      <End Role="Licensee" EntitySet="Licensee" />
+      <End Role="Account" EntitySet="Account" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AttachedFiles_Submission" Association="Self.FK_AttachedFiles_Submission">
+      <End Role="Submission" EntitySet="Submission" />
+      <End Role="AttachedFiles" EntitySet="AttachedFiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AttachedImages_Submission" Association="Self.FK_AttachedImages_Submission">
+      <End Role="Submission" EntitySet="Submission" />
+      <End Role="AttachedImages" EntitySet="AttachedImages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contract_Licensee" Association="Self.FK_Contract_Licensee">
+      <End Role="Licensee" EntitySet="Licensee" />
+      <End Role="Contract" EntitySet="Contract" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractAttachment_Contract" Association="Self.FK_ContractAttachment_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="ContractAttachment" EntitySet="ContractAttachment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractCatalogue_ContractLicensedProperty" Association="Self.FK_ContractCatalogue_ContractLicensedProperty">
+      <End Role="ContractLicensedProperty" EntitySet="ContractLicensedProperty" />
+      <End Role="ContractCatalogue" EntitySet="ContractCatalogue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractCategory_ContractCatalogue" Association="Self.FK_ContractCategory_ContractCatalogue">
+      <End Role="ContractCatalogue" EntitySet="ContractCatalogue" />
+      <End Role="ContractCategory" EntitySet="ContractCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractInvoice_Contract" Association="Self.FK_ContractInvoice_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="ContractInvoice" EntitySet="ContractInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractLanguage_Contract" Association="Self.FK_ContractLanguage_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="ContractLanguage" EntitySet="ContractLanguage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractLanguage_Language" Association="Self.FK_ContractLanguage_Language">
+      <End Role="Language" EntitySet="Language" />
+      <End Role="ContractLanguage" EntitySet="ContractLanguage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractLicensedProperty_Contract" Association="Self.FK_ContractLicensedProperty_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="ContractLicensedProperty" EntitySet="ContractLicensedProperty" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractLicensedProperty_LicensedProperty" Association="Self.FK_ContractLicensedProperty_LicensedProperty">
+      <End Role="LicensedProperty" EntitySet="LicensedProperty" />
+      <End Role="ContractLicensedProperty" EntitySet="ContractLicensedProperty" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractMarket_Contract" Association="Self.FK_ContractMarket_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="ContractMarket" EntitySet="ContractMarket" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractMarket_Market" Association="Self.FK_ContractMarket_Market">
+      <End Role="Market" EntitySet="Market" />
+      <End Role="ContractMarket" EntitySet="ContractMarket" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractProduct_ContractCategory" Association="Self.FK_ContractProduct_ContractCategory">
+      <End Role="ContractCategory" EntitySet="ContractCategory" />
+      <End Role="ContractProduct" EntitySet="ContractProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractProductPrices_ContractProduct" Association="Self.FK_ContractProductPrices_ContractProduct">
+      <End Role="ContractProduct" EntitySet="ContractProduct" />
+      <End Role="ContractProductPrices" EntitySet="ContractProductPrices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractProductPrices_PriceProfiles" Association="Self.FK_ContractProductPrices_PriceProfiles">
+      <End Role="PriceProfiles" EntitySet="PriceProfiles" />
+      <End Role="ContractProductPrices" EntitySet="ContractProductPrices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractSalesChanel_Contract" Association="Self.FK_ContractSalesChanel_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="ContractSalesChanel" EntitySet="ContractSalesChanel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractSalesChanel_SalesChanel" Association="Self.FK_ContractSalesChanel_SalesChanel">
+      <End Role="SalesChanel" EntitySet="SalesChanel" />
+      <End Role="ContractSalesChanel" EntitySet="ContractSalesChanel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractTeritories_Contract" Association="Self.FK_ContractTeritories_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="ContractTeritories" EntitySet="ContractTeritories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractTeritories_Teritory" Association="Self.FK_ContractTeritories_Teritory">
+      <End Role="Territory" EntitySet="Territory" />
+      <End Role="ContractTeritories" EntitySet="ContractTeritories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PaymentTerms_Contract" Association="Self.FK_PaymentTerms_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="PaymentTerms" EntitySet="PaymentTerms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PriceProfiles_Contract" Association="Self.FK_PriceProfiles_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="PriceProfiles" EntitySet="PriceProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Royalty_Contract" Association="Self.FK_Royalty_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="Royalty" EntitySet="Royalty" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Royalty_PriceProfiles" Association="Self.FK_Royalty_PriceProfiles">
+      <End Role="PriceProfiles" EntitySet="PriceProfiles" />
+      <End Role="Royalty" EntitySet="Royalty" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesUploadReports_Contract" Association="Self.FK_SalesUploadReports_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="SalesUploadReports" EntitySet="SalesUploadReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SKUs_Submission" Association="Self.FK_SKUs_Submission">
+      <End Role="Submission" EntitySet="Submission" />
+      <End Role="SKUs" EntitySet="SKUs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubLanguage_Language" Association="Self.FK_SubLanguage_Language">
+      <End Role="Language" EntitySet="Language" />
+      <End Role="SubLanguage" EntitySet="SubLanguage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubLanguage_Submission" Association="Self.FK_SubLanguage_Submission">
+      <End Role="Submission" EntitySet="Submission" />
+      <End Role="SubLanguage" EntitySet="SubLanguage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubMarket_Market" Association="Self.FK_SubMarket_Market">
+      <End Role="Market" EntitySet="Market" />
+      <End Role="SubMarket" EntitySet="SubMarket" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubMarket_Submission" Association="Self.FK_SubMarket_Submission">
+      <End Role="Submission" EntitySet="Submission" />
+      <End Role="SubMarket" EntitySet="SubMarket" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Submission_Contract" Association="Self.FK_Submission_Contract">
+      <End Role="Contract" EntitySet="Contract" />
+      <End Role="Submission" EntitySet="Submission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubSalesChanel_SalesChanel" Association="Self.FK_SubSalesChanel_SalesChanel">
+      <End Role="SalesChanel" EntitySet="SalesChanel" />
+      <End Role="SubSalesChanel" EntitySet="SubSalesChanel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubSalesChanel_Submission" Association="Self.FK_SubSalesChanel_Submission">
+      <End Role="Submission" EntitySet="Submission" />
+      <End Role="SubSalesChanel" EntitySet="SubSalesChanel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubTerritories_Submission" Association="Self.FK_SubTerritories_Submission">
+      <End Role="Submission" EntitySet="Submission" />
+      <End Role="SubTerritories" EntitySet="SubTerritories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubTerritories_Teritory" Association="Self.FK_SubTerritories_Teritory">
+      <End Role="Territory" EntitySet="Territory" />
+      <End Role="SubTerritories" EntitySet="SubTerritories" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RoyaltyModelStoreContainer" CdmEntityContainer="RoyaltyEntities">
+    <EntitySetMapping Name="AvailableRights">
+      <EntityTypeMapping TypeName="RoyaltyModel.AvailableRight">
+        <MappingFragment StoreEntitySet="AvailableRight">
+          <ScalarProperty Name="ObjectTypeID" ColumnName="ObjectTypeID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateBy" ColumnName="LastUpdateBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Banks">
+      <EntityTypeMapping TypeName="RoyaltyModel.Bank">
+        <MappingFragment StoreEntitySet="Bank">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateBy" ColumnName="LastUpdateBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractMapAvailableRights">
+      <EntityTypeMapping TypeName="RoyaltyModel.ContractMapAvailableRight">
+        <MappingFragment StoreEntitySet="ContractMapAvailableRight">
+          <ScalarProperty Name="ContractID" ColumnName="ContractID" />
+          <ScalarProperty Name="AvailableRightID" ColumnName="AvailableRightID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractMapBanks">
+      <EntityTypeMapping TypeName="RoyaltyModel.ContractMapBank">
+        <MappingFragment StoreEntitySet="ContractMapBank">
+          <ScalarProperty Name="BankID" ColumnName="BankID" />
+          <ScalarProperty Name="ContractID" ColumnName="ContractID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractMapGroups">
+      <EntityTypeMapping TypeName="RoyaltyModel.ContractMapGroup">
+        <MappingFragment StoreEntitySet="ContractMapGroup">
+          <ScalarProperty Name="ContractID" ColumnName="ContractID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractParties">
+      <EntityTypeMapping TypeName="RoyaltyModel.ContractParty">
+        <MappingFragment StoreEntitySet="ContractParty">
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateBy" ColumnName="LastUpdateBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="TradingBankNumber" ColumnName="TradingBankNumber" />
+          <ScalarProperty Name="TradingBankBSB" ColumnName="TradingBankBSB" />
+          <ScalarProperty Name="TradingBankAccount" ColumnName="TradingBankAccount" />
+          <ScalarProperty Name="TradingBankName" ColumnName="TradingBankName" />
+          <ScalarProperty Name="TradingCurrencyType" ColumnName="TradingCurrencyType" />
+          <ScalarProperty Name="TradingTerm" ColumnName="TradingTerm" />
+          <ScalarProperty Name="DeliveryPhone" ColumnName="DeliveryPhone" />
+          <ScalarProperty Name="DeliveryCountry" ColumnName="DeliveryCountry" />
+          <ScalarProperty Name="DeliveryPostcode" ColumnName="DeliveryPostcode" />
+          <ScalarProperty Name="DeliveryState" ColumnName="DeliveryState" />
+          <ScalarProperty Name="DeliverySuburb" ColumnName="DeliverySuburb" />
+          <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+          <ScalarProperty Name="DeliveryAttention" ColumnName="DeliveryAttention" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="AccEmail" ColumnName="AccEmail" />
+          <ScalarProperty Name="AltEmail" ColumnName="AltEmail" />
+          <ScalarProperty Name="PriEmail" ColumnName="PriEmail" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LicenseType" ColumnName="LicenseType" />
+          <ScalarProperty Name="ABN" ColumnName="ABN" />
+          <ScalarProperty Name="ACN" ColumnName="ACN" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractSchedules">
+      <EntityTypeMapping TypeName="RoyaltyModel.ContractSchedule">
+        <MappingFragment StoreEntitySet="ContractSchedule">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateBy" ColumnName="LastUpdateBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="AlertRepeat" ColumnName="AlertRepeat" />
+          <ScalarProperty Name="AlertDate" ColumnName="AlertDate" />
+          <ScalarProperty Name="ReportDate" ColumnName="ReportDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ContractID" ColumnName="ContractID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Currencies">
+      <EntityTypeMapping TypeName="RoyaltyModel.Currency">
+        <MappingFragment StoreEntitySet="Currency">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Groups">
+      <EntityTypeMapping TypeName="RoyaltyModel.Group">
+        <MappingFragment StoreEntitySet="Group">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateBy" ColumnName="LastUpdateBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LicenseeMaps">
+      <EntityTypeMapping TypeName="RoyaltyModel.LicenseeMap">
+        <MappingFragment StoreEntitySet="LicenseeMap">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateBy" ColumnName="LastUpdateBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LicensorID" ColumnName="LicensorID" />
+          <ScalarProperty Name="ContractID" ColumnName="ContractID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObjectTypes">
+      <EntityTypeMapping TypeName="RoyaltyModel.ObjectType">
+        <MappingFragment StoreEntitySet="ObjectType">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateBy" ColumnName="LastUpdateBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentTerms">
+      <EntityTypeMapping TypeName="RoyaltyModel.PaymentTerm">
+        <MappingFragment StoreEntitySet="PaymentTerm">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateBy" ColumnName="LastUpdateBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="MinAmount" ColumnName="MinAmount" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ContractID" ColumnName="ContractID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Royalties">
+      <EntityTypeMapping TypeName="RoyaltyModel.Royalty">
+        <MappingFragment StoreEntitySet="Royalty">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateBy" ColumnName="LastUpdateBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="RebatePercent" ColumnName="RebatePercent" />
+          <ScalarProperty Name="RoyaltyTypeID" ColumnName="RoyaltyTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ContractID" ColumnName="ContractID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoyaltyTypes">
+      <EntityTypeMapping TypeName="RoyaltyModel.RoyaltyType">
+        <MappingFragment StoreEntitySet="RoyaltyType">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateBy" ColumnName="LastUpdateBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubmissionComments">
+      <EntityTypeMapping TypeName="RoyaltyModel.SubmissionComment">
+        <MappingFragment StoreEntitySet="SubmissionComment">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="SubmissionID" ColumnName="SubmissionID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="roy_sp_GetEntityFromCompanyFinanceData" FunctionName="RoyaltyModel.Store.roy_sp_GetEntityFromCompanyFinanceData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RoyaltyModel.roy_sp_GetEntityFromCompanyFinanceData_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="companyname" ColumnName="companyname" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="roy_sp_GetProductListByContractId" FunctionName="RoyaltyModel.Store.roy_sp_GetProductListByContractId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RoyaltyModel.roy_sp_GetProductListByContractId_Result">
+          <ScalarProperty Name="proid" ColumnName="proid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="currentprice" ColumnName="currentprice" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="ContractMapProductID" ColumnName="ContractMapProductID" />
+          <ScalarProperty Name="urladdress" ColumnName="urladdress" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="roy_sp_GetProductByGroupId" FunctionName="RoyaltyModel.Store.roy_sp_GetProductByGroupId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RoyaltyModel.roy_sp_GetProductByGroupId_Result">
+          <ScalarProperty Name="proid" ColumnName="proid" />
+          <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+          <ScalarProperty Name="cataloguename" ColumnName="cataloguename" />
+          <ScalarProperty Name="catalogueID" ColumnName="catalogueID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="currentprice" ColumnName="currentprice" />
+          <ScalarProperty Name="urladdress" ColumnName="urladdress" />
+          <ScalarProperty Name="groupid" ColumnName="groupid" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="roy_sp_GetContractList" FunctionName="RoyaltyModel.Store.roy_sp_GetContractList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RoyaltyModel.roy_sp_GetContractList_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ContractNo" ColumnName="ContractNo" />
+          <ScalarProperty Name="ContractTitle" ColumnName="ContractTitle" />
+          <ScalarProperty Name="LicensorContactName" ColumnName="LicensorContactName" />
+          <ScalarProperty Name="LicenceeContactName" ColumnName="LicenceeContactName" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="CommecementDate" ColumnName="CommecementDate" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Entity" ColumnName="Entity" />
+          <ScalarProperty Name="SignedDate" ColumnName="SignedDate" />
+          <ScalarProperty Name="SignedBy" ColumnName="SignedBy" />
+          <ScalarProperty Name="LicensorID" ColumnName="LicensorID" />
+          <ScalarProperty Name="LicensorCompanyName" ColumnName="LicensorCompanyName" />
+          <ScalarProperty Name="LicensorABN" ColumnName="LicensorABN" />
+          <ScalarProperty Name="LicensorEmail" ColumnName="LicensorEmail" />
+          <ScalarProperty Name="LicensorAddress" ColumnName="LicensorAddress" />
+          <ScalarProperty Name="LicensorPosition" ColumnName="LicensorPosition" />
+          <ScalarProperty Name="LicensorPhone" ColumnName="LicensorPhone" />
+          <ScalarProperty Name="LicenseeID" ColumnName="LicenseeID" />
+          <ScalarProperty Name="LicenceeCompanyName" ColumnName="LicenceeCompanyName" />
+          <ScalarProperty Name="LicenceeABN" ColumnName="LicenceeABN" />
+          <ScalarProperty Name="LicenceeEmail" ColumnName="LicenceeEmail" />
+          <ScalarProperty Name="LicenceeAddress" ColumnName="LicenceeAddress" />
+          <ScalarProperty Name="LicenceePosition" ColumnName="LicenceePosition" />
+          <ScalarProperty Name="LicenceePhone" ColumnName="LicenceePhone" />
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="roy_sp_GetProductByCatalogue" FunctionName="RoyaltyModel.Store.roy_sp_GetProductByCatalogue">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RoyaltyModel.roy_sp_GetProductByCatalogue_Result">
+          <ScalarProperty Name="catalogueid" ColumnName="catalogueid" />
+          <ScalarProperty Name="cataloguename" ColumnName="cataloguename" />
+          <ScalarProperty Name="proid" ColumnName="proid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="currentprice" ColumnName="currentprice" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="online" ColumnName="online" />
+          <ScalarProperty Name="inventorystatus" ColumnName="inventorystatus" />
+          <ScalarProperty Name="InvCode" ColumnName="InvCode" />
+          <ScalarProperty Name="TPFCode" ColumnName="TPFCode" />
+          <ScalarProperty Name="urladdress" ColumnName="urladdress" />
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="SKUs">
+      <EntityTypeMapping TypeName="RoyaltyModel.SKU">
+        <MappingFragment StoreEntitySet="SKU">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateBy" ColumnName="LastUpdateBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="SubmissionMapProdID" ColumnName="SubmissionMapProdID" />
+          <ScalarProperty Name="AltCode" ColumnName="AltCode" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="roy_sp_GetProductForSubmission" FunctionName="RoyaltyModel.Store.roy_sp_GetProductForSubmission">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RoyaltyModel.roy_sp_GetProductForSubmission_Result">
+          <ScalarProperty Name="ContractID" ColumnName="ContractID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="catalogueID" ColumnName="catalogueID" />
+          <ScalarProperty Name="cataloguename" ColumnName="cataloguename" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="proname" ColumnName="proname" />
+          <ScalarProperty Name="urladdress" ColumnName="urladdress" />
+          <ScalarProperty Name="RowId" ColumnName="RowId" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ContractMapProducts">
+      <EntityTypeMapping TypeName="RoyaltyModel.ContractMapProduct">
+        <MappingFragment StoreEntitySet="ContractMapProduct">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ContractMapGroupID" ColumnName="ContractMapGroupID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductMapGroups">
+      <EntityTypeMapping TypeName="RoyaltyModel.ProductMapGroup">
+        <MappingFragment StoreEntitySet="ProductMapGroup">
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubmissionMapAvailableRights">
+      <EntityTypeMapping TypeName="RoyaltyModel.SubmissionMapAvailableRight">
+        <MappingFragment StoreEntitySet="SubmissionMapAvailableRight">
+          <ScalarProperty Name="SubmissionID" ColumnName="SubmissionID" />
+          <ScalarProperty Name="ContractAvailableID" ColumnName="ContractAvailableID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Submissions">
+      <EntityTypeMapping TypeName="RoyaltyModel.Submission">
+        <MappingFragment StoreEntitySet="Submission">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ResponeDate" ColumnName="ResponeDate" />
+          <ScalarProperty Name="ResponeBy" ColumnName="ResponeBy" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateBy" ColumnName="LastUpdateBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="ContractID" ColumnName="ContractID" />
+          <ScalarProperty Name="InternalCode" ColumnName="InternalCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="roy_sp_GetSubmissionList" FunctionName="RoyaltyModel.Store.roy_sp_GetSubmissionList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RoyaltyModel.roy_sp_GetSubmissionList_Result1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InternalCode" ColumnName="InternalCode" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="ContractTitle" ColumnName="ContractTitle" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ResponeDate" ColumnName="ResponeDate" />
+          <ScalarProperty Name="ResponeBy" ColumnName="ResponeBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StatusDescription" ColumnName="StatusDescription" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="RowId" ColumnName="RowId" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="roy_sp_GetProductBySubmissionId" FunctionName="RoyaltyModel.Store.roy_sp_GetProductBySubmissionId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RoyaltyModel.roy_sp_GetProductBySubmissionId_Result">
+          <ScalarProperty Name="SubmissionID" ColumnName="SubmissionID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ContractMapProductID" ColumnName="ContractMapProductID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="UrlAddress" ColumnName="UrlAddress" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="SubmissionAttachments">
+      <EntityTypeMapping TypeName="RoyaltyModel.SubmissionAttachment">
+        <MappingFragment StoreEntitySet="SubmissionAttachment">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateBy" ColumnName="LastUpdateBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="SubmissionMapProductID" ColumnName="SubmissionMapProductID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubmissionProductPrices">
+      <EntityTypeMapping TypeName="RoyaltyModel.SubmissionProductPrice">
+        <MappingFragment StoreEntitySet="SubmissionProductPrice">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ValueTo" ColumnName="ValueTo" />
+          <ScalarProperty Name="ValueFrom" ColumnName="ValueFrom" />
+          <ScalarProperty Name="RoyaltyTypeID" ColumnName="RoyaltyTypeID" />
+          <ScalarProperty Name="SubmitsionMapProductID" ColumnName="SubmitsionMapProductID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contracts">
+      <EntityTypeMapping TypeName="RoyaltyModel.Contract">
+        <MappingFragment StoreEntitySet="Contract">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+          <ScalarProperty Name="ProcessBy" ColumnName="ProcessBy" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateBy" ColumnName="LastUpdateBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="FileAttached" ColumnName="FileAttached" />
+          <ScalarProperty Name="ReportPeriod" ColumnName="ReportPeriod" />
+          <ScalarProperty Name="SignedDate" ColumnName="SignedDate" />
+          <ScalarProperty Name="SignedBy" ColumnName="SignedBy" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="CommecementDate" ColumnName="CommecementDate" />
+          <ScalarProperty Name="LicenceeContactName" ColumnName="LicenceeContactName" />
+          <ScalarProperty Name="LicenseeID" ColumnName="LicenseeID" />
+          <ScalarProperty Name="LicensorContactName" ColumnName="LicensorContactName" />
+          <ScalarProperty Name="LicensorID" ColumnName="LicensorID" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="Entity" ColumnName="Entity" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="ContractTitle" ColumnName="ContractTitle" />
+          <ScalarProperty Name="ContractNo" ColumnName="ContractNo" />
+          <ScalarProperty Name="ExternalContractNo" ColumnName="ExternalContractNo" />
+          <ScalarProperty Name="RefContract" ColumnName="RefContract" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="roy_sp_GetContractByID" FunctionName="RoyaltyModel.Store.roy_sp_GetContractByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RoyaltyModel.roy_sp_GetContractByID_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CommecementDate" ColumnName="CommecementDate" />
+          <ScalarProperty Name="ContractNo" ColumnName="ContractNo" />
+          <ScalarProperty Name="ContractTitle" ColumnName="ContractTitle" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="ReportPeriod" ColumnName="ReportPeriod" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="Entity" ColumnName="Entity" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="FileAttached" ColumnName="FileAttached" />
+          <ScalarProperty Name="ExternalContractNo" ColumnName="ExternalContractNo" />
+          <ScalarProperty Name="RefContract" ColumnName="RefContract" />
+          <ScalarProperty Name="RefContractId" ColumnName="RefContractId" />
+          <ScalarProperty Name="RefContractNo" ColumnName="RefContractNo" />
+          <ScalarProperty Name="RefContractTitle" ColumnName="RefContractTitle" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="LastUpdateBy" ColumnName="LastUpdateBy" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LicenceeContactName" ColumnName="LicenceeContactName" />
+          <ScalarProperty Name="LicenceeID" ColumnName="LicenceeID" />
+          <ScalarProperty Name="LicensorContactName" ColumnName="LicensorContactName" />
+          <ScalarProperty Name="LicensorID" ColumnName="LicensorID" />
+          <ScalarProperty Name="SignedBy" ColumnName="SignedBy" />
+          <ScalarProperty Name="SignedDate" ColumnName="SignedDate" />
+          <ScalarProperty Name="LicensorABN" ColumnName="LicensorABN" />
+          <ScalarProperty Name="LicensorACN" ColumnName="LicensorACN" />
+          <ScalarProperty Name="LicensorEmail" ColumnName="LicensorEmail" />
+          <ScalarProperty Name="LicensorCompanyName" ColumnName="LicensorCompanyName" />
+          <ScalarProperty Name="LicensorFirstName" ColumnName="LicensorFirstName" />
+          <ScalarProperty Name="LicensorLastName" ColumnName="LicensorLastName" />
+          <ScalarProperty Name="LicensorMobile" ColumnName="LicensorMobile" />
+          <ScalarProperty Name="LicensorPhone" ColumnName="LicensorPhone" />
+          <ScalarProperty Name="LicensorAddress" ColumnName="LicensorAddress" />
+          <ScalarProperty Name="LicenceeABN" ColumnName="LicenceeABN" />
+          <ScalarProperty Name="LicenceeACN" ColumnName="LicenceeACN" />
+          <ScalarProperty Name="LicenceeEmail" ColumnName="LicenceeEmail" />
+          <ScalarProperty Name="LicenceeCompanyName" ColumnName="LicenceeCompanyName" />
+          <ScalarProperty Name="LicenceeFirstName" ColumnName="LicenceeFirstName" />
+          <ScalarProperty Name="LicenceeLastName" ColumnName="LicenceeLastName" />
+          <ScalarProperty Name="LicenceeMobile" ColumnName="LicenceeMobile" />
+          <ScalarProperty Name="LicenceePhone" ColumnName="LicenceePhone" />
+          <ScalarProperty Name="LicenceeAddress" ColumnName="LicenceeAddress" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="SubmissionMapProducts">
+      <EntityTypeMapping TypeName="RoyaltyModel.SubmissionMapProduct">
+        <MappingFragment StoreEntitySet="SubmissionMapProduct">
+          <ScalarProperty Name="LasUpdateDate" ColumnName="LasUpdateDate" />
+          <ScalarProperty Name="LasUpdateBy" ColumnName="LasUpdateBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="ResponseDate" ColumnName="ResponseDate" />
+          <ScalarProperty Name="ResponseBy" ColumnName="ResponseBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ContractMapProductID" ColumnName="ContractMapProductID" />
+          <ScalarProperty Name="SubmissionID" ColumnName="SubmissionID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="roy_sp_SearchSubmissionInfo" FunctionName="RoyaltyModel.Store.roy_sp_SearchSubmissionInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RoyaltyModel.roy_sp_SearchSubmissionInfo_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="InternalCode" ColumnName="InternalCode" />
+          <ScalarProperty Name="ContractID" ColumnName="ContractID" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="ContractTitle" ColumnName="ContractTitle" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

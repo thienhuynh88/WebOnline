@@ -1,0 +1,1091 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RoyaltyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="RoyaltyEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AvailableRights" EntityType="RoyaltyModel.AvailableRight" />
+    <EntitySet Name="Banks" EntityType="RoyaltyModel.Bank" />
+    <EntitySet Name="ContractMapAvailableRights" EntityType="RoyaltyModel.ContractMapAvailableRight" />
+    <EntitySet Name="ContractMapBanks" EntityType="RoyaltyModel.ContractMapBank" />
+    <EntitySet Name="ContractMapGroups" EntityType="RoyaltyModel.ContractMapGroup" />
+    <EntitySet Name="ContractParties" EntityType="RoyaltyModel.ContractParty" />
+    <EntitySet Name="ContractSchedules" EntityType="RoyaltyModel.ContractSchedule" />
+    <EntitySet Name="Currencies" EntityType="RoyaltyModel.Currency" />
+    <EntitySet Name="Groups" EntityType="RoyaltyModel.Group" />
+    <EntitySet Name="LicenseeMaps" EntityType="RoyaltyModel.LicenseeMap" />
+    <EntitySet Name="ObjectTypes" EntityType="RoyaltyModel.ObjectType" />
+    <EntitySet Name="PaymentTerms" EntityType="RoyaltyModel.PaymentTerm" />
+    <EntitySet Name="Royalties" EntityType="RoyaltyModel.Royalty" />
+    <EntitySet Name="RoyaltyTypes" EntityType="RoyaltyModel.RoyaltyType" />
+    <EntitySet Name="SubmissionComments" EntityType="RoyaltyModel.SubmissionComment" />
+    <AssociationSet Name="FK_AvailableRight_ObjectType" Association="RoyaltyModel.FK_AvailableRight_ObjectType">
+      <End Role="ObjectType" EntitySet="ObjectTypes" />
+      <End Role="AvailableRight" EntitySet="AvailableRights" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractMapAvailableRight_AvailableRight" Association="RoyaltyModel.FK_ContractMapAvailableRight_AvailableRight">
+      <End Role="AvailableRight" EntitySet="AvailableRights" />
+      <End Role="ContractMapAvailableRight" EntitySet="ContractMapAvailableRights" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractMapBank_Bank" Association="RoyaltyModel.FK_ContractMapBank_Bank">
+      <End Role="Bank" EntitySet="Banks" />
+      <End Role="ContractMapBank" EntitySet="ContractMapBanks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractMapProductGroup_ProductGroup1" Association="RoyaltyModel.FK_ContractMapProductGroup_ProductGroup1">
+      <End Role="Group" EntitySet="Groups" />
+      <End Role="ContractMapGroup" EntitySet="ContractMapGroups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LicenseeMap_ContractParty" Association="RoyaltyModel.FK_LicenseeMap_ContractParty">
+      <End Role="ContractParty" EntitySet="ContractParties" />
+      <End Role="LicenseeMap" EntitySet="LicenseeMaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Royalty_RoyaltyType" Association="RoyaltyModel.FK_Royalty_RoyaltyType">
+      <End Role="RoyaltyType" EntitySet="RoyaltyTypes" />
+      <End Role="Royalty" EntitySet="Royalties" />
+    </AssociationSet>
+    <FunctionImport Name="roy_sp_GetEntityFromCompanyFinanceData" ReturnType="Collection(RoyaltyModel.roy_sp_GetEntityFromCompanyFinanceData_Result)" />
+    <FunctionImport Name="roy_sp_GetProductListByContractId" ReturnType="Collection(RoyaltyModel.roy_sp_GetProductListByContractId_Result)">
+      <Parameter Name="contractId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="roy_sp_GetProductByGroupId" ReturnType="Collection(RoyaltyModel.roy_sp_GetProductByGroupId_Result)">
+      <Parameter Name="GroupId" Mode="In" Type="Int32" />
+      <Parameter Name="KeySearch" Mode="In" Type="String" />
+      <Parameter Name="page" Mode="In" Type="Int32" />
+      <Parameter Name="pageSize" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="roy_sp_GetContractList" ReturnType="Collection(RoyaltyModel.roy_sp_GetContractList_Result)">
+      <Parameter Name="keyword" Mode="In" Type="String" />
+      <Parameter Name="page" Mode="In" Type="Int32" />
+      <Parameter Name="pageSize" Mode="In" Type="Int32" />
+      <Parameter Name="total" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="roy_sp_GetProductByCatalogue" ReturnType="Collection(RoyaltyModel.roy_sp_GetProductByCatalogue_Result)">
+      <Parameter Name="catalogueId" Mode="In" Type="Int32" />
+      <Parameter Name="keyword" Mode="In" Type="String" />
+      <Parameter Name="page" Mode="In" Type="Int32" />
+      <Parameter Name="pageSize" Mode="In" Type="Int32" />
+      <Parameter Name="total" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="SKUs" EntityType="RoyaltyModel.SKU" />
+    <FunctionImport Name="roy_sp_GetProductForSubmission" ReturnType="Collection(RoyaltyModel.roy_sp_GetProductForSubmission_Result)">
+      <Parameter Name="ContractId" Mode="In" Type="Int32" />
+      <Parameter Name="GroupId" Mode="In" Type="Int32" />
+      <Parameter Name="KeySearch" Mode="In" Type="String" />
+      <Parameter Name="page" Mode="In" Type="Int32" />
+      <Parameter Name="pageSize" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="ContractMapProducts" EntityType="RoyaltyModel.ContractMapProduct" />
+    <EntitySet Name="ProductMapGroups" EntityType="RoyaltyModel.ProductMapGroup" />
+    <AssociationSet Name="FK_ContractProducts_ContractGroups" Association="RoyaltyModel.FK_ContractProducts_ContractGroups">
+      <End Role="ContractMapGroup" EntitySet="ContractMapGroups" />
+      <End Role="ContractMapProduct" EntitySet="ContractMapProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductMapGroup_Group" Association="RoyaltyModel.FK_ProductMapGroup_Group">
+      <End Role="Group" EntitySet="Groups" />
+      <End Role="ProductMapGroup" EntitySet="ProductMapGroups" />
+    </AssociationSet>
+    <EntitySet Name="SubmissionMapAvailableRights" EntityType="RoyaltyModel.SubmissionMapAvailableRight" />
+    <AssociationSet Name="FK_SumissionMapAvailableRight_ContractMapAvailableRight" Association="RoyaltyModel.FK_SumissionMapAvailableRight_ContractMapAvailableRight">
+      <End Role="ContractMapAvailableRight" EntitySet="ContractMapAvailableRights" />
+      <End Role="SubmissionMapAvailableRight" EntitySet="SubmissionMapAvailableRights" />
+    </AssociationSet>
+    <EntitySet Name="Submissions" EntityType="RoyaltyModel.Submission" />
+    <AssociationSet Name="FK_SubmissionComment_Submission" Association="RoyaltyModel.FK_SubmissionComment_Submission">
+      <End Role="Submission" EntitySet="Submissions" />
+      <End Role="SubmissionComment" EntitySet="SubmissionComments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SumissionMapAvailableRight_Submission" Association="RoyaltyModel.FK_SumissionMapAvailableRight_Submission">
+      <End Role="Submission" EntitySet="Submissions" />
+      <End Role="SubmissionMapAvailableRight" EntitySet="SubmissionMapAvailableRights" />
+    </AssociationSet>
+    <FunctionImport Name="roy_sp_GetSubmissionList" ReturnType="Collection(RoyaltyModel.roy_sp_GetSubmissionList_Result1)">
+      <Parameter Name="keyword" Mode="In" Type="String" />
+      <Parameter Name="page" Mode="In" Type="Int32" />
+      <Parameter Name="pageSize" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="roy_sp_GetProductBySubmissionId" ReturnType="Collection(RoyaltyModel.roy_sp_GetProductBySubmissionId_Result)">
+      <Parameter Name="submissionId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="SubmissionAttachments" EntityType="RoyaltyModel.SubmissionAttachment" />
+    <EntitySet Name="SubmissionProductPrices" EntityType="RoyaltyModel.SubmissionProductPrice" />
+    <AssociationSet Name="FK_SubmissionProductPrice_RoyaltyType" Association="RoyaltyModel.FK_SubmissionProductPrice_RoyaltyType">
+      <End Role="RoyaltyType" EntitySet="RoyaltyTypes" />
+      <End Role="SubmissionProductPrice" EntitySet="SubmissionProductPrices" />
+    </AssociationSet>
+    <EntitySet Name="Contracts" EntityType="RoyaltyModel.Contract" />
+    <AssociationSet Name="FK_Contract_ContractParty" Association="RoyaltyModel.FK_Contract_ContractParty">
+      <End Role="ContractParty" EntitySet="ContractParties" />
+      <End Role="Contract" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contract_ContractParty1" Association="RoyaltyModel.FK_Contract_ContractParty1">
+      <End Role="ContractParty" EntitySet="ContractParties" />
+      <End Role="Contract" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractMapAvailableRight_Contract" Association="RoyaltyModel.FK_ContractMapAvailableRight_Contract">
+      <End Role="Contract" EntitySet="Contracts" />
+      <End Role="ContractMapAvailableRight" EntitySet="ContractMapAvailableRights" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractMapBank_Contract" Association="RoyaltyModel.FK_ContractMapBank_Contract">
+      <End Role="Contract" EntitySet="Contracts" />
+      <End Role="ContractMapBank" EntitySet="ContractMapBanks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractMapProductGroup_Contract" Association="RoyaltyModel.FK_ContractMapProductGroup_Contract">
+      <End Role="Contract" EntitySet="Contracts" />
+      <End Role="ContractMapGroup" EntitySet="ContractMapGroups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractSchedule_Contract" Association="RoyaltyModel.FK_ContractSchedule_Contract">
+      <End Role="Contract" EntitySet="Contracts" />
+      <End Role="ContractSchedule" EntitySet="ContractSchedules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LicenseeMap_Contract" Association="RoyaltyModel.FK_LicenseeMap_Contract">
+      <End Role="Contract" EntitySet="Contracts" />
+      <End Role="LicenseeMap" EntitySet="LicenseeMaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PaymentTerm_Contract" Association="RoyaltyModel.FK_PaymentTerm_Contract">
+      <End Role="Contract" EntitySet="Contracts" />
+      <End Role="PaymentTerm" EntitySet="PaymentTerms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Royalty_Contract" Association="RoyaltyModel.FK_Royalty_Contract">
+      <End Role="Contract" EntitySet="Contracts" />
+      <End Role="Royalty" EntitySet="Royalties" />
+    </AssociationSet>
+    <FunctionImport Name="roy_sp_GetContractByID" ReturnType="Collection(RoyaltyModel.roy_sp_GetContractByID_Result)">
+      <Parameter Name="contractId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="SubmissionMapProducts" EntityType="RoyaltyModel.SubmissionMapProduct" />
+    <AssociationSet Name="FK_SubmissionMapProduct_ContractMapProduct" Association="RoyaltyModel.FK_SubmissionMapProduct_ContractMapProduct">
+      <End Role="ContractMapProduct" EntitySet="ContractMapProducts" />
+      <End Role="SubmissionMapProduct" EntitySet="SubmissionMapProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SKU_SubmissionMapProduct" Association="RoyaltyModel.FK_SKU_SubmissionMapProduct">
+      <End Role="SubmissionMapProduct" EntitySet="SubmissionMapProducts" />
+      <End Role="SKU" EntitySet="SKUs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubmissionMapProduct_Submission" Association="RoyaltyModel.FK_SubmissionMapProduct_Submission">
+      <End Role="Submission" EntitySet="Submissions" />
+      <End Role="SubmissionMapProduct" EntitySet="SubmissionMapProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubmissionAttachment_SubmissionMapProduct" Association="RoyaltyModel.FK_SubmissionAttachment_SubmissionMapProduct">
+      <End Role="SubmissionMapProduct" EntitySet="SubmissionMapProducts" />
+      <End Role="SubmissionAttachment" EntitySet="SubmissionAttachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubmissionProductPrice_SubmissionMapProduct" Association="RoyaltyModel.FK_SubmissionProductPrice_SubmissionMapProduct">
+      <End Role="SubmissionMapProduct" EntitySet="SubmissionMapProducts" />
+      <End Role="SubmissionProductPrice" EntitySet="SubmissionProductPrices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Submission_Contract" Association="RoyaltyModel.FK_Submission_Contract">
+      <End Role="Contract" EntitySet="Contracts" />
+      <End Role="Submission" EntitySet="Submissions" />
+    </AssociationSet>
+    <FunctionImport Name="roy_sp_SearchSubmissionInfo" ReturnType="Collection(RoyaltyModel.roy_sp_SearchSubmissionInfo_Result)">
+      <Parameter Name="condition" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="AvailableRight">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateBy" Type="Int32" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="ObjectTypeID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ObjectType" Relationship="RoyaltyModel.FK_AvailableRight_ObjectType" FromRole="AvailableRight" ToRole="ObjectType" />
+    <NavigationProperty Name="ContractMapAvailableRights" Relationship="RoyaltyModel.FK_ContractMapAvailableRight_AvailableRight" FromRole="AvailableRight" ToRole="ContractMapAvailableRight" />
+  </EntityType>
+  <EntityType Name="Bank">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BankName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Suburb" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PostCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateBy" Type="Int32" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ContractMapBanks" Relationship="RoyaltyModel.FK_ContractMapBank_Bank" FromRole="Bank" ToRole="ContractMapBank" />
+  </EntityType>
+  <EntityType Name="ContractMapAvailableRight">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AvailableRightID" Type="Int32" Nullable="false" />
+    <Property Name="ContractID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AvailableRight" Relationship="RoyaltyModel.FK_ContractMapAvailableRight_AvailableRight" FromRole="ContractMapAvailableRight" ToRole="AvailableRight" />
+    <NavigationProperty Name="SubmissionMapAvailableRights" Relationship="RoyaltyModel.FK_SumissionMapAvailableRight_ContractMapAvailableRight" FromRole="ContractMapAvailableRight" ToRole="SubmissionMapAvailableRight" />
+    <NavigationProperty Name="Contract" Relationship="RoyaltyModel.FK_ContractMapAvailableRight_Contract" FromRole="ContractMapAvailableRight" ToRole="Contract" />
+  </EntityType>
+  <EntityType Name="ContractMapBank">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractID" Type="Int32" Nullable="false" />
+    <Property Name="BankID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Bank" Relationship="RoyaltyModel.FK_ContractMapBank_Bank" FromRole="ContractMapBank" ToRole="Bank" />
+    <NavigationProperty Name="Contract" Relationship="RoyaltyModel.FK_ContractMapBank_Contract" FromRole="ContractMapBank" ToRole="Contract" />
+  </EntityType>
+  <EntityType Name="ContractMapGroup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupID" Type="Int32" Nullable="false" />
+    <Property Name="ContractID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Group" Relationship="RoyaltyModel.FK_ContractMapProductGroup_ProductGroup1" FromRole="ContractMapGroup" ToRole="Group" />
+    <NavigationProperty Name="ContractMapProducts" Relationship="RoyaltyModel.FK_ContractProducts_ContractGroups" FromRole="ContractMapGroup" ToRole="ContractMapProduct" />
+    <NavigationProperty Name="Contract" Relationship="RoyaltyModel.FK_ContractMapProductGroup_Contract" FromRole="ContractMapGroup" ToRole="Contract" />
+  </EntityType>
+  <EntityType Name="ContractParty">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Suburb" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PostCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ACN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ABN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LicenseType" Type="Int32" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PriEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AltEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AccEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeliveryAttention" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="DeliverySuburb" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryState" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DeliveryPostcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DeliveryCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TradingTerm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TradingCurrencyType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TradingBankName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TradingBankAccount" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TradingBankBSB" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TradingBankNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateBy" Type="Int32" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="Avatar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="LicenseeMaps" Relationship="RoyaltyModel.FK_LicenseeMap_ContractParty" FromRole="ContractParty" ToRole="LicenseeMap" />
+    <NavigationProperty Name="Contracts" Relationship="RoyaltyModel.FK_Contract_ContractParty" FromRole="ContractParty" ToRole="Contract" />
+    <NavigationProperty Name="Contracts1" Relationship="RoyaltyModel.FK_Contract_ContractParty1" FromRole="ContractParty" ToRole="Contract" />
+  </EntityType>
+  <EntityType Name="ContractSchedule">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ReportDate" Type="DateTime" Precision="3" />
+    <Property Name="AlertDate" Type="Int32" />
+    <Property Name="AlertRepeat" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateBy" Type="Int32" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="Contract" Relationship="RoyaltyModel.FK_ContractSchedule_Contract" FromRole="ContractSchedule" ToRole="Contract" />
+  </EntityType>
+  <EntityType Name="Currency">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateBy" Type="Int32" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="ContractMapGroups" Relationship="RoyaltyModel.FK_ContractMapProductGroup_ProductGroup1" FromRole="Group" ToRole="ContractMapGroup" />
+    <NavigationProperty Name="ProductMapGroups" Relationship="RoyaltyModel.FK_ProductMapGroup_Group" FromRole="Group" ToRole="ProductMapGroup" />
+  </EntityType>
+  <EntityType Name="LicenseeMap">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractID" Type="Int32" Nullable="false" />
+    <Property Name="LicensorID" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateBy" Type="Int32" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="ContractParty" Relationship="RoyaltyModel.FK_LicenseeMap_ContractParty" FromRole="LicenseeMap" ToRole="ContractParty" />
+    <NavigationProperty Name="Contract" Relationship="RoyaltyModel.FK_LicenseeMap_Contract" FromRole="LicenseeMap" ToRole="Contract" />
+  </EntityType>
+  <EntityType Name="ObjectType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Descriptions" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateBy" Type="Int32" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="AvailableRights" Relationship="RoyaltyModel.FK_AvailableRight_ObjectType" FromRole="ObjectType" ToRole="AvailableRight" />
+  </EntityType>
+  <EntityType Name="PaymentTerm">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MinAmount" Type="Double" />
+    <Property Name="FromDate" Type="DateTime" Precision="3" />
+    <Property Name="ToDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateBy" Type="Int32" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="Contract" Relationship="RoyaltyModel.FK_PaymentTerm_Contract" FromRole="PaymentTerm" ToRole="Contract" />
+  </EntityType>
+  <EntityType Name="Royalty">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RoyaltyTypeID" Type="Int32" />
+    <Property Name="RebatePercent" Type="Double" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateBy" Type="Int32" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="RoyaltyType" Relationship="RoyaltyModel.FK_Royalty_RoyaltyType" FromRole="Royalty" ToRole="RoyaltyType" />
+    <NavigationProperty Name="Contract" Relationship="RoyaltyModel.FK_Royalty_Contract" FromRole="Royalty" ToRole="Contract" />
+  </EntityType>
+  <EntityType Name="RoyaltyType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateBy" Type="Int32" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="Royalties" Relationship="RoyaltyModel.FK_Royalty_RoyaltyType" FromRole="RoyaltyType" ToRole="Royalty" />
+    <NavigationProperty Name="SubmissionProductPrices" Relationship="RoyaltyModel.FK_SubmissionProductPrice_RoyaltyType" FromRole="RoyaltyType" ToRole="SubmissionProductPrice" />
+  </EntityType>
+  <EntityType Name="SubmissionComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubmissionID" Type="Int32" />
+    <Property Name="Comment" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="Submission" Relationship="RoyaltyModel.FK_SubmissionComment_Submission" FromRole="SubmissionComment" ToRole="Submission" />
+  </EntityType>
+  <Association Name="FK_AvailableRight_ObjectType">
+    <End Type="RoyaltyModel.ObjectType" Role="ObjectType" Multiplicity="1" />
+    <End Type="RoyaltyModel.AvailableRight" Role="AvailableRight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ObjectType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AvailableRight">
+        <PropertyRef Name="ObjectTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractMapAvailableRight_AvailableRight">
+    <End Type="RoyaltyModel.AvailableRight" Role="AvailableRight" Multiplicity="1" />
+    <End Type="RoyaltyModel.ContractMapAvailableRight" Role="ContractMapAvailableRight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AvailableRight">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractMapAvailableRight">
+        <PropertyRef Name="AvailableRightID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractMapBank_Bank">
+    <End Type="RoyaltyModel.Bank" Role="Bank" Multiplicity="1" />
+    <End Type="RoyaltyModel.ContractMapBank" Role="ContractMapBank" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bank">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractMapBank">
+        <PropertyRef Name="BankID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractMapProductGroup_ProductGroup1">
+    <End Type="RoyaltyModel.Group" Role="Group" Multiplicity="1" />
+    <End Type="RoyaltyModel.ContractMapGroup" Role="ContractMapGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractMapGroup">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LicenseeMap_ContractParty">
+    <End Type="RoyaltyModel.ContractParty" Role="ContractParty" Multiplicity="1" />
+    <End Type="RoyaltyModel.LicenseeMap" Role="LicenseeMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractParty">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LicenseeMap">
+        <PropertyRef Name="LicensorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Royalty_RoyaltyType">
+    <End Type="RoyaltyModel.RoyaltyType" Role="RoyaltyType" Multiplicity="0..1" />
+    <End Type="RoyaltyModel.Royalty" Role="Royalty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoyaltyType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Royalty">
+        <PropertyRef Name="RoyaltyTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="roy_sp_GetEntityFromCompanyFinanceData_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="companyname" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="roy_sp_GetProductListByContractId_Result">
+    <Property Type="Int32" Name="proid" Nullable="true" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="80" />
+    <Property Type="Double" Name="currentprice" Nullable="true" />
+    <Property Type="Int32" Name="GroupID" Nullable="false" />
+    <Property Type="Int32" Name="ContractMapProductID" Nullable="false" />
+    <Property Type="String" Name="urladdress" Nullable="true" MaxLength="265" />
+  </ComplexType>
+  <ComplexType Name="roy_sp_GetProductByGroupId_Result">
+    <Property Type="Int32" Name="proid" Nullable="true" />
+    <Property Type="Int32" Name="categoryid" Nullable="true" />
+    <Property Type="String" Name="cataloguename" Nullable="true" MaxLength="80" />
+    <Property Type="Int32" Name="catalogueID" Nullable="true" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="80" />
+    <Property Type="Double" Name="currentprice" Nullable="true" />
+    <Property Type="String" Name="urladdress" Nullable="true" MaxLength="265" />
+    <Property Type="Int32" Name="groupid" Nullable="true" />
+    <Property Type="Int32" Name="Total" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="roy_sp_GetContractList_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="ContractNo" Nullable="false" MaxLength="12" />
+    <Property Type="String" Name="ContractTitle" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="LicensorContactName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="LicenceeContactName" Nullable="true" MaxLength="250" />
+    <Property Type="DateTime" Name="ExpiryDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="CommecementDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CurrencyCode" Nullable="true" MaxLength="5" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="Entity" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="SignedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="SignedBy" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="LicensorID" Nullable="true" />
+    <Property Type="String" Name="LicensorCompanyName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="LicensorABN" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="LicensorEmail" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="LicensorAddress" Nullable="true" MaxLength="236" />
+    <Property Type="String" Name="LicensorPosition" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LicensorPhone" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="LicenseeID" Nullable="true" />
+    <Property Type="String" Name="LicenceeCompanyName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="LicenceeABN" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="LicenceeEmail" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="LicenceeAddress" Nullable="true" MaxLength="236" />
+    <Property Type="String" Name="LicenceePosition" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LicenceePhone" Nullable="true" MaxLength="20" />
+    <Property Type="Int64" Name="RowID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="roy_sp_GetProductByCatalogue_Result">
+    <Property Type="Int32" Name="catalogueid" Nullable="true" />
+    <Property Type="String" Name="cataloguename" Nullable="true" MaxLength="80" />
+    <Property Type="Int32" Name="proid" Nullable="true" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="90" />
+    <Property Type="Double" Name="currentprice" Nullable="true" />
+    <Property Type="String" Name="status" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="online" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="inventorystatus" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="InvCode" Nullable="true" />
+    <Property Type="String" Name="TPFCode" Nullable="true" />
+    <Property Type="String" Name="urladdress" Nullable="true" MaxLength="265" />
+    <Property Type="Int64" Name="RowID" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="SKU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AltCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SubmissionMapProdID" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateBy" Type="Int32" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="SubmissionMapProduct" Relationship="RoyaltyModel.FK_SKU_SubmissionMapProduct" FromRole="SKU" ToRole="SubmissionMapProduct" />
+  </EntityType>
+  <ComplexType Name="roy_sp_GetProductForSubmission_Result">
+    <Property Type="Int32" Name="ContractID" Nullable="false" />
+    <Property Type="Int32" Name="GroupID" Nullable="false" />
+    <Property Type="Int32" Name="catalogueID" Nullable="false" />
+    <Property Type="String" Name="cataloguename" Nullable="true" MaxLength="80" />
+    <Property Type="Int32" Name="ProductID" Nullable="true" />
+    <Property Type="String" Name="proname" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="urladdress" Nullable="true" MaxLength="265" />
+    <Property Type="Int64" Name="RowId" Nullable="true" />
+    <Property Type="Int32" Name="Total" Nullable="true" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="ContractMapProduct">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractMapGroupID" Type="Int32" />
+    <Property Name="ProductID" Type="Int32" />
+    <NavigationProperty Name="ContractMapGroup" Relationship="RoyaltyModel.FK_ContractProducts_ContractGroups" FromRole="ContractMapProduct" ToRole="ContractMapGroup" />
+    <NavigationProperty Name="SubmissionMapProducts" Relationship="RoyaltyModel.FK_SubmissionMapProduct_ContractMapProduct" FromRole="ContractMapProduct" ToRole="SubmissionMapProduct" />
+  </EntityType>
+  <EntityType Name="ProductMapGroup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int32" />
+    <Property Name="ProductName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="GroupID" Type="Int32" />
+    <NavigationProperty Name="Group" Relationship="RoyaltyModel.FK_ProductMapGroup_Group" FromRole="ProductMapGroup" ToRole="Group" />
+  </EntityType>
+  <Association Name="FK_ContractProducts_ContractGroups">
+    <End Type="RoyaltyModel.ContractMapGroup" Role="ContractMapGroup" Multiplicity="0..1" />
+    <End Type="RoyaltyModel.ContractMapProduct" Role="ContractMapProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractMapGroup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractMapProduct">
+        <PropertyRef Name="ContractMapGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductMapGroup_Group">
+    <End Type="RoyaltyModel.Group" Role="Group" Multiplicity="0..1" />
+    <End Type="RoyaltyModel.ProductMapGroup" Role="ProductMapGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProductMapGroup">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SubmissionMapAvailableRight">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractAvailableID" Type="Int32" />
+    <Property Name="SubmissionID" Type="Int32" />
+    <NavigationProperty Name="ContractMapAvailableRight" Relationship="RoyaltyModel.FK_SumissionMapAvailableRight_ContractMapAvailableRight" FromRole="SubmissionMapAvailableRight" ToRole="ContractMapAvailableRight" />
+    <NavigationProperty Name="Submission" Relationship="RoyaltyModel.FK_SumissionMapAvailableRight_Submission" FromRole="SubmissionMapAvailableRight" ToRole="Submission" />
+  </EntityType>
+  <Association Name="FK_SumissionMapAvailableRight_ContractMapAvailableRight">
+    <End Type="RoyaltyModel.ContractMapAvailableRight" Role="ContractMapAvailableRight" Multiplicity="0..1" />
+    <End Type="RoyaltyModel.SubmissionMapAvailableRight" Role="SubmissionMapAvailableRight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractMapAvailableRight">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubmissionMapAvailableRight">
+        <PropertyRef Name="ContractAvailableID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Submission">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InternalCode" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="ContractID" Type="Int32" />
+    <Property Name="ContactName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateBy" Type="Int32" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="ResponeBy" Type="Int32" />
+    <Property Name="ResponeDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="SubmissionComments" Relationship="RoyaltyModel.FK_SubmissionComment_Submission" FromRole="Submission" ToRole="SubmissionComment" />
+    <NavigationProperty Name="SubmissionMapAvailableRights" Relationship="RoyaltyModel.FK_SumissionMapAvailableRight_Submission" FromRole="Submission" ToRole="SubmissionMapAvailableRight" />
+    <NavigationProperty Name="SubmissionMapProducts" Relationship="RoyaltyModel.FK_SubmissionMapProduct_Submission" FromRole="Submission" ToRole="SubmissionMapProduct" />
+    <NavigationProperty Name="Contract" Relationship="RoyaltyModel.FK_Submission_Contract" FromRole="Submission" ToRole="Contract" />
+  </EntityType>
+  <Association Name="FK_SubmissionComment_Submission">
+    <End Type="RoyaltyModel.Submission" Role="Submission" Multiplicity="0..1" />
+    <End Type="RoyaltyModel.SubmissionComment" Role="SubmissionComment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Submission">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubmissionComment">
+        <PropertyRef Name="SubmissionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SumissionMapAvailableRight_Submission">
+    <End Type="RoyaltyModel.Submission" Role="Submission" Multiplicity="0..1" />
+    <End Type="RoyaltyModel.SubmissionMapAvailableRight" Role="SubmissionMapAvailableRight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Submission">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubmissionMapAvailableRight">
+        <PropertyRef Name="SubmissionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="roy_sp_GetSubmissionList_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="InternalCode" Nullable="false" MaxLength="12" />
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ContactName" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="CreateBy" Nullable="false" MaxLength="61" />
+    <Property Type="String" Name="ContractTitle" Nullable="false" MaxLength="250" />
+    <Property Type="Int32" Name="ContractId" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ResponeDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ResponeBy" Nullable="false" MaxLength="61" />
+    <Property Type="Int64" Name="RowId" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="String" Name="StatusDescription" Nullable="false" MaxLength="9" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="Int32" Name="Total" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="roy_sp_GetSubmissionList_Result1">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="InternalCode" Nullable="false" MaxLength="12" />
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ContactName" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="CreateBy" Nullable="false" MaxLength="61" />
+    <Property Type="String" Name="ContractTitle" Nullable="false" MaxLength="250" />
+    <Property Type="Int32" Name="ContractId" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ResponeDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ResponeBy" Nullable="false" MaxLength="61" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="String" Name="StatusDescription" Nullable="false" MaxLength="9" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="Int64" Name="RowId" Nullable="true" />
+    <Property Type="Int32" Name="Total" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="roy_sp_GetProductBySubmissionId_Result">
+    <Property Type="Int32" Name="SubmissionID" Nullable="true" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="ContractMapProductID" Nullable="true" />
+    <Property Type="Int32" Name="ProductID" Nullable="true" />
+    <Property Type="Int32" Name="GroupID" Nullable="false" />
+    <Property Type="String" Name="GroupName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="ProductName" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="UrlAddress" Nullable="true" MaxLength="265" />
+    <Property Type="Int32" Name="Status" Nullable="false" />
+    <Property Type="String" Name="Note" Nullable="true" MaxLength="1000" />
+  </ComplexType>
+  <EntityType Name="SubmissionAttachment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubmissionMapProductID" Type="Int32" />
+    <Property Name="FileName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="FilePath" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateBy" Type="Int32" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="SubmissionMapProduct" Relationship="RoyaltyModel.FK_SubmissionAttachment_SubmissionMapProduct" FromRole="SubmissionAttachment" ToRole="SubmissionMapProduct" />
+  </EntityType>
+  <EntityType Name="SubmissionProductPrice">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubmitsionMapProductID" Type="Int32" />
+    <Property Name="RoyaltyTypeID" Type="Int32" />
+    <Property Name="ValueFrom" Type="Double" />
+    <Property Name="ValueTo" Type="Double" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RoyaltyType" Relationship="RoyaltyModel.FK_SubmissionProductPrice_RoyaltyType" FromRole="SubmissionProductPrice" ToRole="RoyaltyType" />
+    <NavigationProperty Name="SubmissionMapProduct" Relationship="RoyaltyModel.FK_SubmissionProductPrice_SubmissionMapProduct" FromRole="SubmissionProductPrice" ToRole="SubmissionMapProduct" />
+  </EntityType>
+  <Association Name="FK_SubmissionProductPrice_RoyaltyType">
+    <End Type="RoyaltyModel.RoyaltyType" Role="RoyaltyType" Multiplicity="0..1" />
+    <End Type="RoyaltyModel.SubmissionProductPrice" Role="SubmissionProductPrice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoyaltyType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubmissionProductPrice">
+        <PropertyRef Name="RoyaltyTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Contract">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RefContract" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ExternalContractNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContractNo" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="ContractTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="OrderNumber" Type="Int32" />
+    <Property Name="Entity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CurrencyCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="LicensorID" Type="Int32" />
+    <Property Name="LicensorContactName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="LicenseeID" Type="Int32" />
+    <Property Name="LicenceeContactName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CommecementDate" Type="DateTime" Precision="3" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="3" />
+    <Property Name="SignedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SignedDate" Type="DateTime" Precision="3" />
+    <Property Name="ReportPeriod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FileAttached" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateBy" Type="Int32" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="ProcessBy" Type="Int32" />
+    <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="ContractParty" Relationship="RoyaltyModel.FK_Contract_ContractParty" FromRole="Contract" ToRole="ContractParty" />
+    <NavigationProperty Name="ContractParty1" Relationship="RoyaltyModel.FK_Contract_ContractParty1" FromRole="Contract" ToRole="ContractParty" />
+    <NavigationProperty Name="ContractMapAvailableRights" Relationship="RoyaltyModel.FK_ContractMapAvailableRight_Contract" FromRole="Contract" ToRole="ContractMapAvailableRight" />
+    <NavigationProperty Name="ContractMapBanks" Relationship="RoyaltyModel.FK_ContractMapBank_Contract" FromRole="Contract" ToRole="ContractMapBank" />
+    <NavigationProperty Name="ContractMapGroups" Relationship="RoyaltyModel.FK_ContractMapProductGroup_Contract" FromRole="Contract" ToRole="ContractMapGroup" />
+    <NavigationProperty Name="ContractSchedules" Relationship="RoyaltyModel.FK_ContractSchedule_Contract" FromRole="Contract" ToRole="ContractSchedule" />
+    <NavigationProperty Name="LicenseeMaps" Relationship="RoyaltyModel.FK_LicenseeMap_Contract" FromRole="Contract" ToRole="LicenseeMap" />
+    <NavigationProperty Name="PaymentTerms" Relationship="RoyaltyModel.FK_PaymentTerm_Contract" FromRole="Contract" ToRole="PaymentTerm" />
+    <NavigationProperty Name="Royalties" Relationship="RoyaltyModel.FK_Royalty_Contract" FromRole="Contract" ToRole="Royalty" />
+    <NavigationProperty Name="Submissions" Relationship="RoyaltyModel.FK_Submission_Contract" FromRole="Contract" ToRole="Submission" />
+  </EntityType>
+  <Association Name="FK_Contract_ContractParty">
+    <End Type="RoyaltyModel.ContractParty" Role="ContractParty" Multiplicity="0..1" />
+    <End Type="RoyaltyModel.Contract" Role="Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractParty">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="LicensorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contract_ContractParty1">
+    <End Type="RoyaltyModel.ContractParty" Role="ContractParty" Multiplicity="0..1" />
+    <End Type="RoyaltyModel.Contract" Role="Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractParty">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="LicenseeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractMapAvailableRight_Contract">
+    <End Type="RoyaltyModel.Contract" Role="Contract" Multiplicity="1" />
+    <End Type="RoyaltyModel.ContractMapAvailableRight" Role="ContractMapAvailableRight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractMapAvailableRight">
+        <PropertyRef Name="ContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractMapBank_Contract">
+    <End Type="RoyaltyModel.Contract" Role="Contract" Multiplicity="1" />
+    <End Type="RoyaltyModel.ContractMapBank" Role="ContractMapBank" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractMapBank">
+        <PropertyRef Name="ContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractMapProductGroup_Contract">
+    <End Type="RoyaltyModel.Contract" Role="Contract" Multiplicity="1" />
+    <End Type="RoyaltyModel.ContractMapGroup" Role="ContractMapGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractMapGroup">
+        <PropertyRef Name="ContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractSchedule_Contract">
+    <End Type="RoyaltyModel.Contract" Role="Contract" Multiplicity="1" />
+    <End Type="RoyaltyModel.ContractSchedule" Role="ContractSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContractSchedule">
+        <PropertyRef Name="ContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LicenseeMap_Contract">
+    <End Type="RoyaltyModel.Contract" Role="Contract" Multiplicity="1" />
+    <End Type="RoyaltyModel.LicenseeMap" Role="LicenseeMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LicenseeMap">
+        <PropertyRef Name="ContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PaymentTerm_Contract">
+    <End Type="RoyaltyModel.Contract" Role="Contract" Multiplicity="0..1" />
+    <End Type="RoyaltyModel.PaymentTerm" Role="PaymentTerm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PaymentTerm">
+        <PropertyRef Name="ContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Royalty_Contract">
+    <End Type="RoyaltyModel.Contract" Role="Contract" Multiplicity="0..1" />
+    <End Type="RoyaltyModel.Royalty" Role="Royalty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Royalty">
+        <PropertyRef Name="ContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="roy_sp_GetContractByID_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="DateTime" Name="CommecementDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ContractNo" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="ContractTitle" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="OrderNumber" Nullable="true" />
+    <Property Type="String" Name="ReportPeriod" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CurrencyCode" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="Entity" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="ExpiryDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="FileAttached" Nullable="false" />
+    <Property Type="String" Name="ExternalContractNo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="RefContract" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="RefContractId" Nullable="false" />
+    <Property Type="String" Name="RefContractNo" Nullable="false" MaxLength="12" />
+    <Property Type="String" Name="RefContractTitle" Nullable="false" MaxLength="250" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="LastUpdateBy" Nullable="true" />
+    <Property Type="DateTime" Name="LastUpdateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="LicenceeContactName" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="LicenceeID" Nullable="false" />
+    <Property Type="String" Name="LicensorContactName" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="LicensorID" Nullable="false" />
+    <Property Type="String" Name="SignedBy" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="SignedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="LicensorABN" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="LicensorACN" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="LicensorEmail" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="LicensorCompanyName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="LicensorFirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LicensorLastName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LicensorMobile" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="LicensorPhone" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="LicensorAddress" Nullable="false" MaxLength="236" />
+    <Property Type="String" Name="LicenceeABN" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="LicenceeACN" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="LicenceeEmail" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="LicenceeCompanyName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="LicenceeFirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LicenceeLastName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LicenceeMobile" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="LicenceePhone" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="LicenceeAddress" Nullable="false" MaxLength="236" />
+  </ComplexType>
+  <EntityType Name="SubmissionMapProduct">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubmissionID" Type="Int32" />
+    <Property Name="ContractMapProductID" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="ResponseBy" Type="Int32" />
+    <Property Name="ResponseDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ContractMapProduct" Relationship="RoyaltyModel.FK_SubmissionMapProduct_ContractMapProduct" FromRole="SubmissionMapProduct" ToRole="ContractMapProduct" />
+    <NavigationProperty Name="SKUs" Relationship="RoyaltyModel.FK_SKU_SubmissionMapProduct" FromRole="SubmissionMapProduct" ToRole="SKU" />
+    <NavigationProperty Name="Submission" Relationship="RoyaltyModel.FK_SubmissionMapProduct_Submission" FromRole="SubmissionMapProduct" ToRole="Submission" />
+    <NavigationProperty Name="SubmissionAttachments" Relationship="RoyaltyModel.FK_SubmissionAttachment_SubmissionMapProduct" FromRole="SubmissionMapProduct" ToRole="SubmissionAttachment" />
+    <NavigationProperty Name="SubmissionProductPrices" Relationship="RoyaltyModel.FK_SubmissionProductPrice_SubmissionMapProduct" FromRole="SubmissionMapProduct" ToRole="SubmissionProductPrice" />
+    <Property Name="Note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="LasUpdateBy" Type="Int32" />
+    <Property Name="LasUpdateDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <Association Name="FK_SubmissionMapProduct_ContractMapProduct">
+    <End Type="RoyaltyModel.ContractMapProduct" Role="ContractMapProduct" Multiplicity="0..1" />
+    <End Type="RoyaltyModel.SubmissionMapProduct" Role="SubmissionMapProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractMapProduct">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubmissionMapProduct">
+        <PropertyRef Name="ContractMapProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SKU_SubmissionMapProduct">
+    <End Type="RoyaltyModel.SubmissionMapProduct" Role="SubmissionMapProduct" Multiplicity="1" />
+    <End Type="RoyaltyModel.SKU" Role="SKU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubmissionMapProduct">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SKU">
+        <PropertyRef Name="SubmissionMapProdID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubmissionMapProduct_Submission">
+    <End Type="RoyaltyModel.Submission" Role="Submission" Multiplicity="0..1" />
+    <End Type="RoyaltyModel.SubmissionMapProduct" Role="SubmissionMapProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Submission">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubmissionMapProduct">
+        <PropertyRef Name="SubmissionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubmissionAttachment_SubmissionMapProduct">
+    <End Type="RoyaltyModel.SubmissionMapProduct" Role="SubmissionMapProduct" Multiplicity="0..1" />
+    <End Type="RoyaltyModel.SubmissionAttachment" Role="SubmissionAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubmissionMapProduct">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubmissionAttachment">
+        <PropertyRef Name="SubmissionMapProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubmissionProductPrice_SubmissionMapProduct">
+    <End Type="RoyaltyModel.SubmissionMapProduct" Role="SubmissionMapProduct" Multiplicity="0..1" />
+    <End Type="RoyaltyModel.SubmissionProductPrice" Role="SubmissionProductPrice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubmissionMapProduct">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubmissionProductPrice">
+        <PropertyRef Name="SubmitsionMapProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Submission_Contract">
+    <End Type="RoyaltyModel.Contract" Role="Contract" Multiplicity="0..1" />
+    <End Type="RoyaltyModel.Submission" Role="Submission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Submission">
+        <PropertyRef Name="ContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="roy_sp_SearchSubmissionInfo_Result">
+    <Property Type="Int32" Name="ID" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="String" Name="InternalCode" Nullable="true" MaxLength="12" />
+    <Property Type="Int32" Name="ContractID" Nullable="true" />
+    <Property Type="String" Name="ContactName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ContractTitle" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductName" Nullable="true" MaxLength="200" />
+  </ComplexType>
+</Schema>

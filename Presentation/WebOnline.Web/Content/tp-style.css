@@ -1,0 +1,306 @@
+﻿.tp-panel {
+    background-color: #F6F6F6;
+    width: 100%;
+    position: relative;
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    position: relative;
+}
+
+    .tp-panel > .tp-panel-container {
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+        .tp-panel > .tp-panel-container > .tp-panel-heading {
+            width: inherit;
+            margin: auto;
+            background: rgb(202, 202, 202);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+            .tp-panel > .tp-panel-container > .tp-panel-heading label {
+                margin: 0;
+                padding: 0;
+            }
+
+            .tp-panel > .tp-panel-container > .tp-panel-heading > .tp-title {
+                font-size: 13pt;
+                color: #428bca;
+            }
+
+        .tp-panel > .tp-panel-container > .tp-panel-body {
+            width: inherit;
+            margin: auto;
+            padding: 10px 15px;
+        }
+
+            .tp-panel > .tp-panel-container > .tp-panel-body h4 {
+                color: #428bca;
+                font-size: 12pt;
+                background: none;
+                padding: 10px 0;
+            }
+
+.tp-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    background-image: url('/content/images/sprite.png');
+    vertical-align: middle;
+}
+
+.tp-icon-collapse {
+    background-position: 0 -224px;
+    float: right;
+    cursor: pointer;
+}
+
+.tp-icon-expand {
+    background-position: 0 -192px;
+    float: right;
+    cursor: pointer;
+}
+
+
+ul.tp-info {
+    padding: 0;
+    margin: auto;
+}
+
+    ul.tp-info > li {
+        margin: 0 10px 10px 0;
+    }
+
+        ul.tp-info > li.tp-info-item {
+            width: 48%;
+            min-width: 400px;
+        }
+
+        ul.tp-info > li > label {
+            background: #c5c5c5;
+            width: 100%;
+            padding: 5px;
+        }
+
+.tp-row {
+    width: 100%;
+    min-width: 500px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+}
+
+    .tp-row .tp-col {
+        padding: 5px;
+    }
+
+.tp-left {
+    float: left;
+}
+
+.tp-right {
+    float: right;
+}
+
+.tp-clearfix {
+    clear: both;
+}
+
+.tp-container {
+    width: 100%;
+    position: relative;
+    padding: 10px;
+}
+
+    .tp-container > h2 {
+        color: #428bca;
+        padding: 0 5px;
+        font-size: 20pt;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+.tp-table {
+    width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+    .tp-table th {
+        width: 150px;
+    }
+
+.tp-textbox {
+    width: 100%;
+    max-width: 300px;
+}
+
+.tp-input-1 {
+    width: 20px;
+}
+
+.tp-gridImage-thumbnail {
+    width: 100%;
+    max-width: 115px;
+    max-height: 115px;
+    padding: 0 5px 0 0;
+}
+
+.tp-thumbnail {
+    width: 100%;
+    max-width: 115px;
+    max-height: 115px;
+}
+
+.tp-action {
+    /*background: #f6f6f6;*/
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+    .tp-action > input[type=button] {
+        width: 150px;
+        margin: 0;
+    }
+
+.tp-bg-waiting {
+    display: none;
+    background: url('/images/bg-waiting.png') repeat;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+}
+
+    .tp-bg-waiting > .tp-waiting {
+        background: url('/content/kendoui/default/loading-image.gif') no-repeat center;
+        width: inherit;
+        height: inherit;
+    }
+
+ul {
+    padding: 0;
+    margin: auto;
+}
+
+p {
+    font-weight: bold;
+}
+
+    p > span {
+        font-weight: normal;
+    }
+
+.tp-group {
+    width: 100%;
+    position: relative;
+    margin: 0 0 1px 0;
+    padding: 0;
+}
+
+    .tp-group .tp-group-header {
+        background: #26BFD8;
+        color: #fff;
+        padding: 10px;
+        width: initial;
+        font-weight: bold;
+        text-transform: capitalize;
+        position: relative;
+    }
+
+    .tp-group .tp-group-body {
+        width: initial;
+    }
+
+        .tp-group .tp-group-body .tp-group-items {
+            width: 100%;
+            position: relative;
+        }
+
+            .tp-group .tp-group-body .tp-group-items .tp-group-item {
+                background: #fff;
+                padding: 10px;
+                border: 1px solid #26BFD8;
+                border-bottom: 2px solid #26BFD8;
+                border-top: none;
+            }
+
+    .tp-group h5 {
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+    .tp-group .tp-group-body .tp-group-item-alt {
+        background: #f1f1f1 !important;
+    }
+
+.tp-comments {
+    background: #fff;
+    width: 100%;
+    padding: 10px;
+    margin: 10px auto;
+    overflow-y: scroll;
+    height: 200px;
+}
+
+    .tp-comments .tp-comment-item {
+        background: #c7edfc;
+        width: initial;
+        margin: 10px 60px 10px 10px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .tp-comments .tp-comment-item-alt {
+        background: #e5f7fd;
+        margin: 10px 10px 10px 60px;
+    }
+
+    .tp-comments .tp-comment-info {
+        color: #363636;
+    }
+
+        .tp-comments .tp-comment-info .tp-comment-info-header {
+            color: #363636;
+        }
+/*.tp-grid .k-pager-wrap {
+        background: #26BFD8 !important;
+        border-width: 0 !important;
+        border-color: initial !important;
+    }
+
+        .tp-grid .k-pager-wrap .k-link {
+            color: #fff !important;
+        }
+
+        .tp-grid .k-pager-wrap > .k-link {
+            border-color: #fff !important;
+        }
+
+        .tp-grid .k-pager-wrap .k-link:hover {
+            border-color: #fff !important;
+            background: #fff !important;
+            color: #2e2e2e !important;
+        }*/
+
+@media screen and (max-width: 1080px) {
+    ul.tp-info > li.tp-info-item {
+        width: 100%;
+        min-width: 400px;
+    }
+}

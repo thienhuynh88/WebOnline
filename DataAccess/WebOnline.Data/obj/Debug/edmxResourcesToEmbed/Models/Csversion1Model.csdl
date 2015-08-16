@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Csversion1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Csversion1Entities1" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="th_sp_SearchInventoryRoyalty" ReturnType="Collection(Csversion1Model.th_sp_SearchInventoryRoyalty_Result)">
+      <Parameter Name="KeySearch" Mode="In" Type="String" />
+      <Parameter Name="catalogueId" Mode="In" Type="Int32" />
+      <Parameter Name="page" Mode="In" Type="Int32" />
+      <Parameter Name="pageSize" Mode="In" Type="Int32" />
+      <Parameter Name="type" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="catalogues" EntityType="Csversion1Model.catalogue" />
+    <EntitySet Name="products" EntityType="Csversion1Model.product" />
+    <EntitySet Name="categories" EntityType="Csversion1Model.category" />
+    <AssociationSet Name="FK_category_catalogue" Association="Csversion1Model.FK_category_catalogue">
+      <End Role="catalogue" EntitySet="catalogues" />
+      <End Role="category" EntitySet="categories" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="th_sp_SearchInventoryRoyalty_Result">
+    <Property Type="Int32" Name="proid" Nullable="true" />
+    <Property Type="Int32" Name="categoryid" Nullable="true" />
+    <Property Type="String" Name="cataloguename" Nullable="true" MaxLength="80" />
+    <Property Type="Int32" Name="catalogueID" Nullable="true" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="80" />
+    <Property Type="Double" Name="currentprice" Nullable="true" />
+    <Property Type="Int32" Name="Total" Nullable="true" />
+    <Property Type="String" Name="urladdress" Nullable="true" MaxLength="265" />
+  </ComplexType>
+  <EntityType Name="catalogue">
+    <Key>
+      <PropertyRef Name="catalogueID" />
+    </Key>
+    <Property Name="catalogueID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cataloguename" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="urladdress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="emailcat" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="emailrec" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="stocknotification" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="catstatus" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="display" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isEvent" Type="Int32" Nullable="false" />
+    <Property Name="cataloguegroup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="folder" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="freeNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TPFcontactName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="freightcat" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="payoptions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sellcurrency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="createDate" Type="DateTime" Precision="3" />
+    <Property Name="code" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="staffid" Type="Int64" />
+    <Property Name="clientID" Type="Int64" />
+    <Property Name="sendwithGoods" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="toBeInvoiced" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="bdcNo" Type="Int64" />
+    <Property Name="orderingSystem" Type="Int32" />
+    <Property Name="googleid" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="defaultEntityId" Type="Int32" />
+    <Property Name="autoDeliveryRequest" Type="Boolean" />
+    <Property Name="assetsfolder" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="partofReportingSystem" Type="Boolean" />
+    <Property Name="usingDotNet" Type="Boolean" />
+    <Property Name="livehelpID" Type="Int32" />
+    <Property Name="invCatalogueID" Type="Int32" />
+    <Property Name="magentokey" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="categories" Relationship="Csversion1Model.FK_category_catalogue" FromRole="catalogue" ToRole="category" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="proID" />
+    </Key>
+    <Property Name="proID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="categoryID" Type="Int64" />
+    <Property Name="code1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="code2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="proname" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="websafename" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="prodescription" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="pronew" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="prospecial" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="subcategory" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Name="subcatdesc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="hasgst" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="proprice" Type="Double" />
+    <Property Name="propriceexc" Type="Double" />
+    <Property Name="pricedesc" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="nzdprice" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="discount" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="prodiscprice" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="isPack" Type="Int32" />
+    <Property Name="isPersonalised" Type="Int32" Nullable="false" />
+    <Property Name="generateVoucherCode" Type="Int32" Nullable="false" />
+    <Property Name="MOQ" Type="Int32" />
+    <Property Name="imagename" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DSMSetRevision" Type="Int32" />
+    <Property Name="duedate" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dispriority" Type="Int16" />
+    <Property Name="status" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="nismessage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="buy" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="priceft" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="pricef" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="pricepub" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="p_landedcost" Type="Double" />
+    <Property Name="p_minguarantee" Type="Double" />
+    <Property Name="p_roypercent" Type="Double" />
+    <Property Name="royaltykey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="p_rebatepercent" Type="Double" />
+    <Property Name="nonDim" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="lastupdate" Type="String" MaxLength="1200" FixedLength="false" Unicode="true" />
+    <Property Name="buffer" Type="Int32" />
+    <Property Name="Licencee" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ownedby" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="hiResImg" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="variationID" Type="Int32" />
+    <Property Name="production_productColour" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="production_productNotes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="orderNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="pgid" Type="Int64" />
+    <Property Name="p_reportstatus" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="p_bostatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="p_inventorystatus" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="p_reportgroup" Type="Int32" />
+    <Property Name="p_proweight" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="landedcost_ref" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="financeNote" Type="String" MaxLength="1200" FixedLength="false" Unicode="true" />
+    <Property Name="newlandedcost" Type="Double" />
+    <Property Name="financestatus" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="financenotes" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="wh_id" Type="Int32" />
+    <Property Name="declaration_name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="dim_length" Type="Decimal" Precision="18" Scale="5" />
+    <Property Name="dim_width" Type="Decimal" Precision="18" Scale="5" />
+    <Property Name="dim_height" Type="Decimal" Precision="18" Scale="5" />
+    <Property Name="dim_volume" Type="Decimal" Precision="18" Scale="10" />
+    <Property Name="packed_item" Type="Int32" />
+    <Property Name="custom_declaration_value" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="productionexportID" Type="Int16" Nullable="false" />
+    <Property Name="createdate" Type="DateTime" Precision="3" />
+    <Property Name="lastupdatedate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="categoryID" />
+    </Key>
+    <Property Name="categoryID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catalogueID" Type="Int32" />
+    <Property Name="categoryname" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="discatpriority" Type="Int16" />
+    <Property Name="catestatus" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="catalogue" Relationship="Csversion1Model.FK_category_catalogue" FromRole="category" ToRole="catalogue" />
+  </EntityType>
+  <Association Name="FK_category_catalogue">
+    <End Type="Csversion1Model.catalogue" Role="catalogue" Multiplicity="0..1" />
+    <End Type="Csversion1Model.category" Role="category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="catalogue">
+        <PropertyRef Name="catalogueID" />
+      </Principal>
+      <Dependent Role="category">
+        <PropertyRef Name="catalogueID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
