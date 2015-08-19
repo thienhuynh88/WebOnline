@@ -1,0 +1,52 @@
+﻿
+
+.borderclass {
+    border: 1px solid #c5c5c5;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    min-width: 500px;
+}
+
+.classul {
+    margin: 2px !important;
+    list-style: inherit !important;
+}
+
+.classh5 {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px;
+    /*color: #00bfff;*/
+}
+.classwidth5 {
+    width: 5%;
+    min-width: 20px;
+}
+.classwidth10 {
+    width: 10%;
+    min-width: 50px;
+}
+.classwidth15 {
+    width: 15%;
+    min-width: 80px;
+}
+.classwidth20 {
+    width: 20%;
+     min-width: 100px;
+}
+
+.classwidth30 {
+    width: 30%;
+    min-width: 150px;
+}
+
+.classwidth40 {
+    width: 40%;
+    min-width: 200px;
+}
+
+.classwidth50 {
+    width: 50%;
+    min-width: 300px;
+}

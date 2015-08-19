@@ -173,6 +173,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -193,7 +194,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Contract.css" />
+    <Content Include="Content\WebOnline.css" />
     <Content Include="Content\FrameCss.css" />
     <Content Include="Content\images\ajax-loader.gif" />
     <Content Include="Content\images\bg-footer.png" />
@@ -533,11 +534,12 @@
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\modules\common\common.js" />
+    <Content Include="Scripts\modules\common\FunctionAll.js" />
     <Content Include="Scripts\modules\common\jszip.min.js" />
     <Content Include="Scripts\modules\common\valueTypes.js" />
     <Content Include="Scripts\modules\common\xlsx.js" />
-    <Content Include="Scripts\modules\controllers\ContractController.js" />
-    <Content Include="Scripts\modules\services\ContractService.js" />
+    <Content Include="Scripts\modules\controllers\UserController.js" />
+    <Content Include="Scripts\modules\services\UserService.js" />
     <Content Include="Scripts\modules\services\shellService.js" />
     <Content Include="Scripts\resources\resources.js" />
     <Content Include="Scripts\respond.js" />
@@ -554,6 +556,7 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Users\DetailUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

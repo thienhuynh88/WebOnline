@@ -88,14 +88,14 @@
     <li>
         @Html.ActionLink("Home", "Index", "Home", null, new { @class = "colo1 saperate backgwhite" })
     </li>
-    @*<li>
-        <a class="saperate backgwhite">Contract Parties</a>
+    <li>
+        <a class="saperate backgwhite">Tài Khoản</a>
         <ul>
-            <li><a href="@Url.Action("list", "contractparty")" title="Contract Parties List">List Parties </a></li>
-            <li><a href="@Url.Action("edit", "contractparty", new { @id = string.Empty })" title="New Contract Parties">New Party</a></li>
+            <li><a href="@Url.Action("DetailUser", "Users")" title="Danh sách đăng nhập">Danh sách </a></li>
+            <li><a href="@Url.Action("DetailUser", "Users")" title="Thêm mới tài khoản">Thêm mới</a></li>
         </ul>
     </li>
-    <li>
+    @*<li>
         <a class="saperate backgwhite">Contract</a>
         <ul>
             <li><a href="@Url.Action("ListContract", "Contract")">List Contracts</a></li>
