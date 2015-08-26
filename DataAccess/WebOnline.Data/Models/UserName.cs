@@ -30,5 +30,10 @@ namespace Royalty.Data.Models
         public Nullable<int> Status { get; set; }
         public string Note { get; set; }
         public Nullable<int> DeptID { get; set; }
+        public string Email { get; set; }
+        public Nullable<int> Createby { get; set; }
+        public Nullable<System.DateTime> Createday { get; set; }
+        public Nullable<int> Updateby { get; set; }
+        public Nullable<System.DateTime> Updateday { get; set; }
     }
 }

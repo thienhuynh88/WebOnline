@@ -16,6 +16,7 @@
           <Property Name="Lname" Type="nvarchar" MaxLength="500" />
           <Property Name="Sex" Type="int" />
           <Property Name="Birthdate" Type="datetime" />
+          <Property Name="Email" Type="nvarchar" MaxLength="500" />
           <Property Name="Phone" Type="nvarchar" MaxLength="50" />
           <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
           <Property Name="Address1" Type="nvarchar" MaxLength="500" />
@@ -24,6 +25,10 @@
           <Property Name="Country" Type="nvarchar" MaxLength="500" />
           <Property Name="Status" Type="int" />
           <Property Name="Note" Type="nvarchar(max)" />
+          <Property Name="Createby" Type="int" />
+          <Property Name="Createday" Type="datetime" />
+          <Property Name="Updateby" Type="int" />
+          <Property Name="Updateday" Type="datetime" />
           <Property Name="DeptID" Type="int" />
         </EntityType>
         <EntityContainer Name="THIENHUYNHDBModelStoreContainer">
@@ -56,6 +61,11 @@
           <Property Name="Status" Type="Int32" />
           <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="DeptID" Type="Int32" />
+          <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Createby" Type="Int32" />
+          <Property Name="Createday" Type="DateTime" Precision="3" />
+          <Property Name="Updateby" Type="Int32" />
+          <Property Name="Updateday" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -66,6 +76,11 @@
           <EntitySetMapping Name="UserNames">
             <EntityTypeMapping TypeName="THIENHUYNHDBModel.UserName">
               <MappingFragment StoreEntitySet="UserNames">
+                <ScalarProperty Name="Updateday" ColumnName="Updateday" />
+                <ScalarProperty Name="Updateby" ColumnName="Updateby" />
+                <ScalarProperty Name="Createday" ColumnName="Createday" />
+                <ScalarProperty Name="Createby" ColumnName="Createby" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="DeptID" ColumnName="DeptID" />
                 <ScalarProperty Name="Note" ColumnName="Note" />
                 <ScalarProperty Name="Status" ColumnName="Status" />

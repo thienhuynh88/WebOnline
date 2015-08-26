@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "ListUsers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    #girdviewlistusers .k-grid-header-wrap table tr th {
+        text-align: center;
+    }
+</style>
+<div style="margin-top: 20px;min-height: 700px">
+
+    <div id="Searchdiv" class="borderclass">
+        <input type="text" id="txtsearch" class="classwidth40 k-textbox" placeholder="Nhập từ khoá tìm kiếm ...." />
+        <label>Loại tài khoản : </label>
+        <input id="searchDeptID" class="classwidth15" />
+        <label>Trạng thái : </label>
+        <input id="searchStatus" class="classwidth15" />
+        <input type="button" class="m-button" value="Search" style="width: 150px" onclick="UserController.btnSearch()" />
+    </div>
+    <div class="face">Danh sách tài khoản</div>
+
+    <div id="girdviewlistusers" style="margin-top: 20px"></div>
+
+
+</div>
+
+<script src="~/Scripts/modules/common/FunctionAll.js"></script>
+<script src="~/Scripts/modules/services/UserService.js"></script>
+<script src="~/Scripts/modules/controllers/UserController.js"></script>
+
+<script>
+    $(document).ready(function () {
+        UserController.InnitWebList();
+    });
+</script>

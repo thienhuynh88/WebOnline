@@ -4,98 +4,120 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div id="bodydetail">
-    <h4 class="classh5"><span style="margin-left: 20px">Tiết Tài Khoản</span></h4>
+@if (Model == null)
+{
+    return;
+}
 
-    <div class="borderclass">
-        <ul>
-            <li class="classul">
-                <label class="classwidth15">Họ : <font color="red">&nbsp;*</font></label>
-                <input type="text" class="k-textbox classwidth40" id="fname" name="fname" value="" />
-            </li>
-        </ul>
-        <ul>
-            <li class="classul">
-                <label class="classwidth15">Tên : <font color="red">&nbsp;*</font></label>
-                <input type="text" class="k-textbox classwidth40" id="lname" name="lname" value="" />
-            </li>
-        </ul>
-        <ul>
-            <li class="classul">
-                <label class="classwidth15">Tên đăng nhập : <font color="red">&nbsp;*</font></label>
-                <input type="text" class="k-textbox classwidth40" id="username" name="username" value="" />
-            </li>
-        </ul>
-        <ul>
-            <li class="classul">
-                <label class="classwidth15">Mật Khẩu : <font color="red">&nbsp;*</font></label>
-                <input type="password" class="k-textbox classwidth40" id="password" name="password" value="" />
-            </li>
-        </ul>
-        <ul>
-            <li class="classul">
-                <label class="classwidth15">Ngày Sinh :</label>
-                <input style="width: 60px;text-align: center" id="ngay" name="ngay" value="" />
-                <input style="width: 60px; text-align: center" id="thang" name="thang" value="" />
-                <input style="width: 80px; text-align: center" id="nam" name="nam" value="" />
-            </li>
-        </ul>
-        <ul>
-            <li class="classul">
-                <label class="classwidth15">Giới Tính :</label>
-                <input class="classwidth10" id="sex" name="sex" value="" />
-            </li>
-        </ul>
-        <ul>
-            <li class="classul">
-                <label class="classwidth15">Điện Thoại : </label>
-                <input type="text" class="k-textbox classwidth40" id="phone" name="phone" value="" />
-            </li>
-        </ul>
-        <ul>
-            <li class="classul">
-                <label class="classwidth15">Email : </label>
-                <input type="email" class="k-textbox classwidth40" id="email" name="email" value="" placeholder="abcd@gmail.com"/>
-            </li>
-        </ul>
-        <ul>
-            <li class="classul">
-                <label class="classwidth15">Tỉnh Thành : </label>
-                <input type="text" class="k-textbox classwidth40" id="tinhthanh" name="tinhthanh" value="" placeholder="Tỉnh thành" />
-            </li>
-        </ul>
-        <ul>
-            <li class="classul">
-                <label class="classwidth15">Địa Chỉ : </label>
-                <input type="text" class="k-textbox classwidth20" id="address1" name="address1" value="" placeholder="Số nhà, tên đường" />
-                <input type="text" class="k-textbox classwidth20" id="address2" name="address2" value="" placeholder="Phường, Xã" />
-            </li>
-        </ul>
-        <ul>
-            <li class="">
-                <label class="classwidth15">&nbsp; </label>
-                <input type="text" class="k-textbox classwidth40" id="address3" name="address3" value="" placeholder="Quận, Huyện" />
-            </li>
-        </ul>
-        
-        <ul>
-            <li class="classul">
-                <label class="classwidth15">Trạng thái :</label>
-                <input class="classwidth15" id="status" name="status" value="" />
-            </li>
-        </ul>
-    </div>
-    
-    <div id="footersupplier" class="borderclass" align="center" style="background-color: rgb(202, 202, 202)">
-        <input type="button" class="m-button" value="Lưu thông tin" style="margin-bottom: 1px;width: 200px" />
-    </div>
+    <div id="bodydetail">
+        <h4 class="classh5"><span style="margin-left: 20px">Tiết Tài Khoản</span></h4>
+        <form id="frmSubmitUser" name="frmSubmitUser">
+            <div class="borderclass">
+                <ul>
+                    <li class="classul">
+                        <input type="hidden" id="ID" name="ID" value="@Model.ID"/>
+                        <label class="classwidth15">Họ : <font color="red">&nbsp;*</font></label>
+                        <input type="text" class="k-textbox classwidth40" id="fname" name="Fname" value="@Model.Fname" />
+                    </li>
+                </ul>
+                <ul>
+                    <li class="classul">
+                        <label class="classwidth15">Tên : <font color="red">&nbsp;*</font></label>
+                        <input type="text" class="k-textbox classwidth40" id="lname" name="Lname" value="@Model.Lname" />
+                    </li>
+                </ul>
+                <ul>
+                    <li class="classul">
+                        <label class="classwidth15">Tên đăng nhập : <font color="red">&nbsp;*</font></label>
+                        <input type="text" class="k-textbox classwidth40" id="username" name="Username1" value="@Model.Username1" />
+                    </li>
+                </ul>
+                <ul>
+                    <li class="classul">
+                        <label class="classwidth15">Mật Khẩu : <font color="red">&nbsp;*</font></label>
+                        <input type="password" class="k-textbox classwidth40" id="password" name="Password" value="@Model.Password" />
+                    </li>
+                </ul>
+                <ul>
+                    <li class="classul">
+                        <label class="classwidth15">Ngày Sinh :</label>
+                        <input type="hidden" id="Birthdate" name="Birthdate" value="" />
+                        <input style="width: 60px;text-align: center" id="ngay" name="Day" value="@Model.Day" />
+                        <input style="width: 60px; text-align: center" id="thang" name="Month" value="@Model.Month" />
+                        <input style="width: 80px; text-align: center" id="nam" name="Year" value="@Model.Year" />
+                    </li>
+                </ul>
+                <ul>
+                    <li class="classul">
+                        <label class="classwidth15">Giới Tính :</label>
+                        <input class="classwidth10" id="sex" name="Sex" value="@Model.Sex" />
+                    </li>
+                </ul>
+                <ul>
+                    <li class="classul">
+                        <label class="classwidth15">Điện Thoại : </label>
+                        <input type="text" class="k-textbox classwidth40" id="Mobile" name="Mobile" value="@Model.Mobile" />
+                    </li>
+                </ul>
+                <ul>
+                    <li class="classul">
+                        <label class="classwidth15">Email : </label>
+                        <input type="email" class="k-textbox classwidth40" id="Email" name="Email" value="@Model.Email" placeholder="abcd@gmail.com" />
+                    </li>
+                </ul>
+                <ul>
+                    <li class="classul">
+                        <label class="classwidth15">Tỉnh Thành : </label>
+                        <input type="text" class="k-textbox classwidth40" id="Country" name="Country" value="@Model.Country" placeholder="Tỉnh thành" />
+                    </li>
+                </ul>
+                <ul>
+                    <li class="classul">
+                        <label class="classwidth15">Địa Chỉ : </label>
+                        <input type="text" class="k-textbox classwidth20" id="Address1" name="Address1" value="@Model.Address1" placeholder="Số nhà, tên đường" />
+                        <input type="text" class="k-textbox classwidth20" id="Address2" name="Address2" value="@Model.Address2" placeholder="Phường, Xã" />
+                    </li>
+                </ul>
+                <ul>
+                    <li class="">
+                        <label class="classwidth15">&nbsp; </label>
+                        <input type="text" class="k-textbox classwidth40" id="Address3" name="Address3" value="@Model.Address3" placeholder="Quận, Huyện" />
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="classul">
+                        <label class="classwidth15">Loại tài khoản :</label>
+                        <input class="classwidth15" id="DeptID" name="DeptID" value="@Model.DeptID" />
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="classul">
+                        <label class="classwidth15">Trạng thái :</label>
+                        <input class="classwidth15" id="Status" name="Status" value="@Model.Status" />
+                    </li>
+                </ul>
+                <ul>
+                    <li class="classul">
+                        <label class="classwidth15">Ghi chú :</label>
+                        <textarea class="k-textbox classwidth40" style="height: 150px" name="Note">@Model.Note</textarea>
+                    </li>
+                </ul>
+
+
+            </div>
+        </form>
+            <div id="footersupplier" class="borderclass" align="center" style="background-color: rgb(202, 202, 202)">
+                <input type="button" class="m-button" value="Lưu thông tin" style="margin-bottom: 1px;width: 200px" onclick="UserController.SaveDataUserName()" />
+            </div>
 </div>
 
 
 <script src="~/Scripts/modules/common/FunctionAll.js"></script>
-
+<script src="~/Scripts/modules/services/UserService.js"></script>
 <script src="~/Scripts/modules/controllers/UserController.js"></script>
-<script src="~/Scripts/modules/services/shellService.js"></script>
+
 <script>
     $(document).ready(function () {
         UserController.InnitViewUser();
