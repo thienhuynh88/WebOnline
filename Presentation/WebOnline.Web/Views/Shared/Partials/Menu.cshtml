@@ -89,27 +89,32 @@
         @Html.ActionLink("Home", "Index", "Home", null, new { @class = "colo1 saperate backgwhite" })
     </li>
     <li>
+        <a class="saperate backgwhite">Sản phẩm</a>
+        <ul>
+            <li><a href="@Url.Action("ProductList", "Product")" title="Danh sách sản phẩm">Danh sách SP </a></li>
+            <li><a href="@Url.Action("ProductNew", "Product")" title="Thêm sản phẩm mới">Thêm mới SP</a></li>
+        </ul>
+    </li>
+    <li>
+        @Html.ActionLink("Quản lý danh mục", "Index", "Catalogue", null, new { @class = "colo1 saperate backgwhite" })
+    </li>
+    
+    <li>
+        <a class="saperate backgwhite">Đơn hàng</a>
+        <ul>
+            <li><a href="@Url.Action("OrderList", "Order")" title="Danh sách đơn hàng">Danh sách </a></li>
+            <li><a href="@Url.Action("OrderNew", "Order")" t title="Thêm mới đơn hàng">Thêm mới</a></li>
+        </ul>
+    </li>
+  
+    <li>
         <a class="saperate backgwhite">Tài Khoản</a>
         <ul>
             <li><a href="@Url.Action("ListUsers", "Users")" title="Danh sách đăng nhập">Danh sách </a></li>
             <li><a href="@Url.Action("DetailUser", "Users")" title="Thêm mới tài khoản">Thêm mới</a></li>
         </ul>
     </li>
-    @*<li>
-        <a class="saperate backgwhite">Contract</a>
-        <ul>
-            <li><a href="@Url.Action("ListContract", "Contract")">List Contracts</a></li>
-            <li><a href="@Url.Action("EditContract", "Contract", new { id = string.Empty })">New Contract</a></li>
-        </ul>
-    </li>
-
-    <li>
-        <a class="saperate backgwhite">Submission</a>
-        <ul>
-            <li><a href="@Url.Action("ListSubmission", "Submission")">List Submissions </a></li>
-            <li><a href="@Url.Action("AddOrEditSubmission", "Submission", new { @id = string.Empty }, null)">New Submission</a></li>
-        </ul>
-    </li>*@
+ 
 
    
 </ul>
