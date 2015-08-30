@@ -2,3 +2,5 @@ E:\Change Code New\Common\TPF.Configurations\bin\Debug\TPF.Configurations.dll
 E:\Change Code New\Common\TPF.Configurations\bin\Debug\TPF.Configurations.pdb
 E:\Change Code New\Common\TPF.Configurations\obj\Debug\TPF.Configurations.dll
 E:\Change Code New\Common\TPF.Configurations\obj\Debug\TPF.Configurations.pdb
+E:\BAN DO THE THAO\WebOnline\Common\TPF.Configurations\obj\Debug\TPF.Configurations.dll
+E:\BAN DO THE THAO\WebOnline\Common\TPF.Configurations\obj\Debug\TPF.Configurations.pdb

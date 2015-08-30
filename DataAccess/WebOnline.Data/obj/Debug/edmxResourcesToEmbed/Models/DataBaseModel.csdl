@@ -23,5 +23,10 @@
     <Property Name="Status" Type="Int32" />
     <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="DeptID" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Createby" Type="Int32" />
+    <Property Name="Createday" Type="DateTime" Precision="3" />
+    <Property Name="Updateby" Type="Int32" />
+    <Property Name="Updateday" Type="DateTime" Precision="3" />
   </EntityType>
 </Schema>

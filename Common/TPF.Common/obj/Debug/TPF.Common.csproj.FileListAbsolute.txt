@@ -11,3 +11,10 @@ E:\ProjectWebOnline\Common\TPF.Common\bin\Debug\log4net.dll
 E:\ProjectWebOnline\Common\TPF.Common\bin\Debug\log4net.xml
 E:\ProjectWebOnline\Common\TPF.Common\obj\Debug\TPF.Common.dll
 E:\ProjectWebOnline\Common\TPF.Common\obj\Debug\TPF.Common.pdb
+E:\BAN DO THE THAO\WebOnline\Common\TPF.Common\bin\Debug\TPF.Common.dll
+E:\BAN DO THE THAO\WebOnline\Common\TPF.Common\bin\Debug\TPF.Common.pdb
+E:\BAN DO THE THAO\WebOnline\Common\TPF.Common\bin\Debug\log4net.dll
+E:\BAN DO THE THAO\WebOnline\Common\TPF.Common\bin\Debug\log4net.xml
+E:\BAN DO THE THAO\WebOnline\Common\TPF.Common\obj\Debug\TPF.Common.dll
+E:\BAN DO THE THAO\WebOnline\Common\TPF.Common\obj\Debug\TPF.Common.pdb
+E:\BAN DO THE THAO\WebOnline\Common\TPF.Common\obj\Debug\TPF.Common.csprojResolveAssemblyReference.cache

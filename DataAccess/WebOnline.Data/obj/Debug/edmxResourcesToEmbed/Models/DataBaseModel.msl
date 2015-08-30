@@ -4,6 +4,11 @@
     <EntitySetMapping Name="UserNames">
       <EntityTypeMapping TypeName="THIENHUYNHDBModel.UserName">
         <MappingFragment StoreEntitySet="UserNames">
+          <ScalarProperty Name="Updateday" ColumnName="Updateday" />
+          <ScalarProperty Name="Updateby" ColumnName="Updateby" />
+          <ScalarProperty Name="Createday" ColumnName="Createday" />
+          <ScalarProperty Name="Createby" ColumnName="Createby" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="DeptID" ColumnName="DeptID" />
           <ScalarProperty Name="Note" ColumnName="Note" />
           <ScalarProperty Name="Status" ColumnName="Status" />

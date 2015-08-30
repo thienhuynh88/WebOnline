@@ -19,3 +19,24 @@ E:\ProjectWebOnline\Business\WebOnline.Business\bin\Debug\log4net.xml
 E:\ProjectWebOnline\Business\WebOnline.Business\obj\Debug\WebOnline.Business.csprojResolveAssemblyReference.cache
 E:\ProjectWebOnline\Business\WebOnline.Business\obj\Debug\Royalty.Business.dll
 E:\ProjectWebOnline\Business\WebOnline.Business\obj\Debug\Royalty.Business.pdb
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\bin\Debug\Royalty.Business.dll.config
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\bin\Debug\Royalty.Business.dll
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\bin\Debug\Royalty.Business.pdb
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\bin\Debug\EntityFramework.dll
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\bin\Debug\Microsoft.CSharp.dll
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\bin\Debug\Royalty.Data.dll
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\bin\Debug\System.Data.DataSetExtensions.dll
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\bin\Debug\System.Data.dll
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\bin\Debug\System.dll
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\bin\Debug\System.Web.dll
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\bin\Debug\System.Xml.dll
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\bin\Debug\System.Xml.Linq.dll
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\bin\Debug\TPF.Common.dll
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\bin\Debug\log4net.dll
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\bin\Debug\TPF.Common.pdb
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\bin\Debug\Royalty.Data.pdb
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\bin\Debug\EntityFramework.xml
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\bin\Debug\log4net.xml
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\obj\Debug\WebOnline.Business.csprojResolveAssemblyReference.cache
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\obj\Debug\Royalty.Business.dll
+E:\BAN DO THE THAO\WebOnline\Business\WebOnline.Business\obj\Debug\Royalty.Business.pdb

@@ -4,3 +4,10 @@ E:\Change Code New\Common\TPF.Resourses\obj\Debug\TPF.Resourses.EnumResources.re
 E:\Change Code New\Common\TPF.Resourses\obj\Debug\TPF.Resourses.csproj.GenerateResource.Cache
 E:\Change Code New\Common\TPF.Resourses\obj\Debug\TPF.Resourses.dll
 E:\Change Code New\Common\TPF.Resourses\obj\Debug\TPF.Resourses.pdb
+E:\BAN DO THE THAO\WebOnline\Common\TPF.Resourses\bin\Debug\TPF.Resourses.dll
+E:\BAN DO THE THAO\WebOnline\Common\TPF.Resourses\bin\Debug\TPF.Resourses.pdb
+E:\BAN DO THE THAO\WebOnline\Common\TPF.Resourses\obj\Debug\TPF.Resourses.csprojResolveAssemblyReference.cache
+E:\BAN DO THE THAO\WebOnline\Common\TPF.Resourses\obj\Debug\TPF.Resourses.EnumResources.resources
+E:\BAN DO THE THAO\WebOnline\Common\TPF.Resourses\obj\Debug\TPF.Resourses.csproj.GenerateResource.Cache
+E:\BAN DO THE THAO\WebOnline\Common\TPF.Resourses\obj\Debug\TPF.Resourses.dll
+E:\BAN DO THE THAO\WebOnline\Common\TPF.Resourses\obj\Debug\TPF.Resourses.pdb

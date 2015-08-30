@@ -5,3 +5,11 @@ E:\ProjectWebOnline\DataAccess\WebOnline.Data\bin\Debug\EntityFramework.dll
 E:\ProjectWebOnline\DataAccess\WebOnline.Data\bin\Debug\EntityFramework.xml
 E:\ProjectWebOnline\DataAccess\WebOnline.Data\obj\Debug\Royalty.Data.dll
 E:\ProjectWebOnline\DataAccess\WebOnline.Data\obj\Debug\Royalty.Data.pdb
+E:\BAN DO THE THAO\WebOnline\DataAccess\WebOnline.Data\bin\Debug\Royalty.Data.dll.config
+E:\BAN DO THE THAO\WebOnline\DataAccess\WebOnline.Data\bin\Debug\Royalty.Data.dll
+E:\BAN DO THE THAO\WebOnline\DataAccess\WebOnline.Data\bin\Debug\Royalty.Data.pdb
+E:\BAN DO THE THAO\WebOnline\DataAccess\WebOnline.Data\bin\Debug\EntityFramework.dll
+E:\BAN DO THE THAO\WebOnline\DataAccess\WebOnline.Data\bin\Debug\EntityFramework.xml
+E:\BAN DO THE THAO\WebOnline\DataAccess\WebOnline.Data\obj\Debug\Royalty.Data.dll
+E:\BAN DO THE THAO\WebOnline\DataAccess\WebOnline.Data\obj\Debug\Royalty.Data.pdb
+E:\BAN DO THE THAO\WebOnline\DataAccess\WebOnline.Data\obj\Debug\WebOnline.Data.csprojResolveAssemblyReference.cache

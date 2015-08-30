@@ -11,6 +11,7 @@
     <Property Name="Lname" Type="nvarchar" MaxLength="500" />
     <Property Name="Sex" Type="int" />
     <Property Name="Birthdate" Type="datetime" />
+    <Property Name="Email" Type="nvarchar" MaxLength="500" />
     <Property Name="Phone" Type="nvarchar" MaxLength="50" />
     <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
     <Property Name="Address1" Type="nvarchar" MaxLength="500" />
@@ -19,6 +20,10 @@
     <Property Name="Country" Type="nvarchar" MaxLength="500" />
     <Property Name="Status" Type="int" />
     <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="Createby" Type="int" />
+    <Property Name="Createday" Type="datetime" />
+    <Property Name="Updateby" Type="int" />
+    <Property Name="Updateday" Type="datetime" />
     <Property Name="DeptID" Type="int" />
   </EntityType>
   <EntityContainer Name="THIENHUYNHDBModelStoreContainer">
