@@ -188,9 +188,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Utility\EnumBase.cs" />
-    <Compile Include="Utility\FilterAttributes\CustomHandleError.cs" />
-    <Compile Include="Utility\JsonNetFormatter.cs" />
+    <Compile Include="Views\Utility\EnumBase.cs" />
+    <Compile Include="Views\Utility\FilterAttributes\CustomHandleError.cs" />
+    <Compile Include="Views\Utility\JsonNetFormatter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
